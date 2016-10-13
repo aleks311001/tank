@@ -1,0 +1,631 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe, файл: C:\Users\User\Desktop\TX\TXLib.h, строка: 9190, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: Cmdret, Thread: 0x9D4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040DA70 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txError at C:/Users/User/Desktop/TX/TXLib.h (7676)
+# 1 0x00416007 in C:\Users\User\Documents\GitHub\tank\V1.exe!txDC at C:/Users/User/Desktop/TX/TXLib.h (9190)
+
+# 2 0x00422DAC in C:\Users\User\Documents\GitHub\tank\V1.exe!Draw_tank at C:/Users/User/Desktop/TX/TXLib.h (1051):
+
+   1049: //}----------------------------------------------------------------------------------------------------------------
+   1050: 
+=> 1051: HBRUSH txSetFillColor (COLORREF color, HDC dc = txDC (true));
+   1052: 
+   1053: //! @cond INTERNAL
+
+# 3 0x00422D66 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (18):
+
+     16:     for (int i = 0;!GetAsyncKeyState ('G'); i ++)
+     17:         {
+=>   18:         Draw_tank (&tank [0]);
+     19:         }
+     20:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 11:54:26, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 11:54:29
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x76EEC41F в функции RaiseException. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0x16BC (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+# 6 0x75979407 in C:\Windows\syswow64\msvcrt.dll!ldexp
+# 7 0x759794DC in C:\Windows\syswow64\msvcrt.dll!ldexp
+# 8 0x7592FD5A in C:\Windows\syswow64\msvcrt.dll!ftol2_sse_excpt
+# 9 0x758EF0E5 in C:\Windows\syswow64\msvcrt.dll!CIcos
+#10 0x75908AB9 in C:\Windows\syswow64\msvcrt.dll!CItan
+
+#11 0x00422D86 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (19):
+
+     17:     for (int i = 0;!GetAsyncKeyState ('G'); i ++)
+     18:         {
+=>   19:         Draw_tank (&tank [0]);
+     20:         }
+     21:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 11:55:13, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 11:55:16
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Деление на ноль при операции с плавающей точкой.
+
+Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x00422F98 в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 31. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0xA2C (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422D86 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (19):
+
+     17:     for (int i = 0;!GetAsyncKeyState ('G'); i ++)
+     18:         {
+=>   19:         Draw_tank (&tank [0]);
+     20:         }
+     21:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 11:57:33, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 11:57:36
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Деление на ноль при операции с плавающей точкой.
+
+Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x004230DA в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 34. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0x16A4 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422EC3 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (21):
+
+     19:         txBegin();
+     20:         txClear ();
+=>   21:         Draw_tank (&tank [0]);
+     22:         txEnd();
+     23:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 11:58:15, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 11:58:18
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Деление на ноль при операции с плавающей точкой.
+
+Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x004230F8 в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 35. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0xF90 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422EE1 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (22):
+
+     20:         txSetFillColor (TX_WHITE);
+     21:         txClear ();
+=>   22:         Draw_tank (&tank [0]);
+     23:         txEnd();
+     24:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 11:59:02, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 11:59:05
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Деление на ноль при операции с плавающей точкой.
+
+Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x004230F8 в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 35. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0x11A4 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422EE1 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (22):
+
+     20:         txSetFillColor (TX_WHITE);
+     21:         txClear ();
+=>   22:         Draw_tank (&tank [0]);
+     23:         txEnd();
+     24:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 11:59:15, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 11:59:18
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x61741E49. Попытка прочесть данные по адресу 0x8C000154. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdrEt, Thread: 0x10D8 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!(anonymous namespace)::TX::_txOnExceptionSEH
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!(anonymous namespace)::TX::_txVectoredExceptionHandler
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:07:19, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:07:21
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0042303B в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 38. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0xD34 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422F7E in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (28):
+
+     26:         if (GetAsyncKeyState ('S')) tank[0].y++;
+     27:         if (GetAsyncKeyState ('D')) tank[0].x++;
+=>   28:         Draw_tank (&tank [0]);
+     29:         txEnd();
+     30:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:19:44, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:19:47
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0042303B в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 38. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0x8E0 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422F7E in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (28):
+
+     26:         if (GetAsyncKeyState ('S')) tank[0].y++;
+     27:         if (GetAsyncKeyState ('D')) tank[0].x++;
+=>   28:         Draw_tank (&tank [0]);
+     29:         txEnd();
+     30:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:20:04, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:20:07
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0042303B в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 38. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0x1764 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422F7E in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (28):
+
+     26:         if (GetAsyncKeyState ('S')) tank[0].y++;
+     27:         if (GetAsyncKeyState ('D')) tank[0].x++;
+=>   28:         Draw_tank (&tank [0]);
+     29:         txEnd();
+     30:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:20:52, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:20:55
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0042303B в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 38. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0xDA8 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422F7E in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (28):
+
+     26:         if (GetAsyncKeyState ('S')) tank[0].y++;
+     27:         if (GetAsyncKeyState ('D')) tank[0].x++;
+=>   28:         Draw_tank (&tank [0]);
+     29:         txEnd();
+     30:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:21:12, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:22:39
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0042303B в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 38. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0xF24 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422F7E in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (28):
+
+     26:         if (GetAsyncKeyState ('S')) tank[0].y++;
+     27:         if (GetAsyncKeyState ('D')) tank[0].x++;
+=>   28:         Draw_tank (&tank [0]);
+     29:         txEnd();
+     30:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:21:12, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:22:54
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0042303B в функции Draw_tank в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 38. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F1280 (32-bit), Flags: CMdRet, Thread: 0xDA8 (Main). 
+
+--------------------------------------------------
+Трассировка стека:
+
+# 0 0x0040E4B5 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txOnExceptionSEH at C:/Users/User/Desktop/TX/TXLib.h (8040)
+# 1 0x0040E097 in C:\Users\User\Documents\GitHub\tank\V1.exe!_txVectoredExceptionHandler at C:/Users/User/Desktop/TX/TXLib.h (7993)
+# 2 0x77D762D9 in C:\Windows\SysWOW64\ntdll.dll!RtlGetProcessHeaps
+# 3 0x77D5B64D in C:\Windows\SysWOW64\ntdll.dll!RtlCaptureContext
+# 4 0x77D5B30F in C:\Windows\SysWOW64\ntdll.dll!LdrRemoveLoadAsDataTable
+# 5 0x77D1012E in C:\Windows\SysWOW64\ntdll.dll!KiUserExceptionDispatcher
+
+# 6 0x00422F7E in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (28):
+
+     26:         if (GetAsyncKeyState ('S')) tank[0].y++;
+     27:         if (GetAsyncKeyState ('D')) tank[0].x++;
+=>   28:         Draw_tank (&tank [0]);
+     29:         txEnd();
+     30:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Oct 13 2016 12:23:57, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Oct 13 2016 12:24:00
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
