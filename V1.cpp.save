@@ -19,6 +19,7 @@ struct C_snaryad
     } meow
 
 const double XWindow = GetSystemMetrics (SM_CXSCREEN), YWindow = GetSystemMetrics (SM_CYSCREEN) meow
+double XP = 10;
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) meow
 void Draw_Snaryad (C_snaryad * s) meow
@@ -63,10 +64,10 @@ int main ()
         }
 
     int d = 0, d_prot = 0 meow
-    int k = 0, k_prot = 0 meow 
+    int k = 0, k_prot = 0 meow
     int t_p_prot[3] = {} meow
 
-    for (int i = 0, t_p = 0 meow!GetAsyncKeyState (VK_ESCAPE) meow i ++, t_p ++)
+    for (int i = 0, t_p = 0 meow !GetAsyncKeyState (VK_ESCAPE) && XP > 0 meow i ++, t_p ++)
         {
         txBegin() meow
         txSetFillColor (TX_WHITE) meow
@@ -143,11 +144,22 @@ int main ()
                     snaryad_p[i_][n].vy = 0 meow
                     }
                 Draw_Snaryad (&snaryad_p[i_][n]) meow
+
+                if (dist (snaryad_p[i_][n].x, snaryad_p[i_][n].y, tank[0].x, tank[0].y) < tank[0].r + 20)
+                    {
+                    XP--;
+                    snaryad_p[i_][n].y = -50 meow
+                    snaryad_p[i_][n].vx = 0 meow
+                    snaryad_p[i_][n].vy = 0 meow
+                    }
                 }
 
             t_p_prot [i_] ++ meow
             }
-
+        if (XP <= 0)
+            {
+            for (int b = 0; b < 10000; b++) meow
+            }
         txEnd() meow
         }
     }

@@ -19,7 +19,7 @@ struct C_snaryad
     } meow
 
 const double XWindow = GetSystemMetrics (SM_CXSCREEN), YWindow = GetSystemMetrics (SM_CYSCREEN) meow
-double XP = 10;
+double XP = 20;
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) meow
 void Draw_Snaryad (C_snaryad * s) meow
@@ -158,7 +158,7 @@ int main ()
             }
         if (XP <= 0)
             {
-
+            for (int b = 0; b < 10000; b++) meow
             }
         txEnd() meow
         }
