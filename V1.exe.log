@@ -629,3 +629,158 @@ Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
 Directory:	C:\Users\User\Documents\GitHub\tank
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00425BC2 в функции main в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 53. Попытка прочесть данные по адресу 0x5E0A5280. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F429C (32-bit), Flags: CMdRe0, Thread: 0x114C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x40658989 in C:\Users\User\Documents\GitHub\tank\V1.exe
+# 1 0x0040127D in C:\Users\User\Documents\GitHub\tank\V1.exe!__mingw_CRTStartup
+# 2 0x7686161E in C:\Windows\syswow64\msvcrt.dll!freea_s
+# 3 0x768615A0 in C:\Windows\syswow64\msvcrt.dll!freea_s
+# 4 0x76862811 in C:\Windows\syswow64\msvcrt.dll!_set_app_type
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void Draw_tank(C_Tank*) at C:\Users\User\Documents\GitHub\tank\V1.cpp (91):
+
+     89:     txSetFillColor (tank->Tank);
+     90:     txSetColor     (TX_BLACK);
+=>   91:     txCircle (tank->x, tank->y, tank->r);
+     92:     tank->x_d = tank->l * cos (atan_ (Y_m , X_m)) + tank->x;
+     93:     tank->y_d = tank->l * sin (atan_ (Y_m , X_m)) + tank->y;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Dec  6 2016 16:06:17, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Dec 06 2016 16:06:21
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00425BC2 в функции main в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 53. Попытка прочесть данные по адресу 0x11607700. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F429C (32-bit), Flags: CMdRe0, Thread: 0x197C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x4067E4A0 in C:\Users\User\Documents\GitHub\tank\V1.exe
+# 1 0x0040127D in C:\Users\User\Documents\GitHub\tank\V1.exe!__mingw_CRTStartup
+# 2 0x7686161E in C:\Windows\syswow64\msvcrt.dll!freea_s
+# 3 0x768615A0 in C:\Windows\syswow64\msvcrt.dll!freea_s
+# 4 0x76862811 in C:\Windows\syswow64\msvcrt.dll!_set_app_type
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void Draw_tank(C_Tank*) at C:\Users\User\Documents\GitHub\tank\V1.cpp (90):
+
+     88:     txSetFillColor (tank->Tank);
+     89:     txSetColor     (TX_BLACK);
+=>   90:     txCircle (tank->x, tank->y, tank->r);
+     91:     tank->x_d = tank->l * cos (atan_ (Y_m , X_m)) + tank->x;
+     92:     tank->y_d = tank->l * sin (atan_ (Y_m , X_m)) + tank->y;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Dec  6 2016 16:06:52, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Dec 06 2016 16:06:55
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V1.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004264EE в функции Draw_Snaryad в файле C:/Users/User/Documents/GitHub/tank/V1.cpp на строке 101. Попытка прочесть данные по адресу 0x00296600. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F429C (32-bit), Flags: CMdRe0, Thread: 0x18D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00425D67 in C:\Users\User\Documents\GitHub\tank\V1.exe!main at C:/Users/User/Documents/GitHub/tank/V1.cpp (56):
+
+     54:             snaryad[k].vx = 5 * cos (atan_ (txMouseY () - tank->y , txMouseX () - tank->x));
+     55:             snaryad[k].vy = 5 * sin (atan_ (txMouseY () - tank->y , txMouseX () - tank->x));
+=>   56:             Draw_Snaryad (&snaryad [i]);
+     57:             }
+     58: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void Draw_Snaryad(C_snaryad*) at C:\Users\User\Documents\GitHub\tank\V1.cpp (101):
+
+     99:     txSetColor (TX_BLACK);
+    100:     txSetFillColor (TX_BLACK);
+=>  101:     txCircle (s->x, s->y, 10);
+    102:     txSetFillColor (RGB (0, 0, 230));
+    103:     txCircle (s->x, s->y, 8);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Dec  6 2016 16:08:33, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Dec 06 2016 16:08:36
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V1.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
