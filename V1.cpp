@@ -7,6 +7,9 @@ struct C_Tank
     double r ;
     double D, l ;
     double x_d, y_d ;
+    double XP;
+    double max_XP;
+    double lvl;
     COLORREF Tank, Dulo ;
     } ;
 
@@ -16,15 +19,15 @@ struct C_snaryad
     double vx, vy ;
     double l ;
     double x0, y0 ;
+    double lvl;
     COLORREF color ;
     } ;
 
 const double XWindow = GetSystemMetrics (SM_CXSCREEN), YWindow = GetSystemMetrics (SM_CYSCREEN) ;
-double XP = 15;
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) ;
 void Draw_Snaryad (C_snaryad * s) ;
-void Draw_XP () ;
+void Draw_XP (double xp) ;
 void Vistrel (C_snaryad snaryad [], C_Tank tank [], int * d);
 void Prisv_zn_prot (C_Tank sopernik []);
 //void Prisv_zn_sn_p (C_snaryad snaryad_p [][]);
@@ -38,7 +41,7 @@ int main ()
     _txWindowStyle &= ~ WS_CAPTION ;
     txCreateWindow (XWindow, YWindow) ;
 
-    C_Tank tank     [1] = {100, 100, 0, 0, 40, 20, 90, 0, 0, RGB (0, 0, 255), RGB (150, 150, 150)} ;
+    C_Tank tank     [1] = {100, 100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (0, 0, 255), RGB (150, 150, 150)} ;
     C_Tank sopernik [3] = {} ;
     C_snaryad snaryad [10] = {} ;
     C_snaryad snaryad_p [3][40] = {} ;
@@ -51,6 +54,7 @@ int main ()
             {
             snaryad_p[i][n].x = -50 ;
             snaryad_p[i][n].color = RGB (230, 0, 0) ;
+            snaryad_p[i][n].lvl = 1;
             }
         }
     Prisv_zn_sn   (snaryad);
@@ -59,7 +63,7 @@ int main ()
     int k_prot = 0 ;
     int t_p_prot[3] = {} ;
 
-    for (int i = 0, t_p = 0; !GetAsyncKeyState (VK_ESCAPE) && XP > 0; i ++, t_p ++)
+    for (int i = 0, t_p = 0; !GetAsyncKeyState (VK_ESCAPE) && tank[0].XP > 0; i ++, t_p ++, tank[0].XP += 0.0025)
         {
         txBegin() ;
         txSetFillColor (TX_WHITE) ;
@@ -92,8 +96,15 @@ int main ()
                 {
                 if (dist (snaryad[i_].x, snaryad[i_].y, sopernik[n].x, sopernik[n].y) < sopernik[n].r + 20)
                     {
-                    sopernik[n].x = random (50, XWindow  - 50) ;
-                    sopernik[n].y = random (50, YWindow  - 50) ;
+                    if (sopernik[n].XP > 1) sopernik[n].XP --;
+                    else
+                        {
+                        sopernik[n].x = random (50, XWindow  - 50) ;
+                        sopernik[n].y = random (50, YWindow  - 50) ;
+                        sopernik[n].lvl ++;
+                        sopernik[n].max_XP = 1.5 + sopernik[n].lvl / 2;
+                        sopernik[n].XP = sopernik[n].max_XP;
+                        }
                     snaryad[i_].y = -50 ;
                     snaryad[i_].vx = 0 ;
                     snaryad[i_].vy = 0 ;
@@ -132,7 +143,7 @@ int main ()
 
                 if (dist (snaryad_p[i_][n].x, snaryad_p[i_][n].y, tank[0].x, tank[0].y) < tank[0].r + 20)
                     {
-                    XP--;
+                    tank[0].XP--;
                     snaryad_p[i_][n].y = -50 ;
                     snaryad_p[i_][n].vx = 0 ;
                     snaryad_p[i_][n].vy = 0 ;
@@ -153,12 +164,14 @@ int main ()
             sopernik[n].y += sopernik[n].vy;
             }
 
-        Draw_XP ();
+        //Draw_XP (tank[0].XP);
 
-        if (XP <= 0)
+        if (tank[0].XP <= 0)
             {
             for (int b = 0;  b < 10000000000 && !GetAsyncKeyState (VK_ESCAPE);  b++) ;
             }
+
+        if (tank[0].XP >= tank[0].max_XP) tank[0].XP = tank[0].max_XP;
 
         txEnd() ;
         }
@@ -190,6 +203,15 @@ void Draw_tank (C_Tank * tank, double SledX, double SledY)
     txCircle (tank->x, tank->y, tank->r) ;
     tank->x_d = tank->l * cos (atan_ (Y_m , X_m)) + tank->x ;
     tank->y_d = tank->l * sin (atan_ (Y_m , X_m)) + tank->y ;
+
+    POINT XP_ [4] = {{tank->x - tank->r, tank->y - tank->r - 5},
+                     {tank->x - tank->r, tank->y - tank->r - 10},
+                     {tank->x - tank->r + tank->XP * 2 * tank->r / tank->max_XP, tank->y - tank->r - 10},
+                     {tank->x - tank->r + tank->XP * 2 * tank->r / tank->max_XP, tank->y - tank->r - 5}};
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (RGB (0, 240, 0));
+    txPolygon (XP_, 4);
     }
 
 void Draw_Snaryad (C_snaryad * s)
@@ -201,9 +223,9 @@ void Draw_Snaryad (C_snaryad * s)
     txCircle (s->x, s->y, 16) ;
     }
 
-void Draw_XP ()
+void Draw_XP (double xp)
     {
-    POINT XP_ [4] = {{200, 30}, {200, 45}, {200 + XP * (XWindow - 400) / 15, 45}, {200 + XP * (XWindow - 400) / 15, 30}};
+    POINT XP_ [4] = {{200, 30}, {200, 45}, {200 + xp * (XWindow - 400) / 15, 45}, {200 + xp * (XWindow - 400) / 15, 30}};
     txSetColor (TX_BLACK);
     txSetFillColor (RGB (0, 240, 0));
     txPolygon (XP_, 4);
@@ -230,6 +252,9 @@ void Prisv_zn_prot (C_Tank sopernik [])
         sopernik[i].r = 30 ;
         sopernik[i].D = 15 ;
         sopernik[i].l = 75 ;
+        sopernik[i].XP = 2 ;
+        sopernik[i].max_XP = 2;
+        sopernik[i].lvl = 1;
         sopernik[i].Tank = RGB (255, 0, 0) ;
         sopernik[i].Dulo = RGB (130, 130, 130) ;
         }
@@ -253,6 +278,7 @@ void Prisv_zn_sn (C_snaryad snaryad [])
         {
         snaryad[i].x = -50 ;
         snaryad[i].color = RGB (0, 0, 230) ;
+        snaryad[i].lvl = 1;
         }
     }
 
