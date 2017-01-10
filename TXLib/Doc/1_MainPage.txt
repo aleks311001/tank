@@ -1,0 +1,356 @@
+//{============================================================================
+//! @file       Doc/1_MainPage.txt
+//! @brief      Главная страница системы помощи
+//}============================================================================
+
+/*! @mainpage
+
+    @section    MainPage              Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib)
+
+                $Version: 00172a, Revision: 104 $
+                $Date: 2014-08-09 16:37:26 +0400 $
+                $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru> $
+
+    @section    Description           Назначение
+
+                TX Library - компактная графическая библиотека для Win32 на С++.
+                Это небольшая "песочница" для начинающих реализована с целью
+                помочь им в изучении простейших принципов программирования.
+                Документация на русском языке.
+
+                Философия<sup><a href=#Refs><small>1</small></a></sup> TX Library -
+                облегчить первые шаги в программировании и подтолкнуть к творчеству
+                и самостоятельности.
+
+                TX Library is a tiny graphics library for Win32 written in C++.
+                It is a small sandbox for the very beginners to help them to
+                learn basic programming principles. The documentation is
+                currently in Russian.
+
+    @section    Contents              Разделы системы помощи
+
+             -  @ref Contents        "Информация о библиотеке"
+             -  @ref Drawing         "Рисование"
+             -  @ref Mouse           "Поддержка мыши"
+             -  @ref Misc            "Разное"
+             -  @ref Dialogs         "Диалоговые окна"
+             -  @ref Service         "Служебное"
+             -  @ref Technical       "Технические детали"
+
+    @par        Примеры:
+
+             -  @ref Tutor_1st       "Простейший пример"
+             -  @ref Tutor_1st_2     "Слегка улучшенный пример"
+             -  @ref Tutor_Funcs     "Пример с функциями"
+             -  @ref Tutor_Params    "Пример с функциями с параметрами"
+             -  @ref Tutor_Loops     "Пример с циклами"
+             -  @ref Tutor_Loops_2   "Расширенный пример с циклами"
+
+    @section    OfficialSite          Представительство в Интернет
+
+                Официальный сайт библиотеки:
+                <a href=http://txlib.ru>txlib.ru.</a>
+                См. также <a href=http://txlib.sourceforge.net> страницу проекта на SourceForge</a>
+                и <a href=http://code.google.com/p/txlib>на Google Code.</a>
+
+    @warning    <b>Это альфа-версия.
+                Для использования требуется согласование с автором библиотеки.</b> @n
+                Правила использования материалов библиотеки и сайта см. на
+                <a href=http://txlib.ru> официальном сайте.</a>
+
+    @par        Ссылки:
+           -    <a href="http://dl.dropbox.com/u/1557330/TXLib/TXLib-v0172a.rar.exe"><b>Скачать TX Library</b></a>
+                <a href="http://sourceforge.net/project/platformdownload.php?group_id=213688">(Зеркало)</a>
+           -    <a href="http://storage.ded32.net.ru/Lib/TX/TXUpdate/Doc/HTML.ru">Русская документация</a>
+              - <a href="http://dl.dropbox.com/u/1557330/TXLib/TXUpdate/TXLib%20Help.chm">Она же в chm</a>
+                <a href="http://sourceforge.net/projects/txlib/files/TXLib/TXLib%20Help.chm/download">(Зеркало)</a>
+           -    <a href="http://dl.dropbox.com/u/1557330/TXLib/TXUpdate/TXLib.h">Исходный текст</a>
+                <a href="http://sourceforge.net/projects/txlib/files/TXLib/TXLib.h/download">(Зеркало)</a>
+              - <a href="http://code.google.com/p/txlib/source/browse">Трекер VCS</a>
+           -    <a href="http://dl.dropbox.com/u/1557330/TXLib/TXLib-Update.rar.exe">Автообновление</a>
+                <a href="http://sourceforge.net/projects/txlib/files/TXLib/TXLib-Update.rar.exe/download">(Зеркало)</a>
+
+    @section    Screenshots           Скриншоты
+
+    @table
+    @tr @image html Example03.png    "Example03.cpp: Простейшая программа"
+    @td @image html Movie.png        "Movie.cpp: Мультфильм"
+    @tr @image html Shaker.png       "Shaker.cpp: Простая физическая модель движения"
+    @td @image html Phong.jpg        "Phong.cpp: Модель освещения сферы"
+    @tr @image html Tree.png         "Tree.cpp: Простая рекурсия: Дерево"
+    @td @image html Tennis.jpg       "Tennis.cpp: Использование картинок"
+    @endtable
+
+    @section    UsageWarning          Предупреждение, или TXLib @d это всего лишь инструмент
+
+                Библиотека TXLib @d это всего лишь инструмент для того, чтобы облегчить первые шаги
+                в программировании. Однако этот инструмент, как и любой другой, может быть применен неправильно.
+                (Тем не менее, в основу TXLib заложены некоторые принципы, помогающие конструктивному
+                неиллюзорному обучению.)
+
+                Сама по себе любая библиотека или язык программирования не научит начинающего писать
+                программы грамотно. Научит этому разработка своих, достаточно больших проектов, в сочетании
+                с тесным общением профессионалов, желающих помочь начинающим. Такие профессионалы должны
+                обладать и опытом разработки больших программ, и педагогическими навыками, чтобы передать
+                свой опыт начинающим. К сожалению, не всегда это совпадает. Профессионалы-программисты зачастую
+                не хотят лезть в обучение, где хватает своих проблем. С другой стороны, недобросовестные
+                учителя, иногда даже в сильных школах и курсах, хватаются за удобные им инструменты обучения
+                (чужие или свои библиотеки, среды и языки программирования), не удосуживаясь следить за
+                <a href="http://www.google.ru/search?q=literate+programming">качеством кода обучаемых, за стилем
+                и направлением их мышления,</a> ограничиваясь лишь видимостью обучения.
+                Такие образовательные иллюзии очень вредны. Заметны они становятся достаточно  поздно, когда
+                выясняется, что ученик, легко пишущий небольшие программы (пусть даже логически насыщенные,
+                олимпиадные), принципиально не способен написать что-то большее, путается в коде, а другие,
+                в том числе и профессионалы, его не понимают в силу спутанности его мышления и неумения внятно
+                выразить мысли на уровне современных стандартов. Чтобы преодолеть этот барьер, воздвигнутый
+                нерадивым преподавателем (или вашей собственной нерадивостью), приходится серьезно и самостоятельно
+                переучиваться @d иногда будучи уже студентом или аспирантом. Либо смириться и "носить кофе
+                программистам".
+
+                Искусство программирования @d это искусство мышления, не надо это забывать, <i>дорогие преподаватели
+                и учащиеся.</i>
+
+    @par        Принципы, заложенные в TXLib для повышения качества обучения:
+
+              - <b>Сделай сам.</b> В TXLib многие вещи сделаны или оставлены не совсем удобными для применения.
+                Это @d предложение подумать, как сделать это самому, и, как правило, для этого в TXLib есть средства.
+                Сделав, покажите решение другим, если они быстро поймут его и оценят -- то ваше решение удачное.
+
+              - <b>Загляни в <a href="http://storage.ded32.net.ru/Lib/TX/TXUpdate/Doc/HTML.ru"><b>Help.</b></a></b>
+                (Слово неспроста выбрано английским, потому что большинство информации в современном программировании
+                @d на английском языке. Учите его.) Под системой помощи понимается не только TXLib Help, но и весь
+                <a href="http://google.com">Internet</a>.
+
+              - <b>Посмотри, как сделано. Загляни в @ref TXLib.h "код (см. \"Исходные тексты\")."</b> Он создавался
+                в том числе как пример программной системы со своей логикой и со своей реализацией, а некоторые функции
+                можно понять только по коду, потому что их нет в системе помощи. Не всегда решения, примененные в TXLib
+                оптимальны даже с точки зрения автора @d он надеется, что это убережет желающих научиться качественно,
+                но нетерпеливых учеников, от @strike Ctrl+C и Ctrl+V @endstrike плагиата.
+
+              - <b>Посмотри, как сделано <i>иначе.</i></b> TXLib @d не единственная графическая библиотека, и реализация
+                "простого графического холста", примененная в ней @d не единственное решение. Посмотри, как устроены
+                десятки других графических библиотек. Но <i>избегай плохого кода</i> (его можно определить по тому, как
+                морщатся профессионалы, глядя на него, если у вас нет более объективных средств такого определения) @d он
+                научит вас плохому. Хороший, но сложный код (глядя на него, профессионалы не морщатся, а <i>вздыхают</i>)
+                @d отложи до времени и вернись к нему позже.
+
+              - <b>Выйди за пределы "песочницы".</b> Это усиление принципа "сделай сам". Собери вместе свои мысли про
+                хорошую библиотеку, посмотри, как устроен TXLib и <a href="http://www.google.ru/search?q=простая+графическая+библиотека">
+                его аналоги,</a> сделай свою библиотеку, лучше TXLib'а. Это нетрудно. :) Примеры таких библиотек можно найти на
+                <a href="http://txlib.ru">сайте TXLib</a> и в <a href="http://www.google.ru/search?q=удобная+графическая+библиотека">
+                Интернете,</a> и некоторые из них сделаны как раз начинающими.
+
+                Удачи, и May the Source be with you! :)
+
+    @section    PlatformsSupported    Поддерживаемые платформы
+
+           -    Среды программирования и компиляторы
+             -# CodeBlocks 12.11  + MinGW GCC 4.8.1 (NUWEN)
+             -# CodeBlocks 12.11  + MinGW GCC 4.7.2 (NUWEN)
+             -# CodeBlocks 12.11  + MinGW GCC 4.7.1
+             -# CodeBlocks 10.05  + MinGW GCC 4.7.1 (TDM-GCC), 32-bit и 64-bit
+             -# CodeBlocks 10.05  + MinGW GCC 4.6.1 (TDM-GCC)
+             -# CodeBlocks 10.05  + MinGW GCC 4.4.1
+             -# CodeBlocks 8.02   + MinGW GCC 3.4.5
+             -# CodeBlocks 1.0rc2 + MinGW GCC 3.4.4
+             -# Dev-CPP 4.9.9.2   + MinGW GCC 3.4.2
+             -# Microsoft Visual Studio 11.0 (2012)
+             -# Microsoft Visual Studio 10.0 (2010)
+             -# Microsoft Visual Studio  9.0 (2008)
+             -# Microsoft Visual Studio  8.0 (2005)
+             -# Microsoft Visual Studio  7.1 (2003)
+             -# Microsoft Visual Studio  6.0 (1998)
+             -# Intel C++ Compiler 13.0 (2013)
+             -# Intel C++ Compiler 9.0
+           -    Операционные системы
+             -# Windows 8, 8.1         ru/en
+             -# Windows 7              ru/en
+             -# Windows Vista          ru/en
+             -# Windows 2003 SP1 R1/R2 ru/en
+             -# Windows XP   SP2/SP3   ru/en
+             -# Windows 2000 SP4       ru/en
+             -# Linux + Wine
+                - Ubuntu 10.04, 11.04 + Wine 1.2.2+
+             -# MacOS X + Wine
+                - Snow Leopard 10.6.8 + Wine 1.4-rc2
+
+    @note
+             -  <b>Принудительно отключается режим UNICODE</b> (кроме редактора ресурсов
+                Visual Studio). Для явной работы с UNICODE-функциями используйте суффикс W.
+             -  Принудительно включается режим @c _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES.
+
+    @warning    Если программа разрабатывалась на определенных платформах с настройками
+                по умолчанию, то во время исполнения могут потребоваться файлы библиотек,
+                без которых программа не запустится:
+                @n
+    @table      @tr @b Компилятор      @td <b>Среда разработки</b>     @td @b Конфигурация @td <b>Требуемые библиотеки</b> @td
+
+                @tr @c GCC @c g++      @td CodeBlocks, DevCpp, Eclipse @td Debug, Release  @td @c msvcrt.dll @td
+                
+                @tr Microsoft Visual C @td Visual Studio 6             @td Debug, Release  @td <i>Не требуются</i> @td
+                @tr Intel Compiler 9.0 @td Visual Studio 6             @td Debug, Release  @td <i>Не требуются</i> @td
+
+                @tr Microsoft Visual C @td Visual Studio 2003          @td Debug, Release  @td <i>Не требуются</i> @td
+                @tr Intel Compiler 9.0 @td Visual Studio 2003          @td Debug, Release  @td <i>Не требуются</i> @td
+                @tr Microsoft Visual C @td Visual Studio 2005          @td Debug           @td @c msvcp80d.dll,    @c msvcr80d.dll  @td
+                @tr Microsoft Visual C @td Visual Studio 2005          @td Release         @td @c msvcp80.dll, @ss @c msvcr80.dll   @td
+                @tr Microsoft Visual C @td Visual Studio 2008          @td Debug           @td @c msvcp90d.dll,    @c msvcr90d.dll  @td
+                @tr Microsoft Visual C @td Visual Studio 2008          @td Release         @td @c msvcp90.dll, @ss @c msvcr90.dll   @td
+                @tr Microsoft Visual C @td Visual Studio 2010          @td Debug           @td @c msvcp100d.dll,   @c msvcr100d.dll @td
+                @tr Microsoft Visual C @td Visual Studio 2010          @td Release         @td @c msvcp100.dll,@s  @c msvcr100.dll  @td
+                @tr Microsoft Visual C @td Visual Studio 2012          @td Debug           @td @c msvcp110d.dll,   @c msvcr110d.dll @td
+                @tr Microsoft Visual C @td Visual Studio 2012          @td Release         @td @c msvcp110.dll,@s  @c msvcr110.dll  @td
+    @endtable
+                Посмотреть эти зависимости можно утилитой <a href=http://www.dependencywalker.com>Depends.exe</a>.
+
+    @section    UsageNotes            Особенности использования
+
+    @note    Файл @c TXLib.h должен быть включен <tt>(\#include)</tt> в программу:
+             -  @b До или вместо файла @c @b windows.h. Либо надо задать @c (\#define) константы @c WINVER и
+                @c _WIN32_IE не ниже @c 0x0500 и отменить @c (\#undef) макросы @c UNICODE и @c _UNICODE.
+             -  @b До или вместо файлов @c @b string.h или @c @b stdio.h, если используется режим строгого
+                соответствия стандарту @b ANSI. Имейте в виду, что эти файлы могут включаться в @c windows.h.
+             -  @b После включения библиотек <a href=http://boost.org><tt>boost</tt></a>, использующих модуль
+                @c @b boost::preprocessor.
+
+    @title      Опции командной строки: </dt><dd>
+
+    <table class=smalltext>
+                <tr valign=middle><td>           Компилятор                       </td><td> Режим   </td><td> Опции командной строки </td></tr>
+                <tr valign=middle><td rowspan=2> Dev-Cpp 4.9.9.2,  GCC&nbsp;3.4.2 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++98 </i>           -Wall         -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O2 <i> -ansi -std=c++98 </i>           -Wall         -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings </td></tr>
+                <tr valign=middle><td rowspan=2> CodeBlocks 10.05, GCC&nbsp;3.4.2 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++98 </i> -pedantic -Wall         -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O2 <i> -ansi -std=c++98 </i> -pedantic -Wall         -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings </td></tr>
+                <tr valign=middle><td rowspan=2> CodeBlocks  8.02, GCC&nbsp;3.4.5 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++98 </i> -pedantic -Wall         -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O2 <i> -ansi -std=c++98 </i> -pedantic -Wall         -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings </td></tr>
+                <tr valign=middle><td rowspan=2> CodeBlocks 10.05, GCC&nbsp;4.4.1 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++0x </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O2 <i> -ansi -std=c++0x </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel </td></tr>
+                <tr valign=middle><td rowspan=2> TDM-GCC,          GCC&nbsp;4.6.1 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++0x </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O3 <i> -ansi -std=c++0x </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel </td></tr>
+                <tr valign=middle><td rowspan=2> CodeBlocks 12.11, GCC&nbsp;4.7.2 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++11 </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel -Wstack-usage=8192 </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O3 <i> -ansi -std=c++11 </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel -Wstack-usage=8192 </td></tr>
+                <tr valign=middle><td rowspan=2> CodeBlocks 12.11, GCC&nbsp;4.8.0 </td><td> Debug   </td><td> -D&nbsp;_DEBUG -g  <i> -ansi -std=c++11 </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel -Wstack-usage=8192 </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> -D&nbsp;NDEBUG -O3 <i> -ansi -std=c++11 </i> -pedantic -Wall -Wextra -Weffc++ -fexceptions -Wcast-align -Wfloat-equal -Winit-self -Winline -Wredundant-decls -Wshadow -Wundef -Wunreachable-code -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wcast-qual -Wconversion -Wformat=2 -Wstrict-aliasing -Wswitch-default -Wswitch-enum -Wwrite-strings -Wmissing-declarations -Wmissing-include-dirs -Wlogical-op -Wstrict-null-sentinel -Wstack-usage=8192 </td></tr>
+                <tr valign=middle><td rowspan=2> MSVS&nbsp;6                      </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm  /GX /GR /GZ <a href="http://support.microsoft.com/kb/199057">/Zi</a>              /MTd /FD /W4                                                                              /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2      /GX /GR                                                                           /MT  /FD /W4                                                                              /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle><td rowspan=2> Intel C++ 9 (MSVS&nbsp;6)        </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm  /GX /GR /GZ <a href="http://support.microsoft.com/kb/199057">/Zi</a>              /MTd /FD /W4 /Wall /Wcheck /Wport                                                         /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2      /GX /GR                                                                           /MT  /FD /W4 /Wall /Wcheck /Wport                                                         /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle><td rowspan=2> MSVS&nbsp;2003                   </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm  /GS /GR                                       /EHsc /RTC1 /RTCc     /Wp64 /TP /ZI /MTd     /W4                                                                              /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2      /GS /GR                                       /EHsc                 /Wp64 /TP /Zi /MT  /FD /W4                                                                              /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle><td rowspan=2> Intel C++ 9 (MSVS&nbsp;2003)     </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm  /GS /GR     /Gd                               /EHsc /RTC1 /RTCc     /Wp64     /ZI /MTd     /W4 /Wall /Wcheck /Wport /Qtrapuv /Qmultibyte-chars /Qvc7.1                      /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2          /GR     /Gd                               /EHsc                 /Wp64     /Zi /MT  /FD /W4 /Wall /Wcheck /Wport          /Qmultibyte-chars /Qvc7.1                      /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_MBCS </td></tr>
+                <tr valign=middle><td rowspan=2> MSVS&nbsp;2005                   </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm                                                /EHsc /RTC1 /RTCc     /Wp64 /TP /ZI /MTd     /W4 /analyze /fp:except                                                          /D&nbsp;WIN32 /D&nbsp;_CONSOLE </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2              /GL                                   /EHsc                 /Wp64 /TP /Zi /MT  /FD /W4 /analyze                                                                     /D&nbsp;WIN32 /D&nbsp;_CONSOLE </td></tr>
+                <tr valign=middle><td rowspan=2> MSVS&nbsp;2008                   </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm                                                /EHsc /RTC1 /RTCc           /TP /ZI /MTd     /W4 /analyze /fp:except                                                          /D&nbsp;WIN32 /D&nbsp;_CONSOLE </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2              /GL             /Gy /Oi               /EHsc                       /TP /Zi /MT  /FD /W4 /analyze                                                                     /D&nbsp;WIN32 /D&nbsp;_CONSOLE </td></tr>
+                <tr valign=middle><td rowspan=2> MSVS&nbsp;2010                   </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm  /GS /GR     /Gd                 /Oy-          /EHsc /RTC1 /RTCc /MP /WX-  /TP /ZI /MTd     /W4 /analyze /fp:except /fp:precise /Zc:wchar_t /Zc:forScope                     /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;CODE_ANALYSIS </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2 /Gm- /GS /GR /GL /Gd         /Gy /Oi /Oy-          /EHsc             /MP /WX-  /TP /Zi /MT      /W4 /analyze            /fp:precise /Zc:wchar_t /Zc:forScope                     /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;CODE_ANALYSIS </td></tr>
+                <tr valign=middle><td rowspan=2> MSVS&nbsp;2012                   </td><td> Debug   </td><td> /D&nbsp;_DEBUG /Od /Gm  /GS /GR     /Gd /GF             /Oy-          /EHsc /RTC1 /RTCc /MP /WX-  /TP /ZI /MTd     /W4 /analyze /fp:except /fp:precise /Zc:wchar_t /Zc:forScope /sdl /openmp /Qpar- /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_WINDOWS      </td></tr>
+                <tr valign=middle>                                                     <td> Release </td><td> /D&nbsp;NDEBUG /O2 /Gm- /GS /GR /GL /Gd /GF /GT /Gy /Oi /Oy- /Ob2 /Ot /EHsc             /MP /WX-  /TP /Zi /MT      /W4 /analyze            /fp:precise /Zc:wchar_t /Zc:forScope /sdl /openmp /Qpar  /D&nbsp;WIN32 /D&nbsp;_CONSOLE /D&nbsp;_WINDOWS      </td></tr>
+    </table>
+                Эти ключи могут вызывать появление предупреждений для файла @c TXLib.h о символе @c $, использующемся для
+                отладки, и о директиве @c \#warning. Они настолько суровы, что могут вызвать <small>@strike Чака Норриса @endstrike</small>
+                предупреждения даже для файлов стандартных библиотек C++ (вне зависимости от того, используется TXLib.h или нет).
+
+    @section    VersionHistory        История изменений
+
+    - <b>Версия 0.172</b>
+           -#   <b>API</b>
+             -# Добавлена cовместимость с MS Visual Studio 2010 и 2012.
+             -# Соответствие стандарту @c C++0x для MSVS 2010, MSVS 2012, GCC 4.6.1 и @c C++11 для GCC 4.7.1
+                в режиме компиляции @c -Wall @c -Wextra @c -Weffc++ (см. таблицу опций компиляторов).
+             -# Убраны лишние предупреждения о неинициализированнях полях структур при
+                инициализации вида <tt>= {}</tt> (только для компиляторов MS и GCC версии 4).
+             -# Изменен диалог About, заголовки окна и окон сообщений.
+             -# Изменен и дополнен формат вывода ошибок.
+             -# Добавлены функции для работы с консолью.
+             -# Добавлены новые функции служебного характера.
+             -# Макрос @ref TX_THROW переименован в @ref TX_ERROR, макрос @ref TX_NEEDED @d в @ref asserted.
+                Добавлены макросы @ref verify, @ref verified. Обеспечена обратная совместимость.
+             -# Макрос @c _TX_IMPORT переименован @ref _TX_DLLIMPORT, так больше похоже на __declspec (dllimport).
+             -# Убрана облегченная поддержка регионов отсечения (теперь @d только средствами Win32).
+             -# Добавлена системная клавиша @c Alt+Ctrl+Shift+PrintScreen, временно отменяющая блокировку
+                обновления окна, см. txBegin().
+             -# Добавлена многооконность и работа в DLL (experimental and not fully documented).
+             -# Файл @c Graphics.h больше не поддерживается @d не нужен он никому.
+           -#   <b>Документация</b>
+             -# Дополнен текст документации, примеров использования, добавлены демонстрационные программы
+                и дополнения от разных авторов (в папке TX/Examples/Demo). Подробно документирован исходный
+                текст функции txInputBox() для иллюстрации работы с диалогами Win32.
+             -# Документация по примерам вынесена в отдельный файл.
+             -# TXLib теперь упоминает <a href="http://sisinmaru.blog17.fc2.com">кота Мару (Maru the cat)</a>
+                в одной из своих функций. TXLib is now referencing <a href="http://sisinmaru.blog17.fc2.com">
+                Maru the cat</a> in one of its functions.
+           -#   <b>Реализация</b>
+             -# Во все функции добавлены проверки параметров и установка кода ошибки SetLastError().
+             -# Упрощен механизм трансляции текста консоли в окно TXLib.
+             -# Добавлена динамическая иконка окна.
+             -# Добавлено автоматическое удаление HDC и предупреждение об этом через Tray
+                Notification.
+             -# Добавлена принудительная установка русского языка в консоли, см. пляски с бубном
+                в @ref _txConsole_SetUnicodeFont().
+             -# Если процесс с TXLib запущен в среде программирования, которая будет ожидать
+                нажатия клавиши для завершения процесса, TXLib теперь завершает процесс-родитель
+                этой среды. Поддерживаются MS Visual Studio, CodeBlocks, Eclipse.
+                См. @ref _TX_WAITABLE_PARENTS.
+             -# Поддержка среды Eclipse с ее <i>альтернативно талантливой</i> идеей эмулировать консоль
+                в эклипсовском окне и использованием каналов (pipes) для ввода-вывода.
+             -# Код библиотеки верифицирован в статических анализаторах кода
+                <a href="http://cppcheck.sourceforge.net">Cppcheck v1.53</a>,
+                <a href="http://www.viva64.com/ru/pvs-studio">PVS-Studio v4.54</a> и
+                <a href="http://coverity.com">Coverity Scan</a>, и в динамическом анализаторе
+                <a href="http://www.microfocus.com/products/micro-focus-developer/devpartner/index.aspx">
+                MicroFocus DevPartner v10.5</a>.
+           -#   <b>Установка</b>
+             -# Убраны сообщения об ошибках в Setup.js
+    - <b>Версия 0.171</b>
+             -# Соответствие стандартам MS SAL и режиму компиляции /analyze в MSVS 2005, 2008.
+             -# Восстановлен механизм обновления по таймеру.
+             -# Русский язык в консоли в _txThrow().
+    - <b>Версия 0.170</b>
+             -# Исправление ошибок в @ref _txCanvas_OnPAINT (NULL DC).
+             -# Упрощен механизм генерации сообщений для обновления экрана.
+             -# Добавлена трассировка (@ref TX_TRACE).
+    - <b>Версия 0.169</b>
+             -# Добавлена работа с диалоговыми окнами (still experimental).
+    - <b>Версия 0.166</b>
+             -# Исправлена работа при использовании отладчиков на платформах Win2000, WinXP.
+             -# Документированы отладочные функции и макросы.
+    - <b>Версия 0.165</b>
+             -# Добавлены Мастера проектов для VS6, VS2003-2008, CodeBlocks, DevCPP.
+             -# Добавлена интеграция с системой помощи для VS2003-2008.
+    - <b>Версия 0.164</b>
+             -# Добавлена cовместимость с Visual Studio 2005.
+             -# Изменен размер шрифта консоли и шрифта, выбранного по умолчанию.
+    - <b>Версия 0.150</b>
+             -# Добавлены txTransparentBlt(), txAlphaBlend() - Win98 и старше.
+             -# ВНИМАНИЕ! Функции txSetBkColor(), txBkColor(), txGetBkColor()
+                теперь называются txSetFillColor(), txFillColor(), txGetFillColor()
+                (совместимость со старыми версиями - в Graphics.h).
+    - <b>Версия 0.145</b>
+             -# Добавлена txPlaySound().
+    - <b>Версия 0.144</b>
+             -# Исправлен баг в txMouseButtons().
+
+    @section    Trackers              Сообщения об ошибках
+
+    Тем, кто зарегистрирован на <a href=https://sourceforge.net/account/login.php>SourceForge.net,</a>
+    можно:
+
+    - <a href=https://sourceforge.net/tracker/?func=add&group_id=213688&atid=1026710>
+      <b>Сообщить об ошибке</b></a>
+    - <a href=https://sourceforge.net/tracker/?func=add&group_id=213688&atid=1026713>
+      <b>Предложить улучшение</b></a>
+
+    @section    Refs                  Литература
+    -# <a href=http://storage.ded32.net.ru/Materials/ConferencePseudoScientific-2003.pdf>
+       Сальников В.Н., Ильин В.В., Шарко Ф.С., Митина Н.В., Белая И.В., Индукаев А.К., Дединский И.Р.
+       Структура и динамика поведенческих реакций в условиях информационной перегрузки. <i>Batman
+       Proceedings in Sheep Philosophy,</i> 2003, Vol. 22. pp. 23-24.</a>
+*/
+
+
+
+
+
+

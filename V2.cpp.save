@@ -34,6 +34,8 @@ void Vistrel (C_snaryad snaryad [], C_Tank tank [], int * d);
 void Prisv_zn_prot (C_Tank sopernik []);
 //void Prisv_zn_sn_p (C_snaryad snaryad_p [][]);
 void Prisv_zn_sn (C_snaryad snaryad []);
+void Prisv_Zn_Per_data (int P_D [], C_Tank tank);
+void Prisv_Zn_Tank_sop (C_Tank * tank, int P_D []);
 double atan_ (double x, double y) ;
 double sqrt_ (double x) ;
 double dist (double x1, double y1, double x2, double y2) ;
@@ -47,6 +49,10 @@ int main ()
     C_Tank tank     [2] = {{          100,           100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (0, 0, 255), RGB (150, 150, 150)},
                            {XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (255, 0, 0), RGB (150, 150, 150)}} ;
     //C_Tank sopernik [3] = {} ;
+    
+    int Per_Data_0 [] = {};
+    int Per_Data_1 [] = {};
+    
     C_snaryad snaryad_0 [10] = {} ;
     C_snaryad snaryad_1 [10] = {} ;
 
@@ -59,7 +65,7 @@ int main ()
     int d = 0, d_prot = 0 ;
     int k_prot = 0 ;
     int t_p_prot[3] = {} ;
-    
+
     TX_SOCKET client = txCreateSocket (TX_CLIENT, SERVER_IP);
 
     for (int i = 0, t_p = 0; !GetAsyncKeyState (VK_ESCAPE) && tank[0].XP > 0; i ++, t_p ++, tank[0].XP += 0.0025)
@@ -107,7 +113,14 @@ int main ()
             }
 
         if (tank[0].XP >= tank[0].max_XP) tank[0].XP = tank[0].max_XP;
-
+        
+        Prisv_Zn_Per_data (Per_Data_0, tank[0]);
+        
+        txSendTo   (client, &Per_Data_0, 14);
+        txRecvFrom (client, &Per_Data_1, 14);
+        
+        Prisv_Zn_Tank_sop (tank [1], Per_Data_1);
+        
         txEnd() ;
         }
     }
@@ -193,6 +206,40 @@ void Prisv_zn_prot (C_Tank sopernik [])
         sopernik[i].Tank = RGB (255, 0, 0) ;
         sopernik[i].Dulo = RGB (130, 130, 130) ;
         }
+    }
+
+void Prisv_Zn_Per_data (int P_D [], C_Tank tank)
+    {
+    P_D [0]  = tank.x;
+    P_D [1]  = tank.y;
+    P_D [2]  = tank.vx;
+    P_D [3]  = tank.vy;
+    P_D [4]  = tank.r;
+    P_D [5]  = tank.D;
+    P_D [6]  = tank.l;
+    P_D [7]  = tank.x_d;
+    P_D [8]  = tank.y_d;
+    P_D [9]  = tank.XP;
+    P_D [10] = tank.max_XP;
+    P_D [11] = tank.lvl;
+    P_D [12] = txMouseX ();
+    P_D [13] = txMouseY ();
+    }
+
+void Prisv_Zn_Tank_sop (C_Tank * tank, int P_D [])
+    {
+    tank->x   = P_D [0];
+    tank->y   = P_D [1];
+    tank->vx  = P_D [2];
+    tank->vy  = P_D [3]; 
+    tank->r   = P_D [4];
+    tank->D   = P_D [5];
+    tank->l   = P_D [6]; 
+    tank->x_d = P_D [7];
+    tank->y_d = P_D [8];
+    tank->XP  = P_D [9];
+    tank->max_XP = P_D [10];
+    tank->lvl = P_D [11];
     }
 
 /*void Prisv_zn_sn_p (C_snaryad snaryad_p[][])

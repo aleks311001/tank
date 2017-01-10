@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>TX Library: Служебное</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen_.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Создано системой Doxygen 1.7.3 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="TXLib.png"></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TX Library&#160;<span id="projectnumber">Help &ndash; Version: 00172a, Revision: 104</span></div>
+   <div id="projectbrief"><s>&nbsp;ALL&nbsp;</s> Windows graphics in a sandbox</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00033.htm','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<h1>Служебное</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.htm">txAutoLock</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс для автоматической блокировки и разблокировки критической секции.  <a href="a00008.htm#_details">Подробнее...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400">txGDI</a>(command)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.  <a href="#ga365c78a96945ad9e0a6462c28e01d400"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+Вспомогательные функции</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.htm#gaff3d9c60900531f438a19216485bdd41">txUpdateWindow</a> (int update=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Разрешает или запрещает автоматическое обновление изображения в окне.  <a href="#gaff3d9c60900531f438a19216485bdd41"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.htm#gad4ee4d2a16f8f38412e0e7b1c380bf4d">txSelectObject</a> (HGDIOBJ obj)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает текущий объект GDI.  <a href="#gad4ee4d2a16f8f38412e0e7b1c380bf4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.htm#ga93cecf6b117fc403c0488f388b78a6d1">txIDontWantToHaveAPauseAfterMyProgramBeforeTheWindowWillClose_AndIWillNotBeAskingWhereIsMyPicture</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Делает нечто иногда удобное. См. название функции.  <a href="#ga93cecf6b117fc403c0488f388b78a6d1"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+Очень служебные функции</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">WNDPROC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00033.htm#ga30fb1a6913174dfcea5079391f655be2">txSetWindowsHook</a> (WNDPROC wndProc=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает альтернативную функцию обработки оконных сообщений Windows (оконную функцию) для окна TXLib.  <a href="#ga30fb1a6913174dfcea5079391f655be2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2">txLock</a> (bool wait=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка холста (контекста рисования).  <a href="#ga532fa8a55c4f3d4f94ff0fdceae732b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00033.htm#ga8fe4ec4c66cb69ce337747fe65dd0cc6">txUnlock</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Разблокировка холста  <a href="#ga8fe4ec4c66cb69ce337747fe65dd0cc6"></a><br/></td></tr>
+</table>
+<hr/><h2>Макросы</h2>
+<a class="anchor" id="ga365c78a96945ad9e0a6462c28e01d400"></a><!-- doxytag: member="TXLib.h::txGDI" ref="ga365c78a96945ad9e0a6462c28e01d400" args="(command)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define txGDI</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">command</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>Команда GDI (возможно, возвращающая значение)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Значение, возвращаемое вызываемой функцией GDI. Если система рисования не готова, возвращается значение false.</dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Если система рисования не готова (<a class="el" href="a00029.htm#ga37ac6a8a8899decc9e2979d7ccd11f67" title="Возвращает дескриптор контекста рисования холста">txDC()</a> возвращает NULL), то команда GDI не выполняется, а <a class="el" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400" title="Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.">txGDI()</a> возвращает значение false. <br/>
+</dd>
+<dd>
+Если в вызове функции GDI используются запятые, то используйте двойные скобки, чтобы получился один параметр, так как <a class="el" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400" title="Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.">txGDI()</a> все-таки макрос.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#ga37ac6a8a8899decc9e2979d7ccd11f67" title="Возвращает дескриптор контекста рисования холста">txDC()</a>, <a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a>, <a class="el" href="a00033.htm#ga8fe4ec4c66cb69ce337747fe65dd0cc6" title="Разблокировка холста">txUnlock()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400" title="Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.">txGDI</a> (( Rectangle (<a class="code" href="a00029.htm#ga37ac6a8a8899decc9e2979d7ccd11f67" title="Возвращает дескриптор контекста рисования холста">txDC</a>(), x1, y1, x2, y2) ));  <span class="comment">// Не забудьте про две ((ДВЕ)) скобки</span>
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03526">3526</a></p>
+
+</div>
+</div>
+<hr/><h2>Функции</h2>
+<a class="anchor" id="gaff3d9c60900531f438a19216485bdd41"></a><!-- doxytag: member="TXLib.h::txUpdateWindow" ref="gaff3d9c60900531f438a19216485bdd41" args="(int update=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txUpdateWindow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>update</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Разрешает или запрещает автоматическое обновление изображения в окне. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">update</td><td>Режим обновления (true - разрешить, false - запретить).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Предыдущее состояние режима обновления.</dd></dl>
+<p>В отличие от <a class="el" href="a00029.htm#gae92e621aaed81f90e4d142356e38762a" title="Блокирует обновление изображения окна, во избежание мигания.">txBegin()</a> и <a class="el" href="a00029.htm#ga809dc04afd5348247846ee01ce9a06e6" title="Разблокирует обновление окна, заблокированное функцией txBegin().">txEnd()</a>, которые поддерживают вложенные вызовы и работают как "скобки для
+          замерзания картинки", <a class="el" href="a00029.htm#gaff3d9c60900531f438a19216485bdd41" title="Разрешает или запрещает автоматическое обновление изображения в окне.">txUpdateWindow()</a> позволяет явно установить или снять блокировку автоматического обновления.</p>
+<p>Более полную информацию о блокировке см. в функциях <a class="el" href="a00029.htm#gae92e621aaed81f90e4d142356e38762a" title="Блокирует обновление изображения окна, во избежание мигания.">txBegin()</a>, <a class="el" href="a00029.htm#ga809dc04afd5348247846ee01ce9a06e6" title="Разблокирует обновление окна, заблокированное функцией txBegin().">txEnd()</a> и <a class="el" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep()</a>.</p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#gae92e621aaed81f90e4d142356e38762a" title="Блокирует обновление изображения окна, во избежание мигания.">txBegin()</a>, <a class="el" href="a00029.htm#ga809dc04afd5348247846ee01ce9a06e6" title="Разблокирует обновление окна, заблокированное функцией txBegin().">txEnd()</a>, <a class="el" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep()</a>, <a class="el" href="a00029.htm#gaff3d9c60900531f438a19216485bdd41" title="Разрешает или запрещает автоматическое обновление изображения в окне.">txUpdateWindow()</a>, <a class="el" href="a00029.htm#gaa148d2040d20ed74cf46ab186c35f9ed" title="Запрещает или разрешает рисование мигающего курсора в окне.">txTextCursor()</a>, <a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a>, <a class="el" href="a00033.htm#ga8fe4ec4c66cb69ce337747fe65dd0cc6" title="Разблокировка холста">txUnlock()</a>, <a class="el" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400" title="Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.">txGDI()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00029.htm#gaff3d9c60900531f438a19216485bdd41" title="Разрешает или запрещает автоматическое обновление изображения в окне.">txUpdateWindow</a> (<span class="keyword">false</span>);
+          ...
+          <a class="code" href="a00029.htm#gaff3d9c60900531f438a19216485bdd41" title="Разрешает или запрещает автоматическое обновление изображения в окне.">txUpdateWindow</a>();
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad4ee4d2a16f8f38412e0e7b1c380bf4d"></a><!-- doxytag: member="TXLib.h::txSelectObject" ref="gad4ee4d2a16f8f38412e0e7b1c380bf4d" args="(HGDIOBJ obj)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool txSelectObject </td>
+          <td>(</td>
+          <td class="paramtype">HGDIOBJ&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Устанавливает текущий объект GDI. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Дескриптор объекта GDI</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Если операция была успешна - true, иначе - false.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#ga04e174a1e8d269b96b6e5a3e30d6dc1e" title="Устанавливает текущий цвет и толщину линий, цвет текста.">txSetColor()</a>, <a class="el" href="a00029.htm#ga4894075399ec8e8747177f90c15fb35d" title="Возвращает текущий цвет линий и текста.">txGetColor()</a>, <a class="el" href="a00029.htm#gafb1459949ebb32b199d07f5464205baf" title="Устанавливает текущий цвет заполнения фигур.">txSetFillColor()</a>, <a class="el" href="a00029.htm#ga1a65fa9ddfd07bda8ab3e95873991b76" title="Возвращает текущий цвет заполнения фигур.">txGetFillColor()</a>, <a class="el" href="a00029.htm#ga3e94cfad3d9080241f84129d6e5c09b5" title="Названия предопределенных цветов.">txColors</a>, <a class="el" href="a00029.htm#ga5e96023070a7e836d57ff9f4fac8a341" title="Создает (смешивает) цвет из трех базовых цветов (компонент).">RGB()</a>, <a class="el" href="a00029.htm#ga9290f4d78a1f2dc5db7892cabe9a2abc" title="Выбирает текущий шрифт.">txSelectFont()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          HPEN pen = CreatePen (PS_DASH, 1, <a class="code" href="a00029.htm#ga5e96023070a7e836d57ff9f4fac8a341" title="Создает (смешивает) цвет из трех базовых цветов (компонент).">RGB</a> (255, 128, 0));
+          <a class="code" href="a00029.htm#gad4ee4d2a16f8f38412e0e7b1c380bf4d" title="Устанавливает текущий объект GDI.">txSelectObject</a> (pen);
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga93cecf6b117fc403c0488f388b78a6d1"></a><!-- doxytag: member="TXLib.h::txIDontWantToHaveAPauseAfterMyProgramBeforeTheWindowWillClose_AndIWillNotBeAskingWhereIsMyPicture" ref="ga93cecf6b117fc403c0488f388b78a6d1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool txIDontWantToHaveAPauseAfterMyProgramBeforeTheWindowWillClose_AndIWillNotBeAskingWhereIsMyPicture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Делает нечто иногда удобное. См. название функции. </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Если операция была успешна - true, иначе - false.</dd></dl>
+<p>У этой функции есть синоним с простым понятным названием, поищите его в файле библиотеки, около <em>определения</em> этой функции. Или можно <small>&#160;</small><span class="s"> скопировать </span><small>&#160;</small> набрать это километровое имя и посмотреть, что получится.</p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow()</a>, <a class="el" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">int</span> main()
+              {
+              <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600);
+
+              <a class="code" href="a00029.htm#ga5a3cef04fcf688a051a9eafd6c8338a7" title="Устанавливает текущее выравнивание текста.">txSetTextAlign</a> (TA_CENTER);
+              <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (<a class="code" href="a00029.htm#gaed186909e8de1f9a6e5f78c362d9b607" title="Возвращает ширину окна рисования.">txGetExtentX</a>()/2, <a class="code" href="a00029.htm#ga1838cd6a438d4bea5f26bfa47a103a0d" title="Возвращает высоту окна рисования.">txGetExtentY</a>()/2, <span class="stringliteral">&quot;Press any key to exit!&quot;</span>);
+</pre></div> <div class="fragment"><pre class="fragment"> <a class="code" href="a00029.htm#ga93cecf6b117fc403c0488f388b78a6d1" title="Делает нечто иногда удобное. См. название функции.">txIDontWantToHaveAPauseAfterMyProgramBeforeTheWindowWillClose_AndIWillNotBeAskingWhereIsMyPicture</a>();
+              <span class="keywordflow">return</span> 0;
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga30fb1a6913174dfcea5079391f655be2"></a><!-- doxytag: member="TXLib.h::txSetWindowsHook" ref="ga30fb1a6913174dfcea5079391f655be2" args="(WNDPROC wndProc=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WNDPROC txSetWindowsHook </td>
+          <td>(</td>
+          <td class="paramtype">WNDPROC&#160;</td>
+          <td class="paramname"><em>wndProc</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Устанавливает альтернативную функцию обработки оконных сообщений Windows (оконную функцию) для окна TXLib. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wndProc</td><td>Новая оконная функция окна TXLib. <br/>
+ Если NULL, то текущая оконная функция удаляется и устанавливается стандартная.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Адрес предыдущей оконной функции для окна TXLib.</dd></dl>
+<p>Заданная оконная функция будет вызываться <b>до</b> обработки события средствами TXLib. Она должна быть функцией со следующим прототипом: </p>
+<div class="fragment"><pre class="fragment">          LRESULT CALLBACK NewWndProc (HWND window, UINT message, WPARAM wParam, LPARAM lParam);
+</pre></div><dl class="warning"><dt><b>Предупреждения:</b></dt><dd>Оконная функция будет вызываться из вспомогательного (второго) потока, создаваемого <a class="el" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow()</a>. Это <b>не</b> тот же самый поток, в котором выполняется main(). В связи с этим будьте внимательны при работе с глобальными переменными или их аналогами, т.к. может возникнуть "гонка
+          потоков" (race condition).</dd>
+<dd>
+Если оконная функция вернет значение, не равное 0, то стандартная обработка сообщений средствами TXLib <b>не</b> будет произведена. Из-за этого, возможно, окно даже не сможет нормально закрыться. Придется завершать программу с помощью Alt-Ctrl-Del из диспетчера задач, или из более продвинутого диспетчера <a href="http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx">Process Explorer</a>. Если Вы берете на себя обработку оконных сообщений, делайте ее по правилам Win32 (см. MSDN), включая вызов DefWindowProc().</dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Полностью поменять оконную функцию можно с помощью функций SetWindowLong или SetWindowLongPtr: <div class="fragment"><pre class="fragment">          WNDPROC OldWndProc = (WNDPROC) SetWindowLongPtr (<a class="code" href="a00029.htm#gae47b05ec325f3bda871e46c8c74919e8" title="Возвращает дескриптор окна холста">txWindow</a>(), GWL_WNDPROC, (LONG_PTR) NewWndProc);
+</pre></div> При этом надо обязательно всегда вызывать старую оконную функцию с помощью CallWindowProc, (см. MSDN), иначе последствия будут такими же плачевными, как описаны выше.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow()</a>, <a class="el" href="a00009.htm" title="Базовый класс для диалоговых окон.">txDialog</a>, <a class="el" href="a00031.htm#ga364e78410e64fb751d3a0253d08f98e2" title="Ввод строки в отдельном окне.">txInputBox()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          LRESULT CALLBACK MyWndProc (HWND window, UINT message, WPARAM wParam, LPARAM lParam);
+
+          <span class="keywordtype">int</span> main()
+              {
+              <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (GetSystemMetrics (SM_CXSCREEN) / 4, GetSystemMetrics (SM_CYSCREEN) / 4);
+
+              <a class="code" href="a00033.htm#ga30fb1a6913174dfcea5079391f655be2" title="Устанавливает альтернативную функцию обработки оконных сообщений Windows (оконную функцию) для окна T...">txSetWindowsHook</a> (MyWndProc);
+
+              <a class="code" href="a00029.htm#gae5f1c5f63d862d72883203213786d9f0" title="Рисует текст, размещенный в прямоугольной области.">txDrawText</a> (0, 0, <a class="code" href="a00029.htm#gaed186909e8de1f9a6e5f78c362d9b607" title="Возвращает ширину окна рисования.">txGetExtentX</a>(), <a class="code" href="a00029.htm#ga1838cd6a438d4bea5f26bfa47a103a0d" title="Возвращает высоту окна рисования.">txGetExtentY</a>(), <span class="stringliteral">&quot;MOV txWindow, eax [please]&quot;</span>);
+
+              <span class="keywordflow">return</span> 0;
+              }
+
+          LRESULT CALLBACK MyWndProc (HWND window, UINT message, WPARAM wParam, LPARAM lParam)
+              {
+              <span class="keywordflow">if</span> (message == WM_MOVE) <a class="code" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox</a> (<span class="stringliteral">&quot;  I like to MOVe it, MOVe it&quot;</span>, <span class="stringliteral">&quot;TXLib 2 Real&quot;</span>, MB_ICONINFORMATION);
+
+              <span class="keyword">static</span> <span class="keywordtype">int</span> i = 0;
+              <span class="keywordflow">if</span> (i++ % 10 == 0) printf (<span class="stringliteral">&quot;\b&quot;</span> <span class="stringliteral">&quot;%c&quot;</span>, <span class="stringliteral">&quot;-\\|/&quot;</span> [i/10 % 4]);  <span class="comment">// Прропппеллллерррр</span>
+
+              <span class="keywordflow">return</span> 0;  <span class="comment">// Продолжить обработку сообщения средствами TXLib</span>
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga532fa8a55c4f3d4f94ff0fdceae732b2"></a><!-- doxytag: member="TXLib.h::txLock" ref="ga532fa8a55c4f3d4f94ff0fdceae732b2" args="(bool wait=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool txLock </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Блокировка холста (контекста рисования). </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wait</td><td>Ожидать конца перерисовки окна вспомогательным потоком</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Состояние блокировки</dd></dl>
+<p>Перед вызовом любых функций Win32 GDI необходимо заблокировать холст функцией <a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a> и затем разблокировать с помощью <a class="el" href="a00033.htm#ga8fe4ec4c66cb69ce337747fe65dd0cc6" title="Разблокировка холста">txUnlock()</a>. Это связано с тем, что обновление содержимого окна (для тех, кто знает Win32: обработка сообщения WM_PAINT) в библиотеке TXLib происходит в отдельном вспомогательном потоке. Надолго блокировать его нельзя - при заблокированном потоке окно не обновляется.</p>
+<p><a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a> использует EnterCriticalSection(), и физически приостанавливает поток, обновляющий окно, так что надолго блокировать нельзя. Иначе тормозится обработка оконных сообщений, окно перестает реагировать на действия пользователя и перерисовываться. Нельзя также вызывать <a class="el" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep()</a> или Sleep() при заблокированном потоке.</p>
+<p><a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a> / <a class="el" href="a00033.htm#ga8fe4ec4c66cb69ce337747fe65dd0cc6" title="Разблокировка холста">txUnlock()</a> - это низкоуровневый механизм. Он отличается от более простого высокоуровневого механизма <a class="el" href="a00029.htm#gae92e621aaed81f90e4d142356e38762a" title="Блокирует обновление изображения окна, во избежание мигания.">txBegin()</a> / <a class="el" href="a00029.htm#ga809dc04afd5348247846ee01ce9a06e6" title="Разблокирует обновление окна, заблокированное функцией txBegin().">txEnd()</a> / <a class="el" href="a00029.htm#gaff3d9c60900531f438a19216485bdd41" title="Разрешает или запрещает автоматическое обновление изображения в окне.">txUpdateWindow()</a>, который не приостанавливает поток, а просто отключает принудительное постоянное обновление окна.</p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#ga37ac6a8a8899decc9e2979d7ccd11f67" title="Возвращает дескриптор контекста рисования холста">txDC()</a>, <a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a>, <a class="el" href="a00033.htm#ga8fe4ec4c66cb69ce337747fe65dd0cc6" title="Разблокировка холста">txUnlock()</a>, <a class="el" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400" title="Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.">txGDI()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd>См. исходный текст функций _txCanvas_OnPAINT() и _txConsole_Draw() в <a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a>. </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8fe4ec4c66cb69ce337747fe65dd0cc6"></a><!-- doxytag: member="TXLib.h::txUnlock" ref="ga8fe4ec4c66cb69ce337747fe65dd0cc6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool txUnlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Разблокировка холста </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Состояние блокировки (всегда false).</dd></dl>
+<p>Более подробно см. в описании <a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a>.</p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00029.htm#ga37ac6a8a8899decc9e2979d7ccd11f67" title="Возвращает дескриптор контекста рисования холста">txDC()</a>, <a class="el" href="a00033.htm#ga532fa8a55c4f3d4f94ff0fdceae732b2" title="Блокировка холста (контекста рисования).">txLock()</a>, <a class="el" href="a00033.htm#ga365c78a96945ad9e0a6462c28e01d400" title="Вызов функции Win32 GDI с автоматической блокировкой и разблокировкой.">txGDI()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd>См. исходный текст функций _txCanvas_OnPAINT() и _txConsole_Draw() в <a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a>. </dd>
+</dl>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!-- --------------------------------------------------------------------------
+  doxygen_htm.htm
+  $Version: 00172a, Revision: 98 $
+  $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru> $
+  $Date: 2012-11-28 08:44:33 +0400 $
+ -------------------------------------------------------------------------- -->
+
+<table class="" width="100%"><tr valign="top">
+
+  <td align="left">
+    <small><a href="http://orphus.ru">Нашли ошибку? Выделите ее мышкой и нажмите Ctrl+ENTER. &copy;&#160;Orphus.ru.</a></small><br>
+    <a href="http://orphus.ru" id="orphus" target="_blank"><img class = "footer" alt="Orphus" src="http://storage.ded32.net.ru/orphus.gif" border="0"></a>
+    </td>
+
+  <td align="right">
+    Документация по TX Library. Дата: Tue Aug 12 2014 23:45:43. Создано&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3
+    <img src="http://storage.ded32.net.ru/stat/TXLib-Help.chm" width=1px height=1px border="0">
+    </td>
+  </tr></table>
+
+</ul>
+</div>
+
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol)? "https://ssl." : "http://www."); document.write (unescape ("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); try { var pageTracker = _gat._getTracker ("UA-7927138-1"); pageTracker._trackPageview(); } catch (err) {}</script>
+<script type="text/javascript" src="http://storage.ded32.net.ru/orphus.js"></script>
+
+</body>
+</html>

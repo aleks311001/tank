@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>TXNetwork: Второй пример. Сетевая рисовалка.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TXNetwork
+   &#160;<span id="projectnumber">v0.3a</span>
+   </div>
+   <div id="projectbrief">Библиотека для работы с сетью</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="modules.html"><span>Группы</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00004.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Второй пример. Сетевая рисовалка. </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="Example2_Client_Code"></a>
+Example2_Client_Code</h1>
+<div class="fragment"><div class="line"><span class="comment">//{===========================================================================</span></div>
+<div class="line"><span class="comment"></span><span class="comment">//              $Copyright: (C) _RedMan_ (Vova Yrovsky) &lt;vova@txlib.ru&gt; $</span></div>
+<div class="line"><span class="comment">//}===========================================================================</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00015.html">TXNetwork.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;TXLib.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#define ANOTHER_PEER_IP &quot;127.0.0.1&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>NetCoursor_t</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span>     x,     y;</div>
+<div class="line"><span class="keywordtype">int</span> old_x, old_y;</div>
+<div class="line"><span class="keywordtype">int</span> action;</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> NetPaint(<a class="code" href="a00013.html">TX_SOCKET</a> paint_peer);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">txCreateWindow (1024, 768);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00013.html">TX_SOCKET</a> paint_peer = <a class="code" href="a00016.html#gaa33950777ca73a416134ead3bd8e6ea5">txCreateSocket</a> (<a class="code" href="a00016.html#gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58">TX_CLIENT</a>, ANOTHER_PEER_IP, <a class="code" href="a00016.html#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">if</span> (txnAssert(paint_peer) == <a class="code" href="a00017.html#gaa56d5be53827cc51bd2a02fe580e00c9">TXN_NOT_CREATED</a>)</div>
+<div class="line">    {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;BAD SOCKET!!!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">NetPaint (paint_peer);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> NetPaint(<a class="code" href="a00013.html">TX_SOCKET</a> paint_peer)</div>
+<div class="line">{</div>
+<div class="line">NetCoursor_t coursor        = {100, 100, -1, -1, 0};</div>
+<div class="line">NetCoursor_t peer_coursor   = {100, 100, -1, -1, 0};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">while</span> (!GetAsyncKeyState(VK_ESCAPE))</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (peer_coursor.action == -1)</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line"></div>
+<div class="line">    txSetFillColor (TX_GREEN);</div>
+<div class="line">    txSetColor     (TX_GREEN, 10);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (coursor.action == 1) txLine (coursor.old_x, coursor.old_y, coursor.x, coursor.y);</div>
+<div class="line"></div>
+<div class="line">    txSetFillColor (TX_RED);</div>
+<div class="line">    txSetColor     (TX_RED, 10);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (peer_coursor.action == 1) txLine (peer_coursor.old_x, peer_coursor.old_y, peer_coursor.x, peer_coursor.y);</div>
+<div class="line"></div>
+<div class="line">    coursor.old_x = coursor.x;</div>
+<div class="line">    coursor.old_y = coursor.y;</div>
+<div class="line"></div>
+<div class="line">    coursor.x = txMouseX();</div>
+<div class="line">    coursor.y = txMouseY();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (txMouseButtons() == 1)</div>
+<div class="line">        coursor.action = 1;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        coursor.action = 0;</div>
+<div class="line"></div>
+<div class="line">    txRecvTo(paint_peer, (<span class="keywordtype">char</span>*) &amp;peer_coursor, <span class="keyword">sizeof</span>(peer_coursor));</div>
+<div class="line">    txSendTo(paint_peer, (<span class="keywordtype">char</span>*) &amp;coursor     , <span class="keyword">sizeof</span>(coursor));</div>
+<div class="line"></div>
+<div class="line">    txSleep(10);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">coursor.action = -1;</div>
+<div class="line">txSendTo(paint_peer, (<span class="keywordtype">char</span>*) &amp;coursor, <span class="keyword">sizeof</span>(coursor));</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="Example2_Server_Code"></a>
+Example2_Server_Code</h1>
+<div class="fragment"><div class="line"><span class="comment">//{===========================================================================</span></div>
+<div class="line"><span class="comment"></span><span class="comment">//              $Copyright: (C) _RedMan_ (Vova Yrovsky) &lt;vova@txlib.ru&gt; $</span></div>
+<div class="line"><span class="comment">//}===========================================================================</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00015.html">TXNetwork.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;TXLib.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#define ANOTHER_PEER_IP &quot;127.0.0.1&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>Netcursor_t</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span>     x,     y;</div>
+<div class="line"><span class="keywordtype">int</span> old_x, old_y;</div>
+<div class="line"><span class="keywordtype">int</span> action;</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> NetPaint(<a class="code" href="a00013.html">TX_SOCKET</a> paint_peer);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">txCreateWindow (1024, 768);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00013.html">TX_SOCKET</a> paint_peer = <a class="code" href="a00016.html#gaa33950777ca73a416134ead3bd8e6ea5">txCreateSocket</a> (<a class="code" href="a00016.html#gga0696d269feb958d9f6fa2d0e1cf7e517a348f2bd7cd4f969b024f32d9cb4c417c">TX_SERVER</a>, ANOTHER_PEER_IP, <a class="code" href="a00016.html#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">if</span> (txnAssert(paint_peer) == <a class="code" href="a00017.html#gaa56d5be53827cc51bd2a02fe580e00c9">TXN_NOT_CREATED</a>)</div>
+<div class="line">    {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;BAD SOCKET!!!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">NetPaint (paint_peer);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> NetPaint(<a class="code" href="a00013.html">TX_SOCKET</a> paint_peer)</div>
+<div class="line">{</div>
+<div class="line">Netcursor_t cursor        = {100, 100, -1, -1, 0};</div>
+<div class="line">Netcursor_t peer_cursor   = {100, 100, -1, -1, 0};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">while</span> (!GetAsyncKeyState(VK_ESCAPE))</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (peer_cursor.action == -1)</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line"></div>
+<div class="line">    txSetFillColor (TX_GREEN);</div>
+<div class="line">    txSetColor     (TX_GREEN, 10);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (cursor.action == 1) txLine (cursor.old_x, cursor.old_y, cursor.x, cursor.y);</div>
+<div class="line"></div>
+<div class="line">    txSetFillColor (TX_RED);</div>
+<div class="line">    txSetColor     (TX_RED, 10);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (peer_cursor.action == 1) txLine (peer_cursor.old_x, peer_cursor.old_y, peer_cursor.x, peer_cursor.y);</div>
+<div class="line"></div>
+<div class="line">    cursor.old_x = cursor.x;</div>
+<div class="line">    cursor.old_y = cursor.y;</div>
+<div class="line"></div>
+<div class="line">    cursor.x = txMouseX();</div>
+<div class="line">    cursor.y = txMouseY();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (txMouseButtons() == 1)</div>
+<div class="line">        cursor.action = 1;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        cursor.action = 0;</div>
+<div class="line"></div>
+<div class="line">    txSendTo(paint_peer, (<span class="keywordtype">char</span>*) &amp;cursor     , <span class="keyword">sizeof</span>(cursor));</div>
+<div class="line">    txRecvTo(paint_peer, (<span class="keywordtype">char</span>*) &amp;peer_cursor, <span class="keyword">sizeof</span>(peer_cursor));</div>
+<div class="line"></div>
+<div class="line">    txSleep(10);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">cursor.action = -1;</div>
+<div class="line">txSendTo(paint_peer, (<span class="keywordtype">char</span>*) &amp;cursor, <span class="keyword">sizeof</span>(cursor));</div>
+<div class="line">}</div>
+<div class="line"></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+<script type="text/javascript" src="orphus.js"></script>
+<a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="orphus.js/orphus.gif" border="0" width="125" height="115" /></a>

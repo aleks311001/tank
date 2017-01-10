@@ -1,0 +1,1586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>TX Library: Разное</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen_.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Создано системой Doxygen 1.7.3 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="TXLib.png"></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TX Library&#160;<span id="projectnumber">Help &ndash; Version: 00172a, Revision: 104</span></div>
+   <div id="projectbrief"><s>&nbsp;ALL&nbsp;</s> Windows graphics in a sandbox</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00032.htm','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<h1>Разное</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a, b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает максимальное из двух чисел  <a href="#gafa99ec4acc4ecb2dc3c2d05da15d0e3f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a, b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает минимальное из двух чисел  <a href="#ga3acffbd305ee72dcd4593c0d8af64a4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gacd66e8cacf954c3bc3bba81d09425a12">ROUND</a>(x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Округляет число до целого  <a href="#gacd66e8cacf954c3bc3bba81d09425a12"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gade9b60c36576ef735b3e1d1f628ad9c6">ZERO</a>(type)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Обнулитель типов, не имеющих конструкторов  <a href="#gade9b60c36576ef735b3e1d1f628ad9c6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53">assert</a>(cond)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Замена стандартного макроса <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, с выдачей сообщения через <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, консоль и OutputDebugString().  <a href="#ga3153a272f18d0f805028fce7e4337b53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga889b74443b3e918adee3e31fad4653f7">asserted</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит диагностическое сообщение в случае нулевого или ложного результата.  <a href="#ga889b74443b3e918adee3e31fad4653f7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b">verify</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет команду (вычисляет выражение) и проверяет результат.  <a href="#ga14fecb1c008314444a74c1fe7d9a113b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a">TX_ERROR</a>(...)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит развернутое диагностическое сообщение.  <a href="#ga3e4a82a10130528f63b6f19476a0943a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220">TX_DEBUG_ERROR</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит развернутое диагностическое сообщение в отладочном режиме.  <a href="#ga61997e2af7f7c3d2e40ef9a612000220"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gadd1c9ccd036228402b807abaea14f7ee"></a><!-- doxytag: member="Misc::__TX_COMPILER__" ref="gadd1c9ccd036228402b807abaea14f7ee" args="" -->
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gadd1c9ccd036228402b807abaea14f7ee">__TX_COMPILER__</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя и версия текущего компилятора <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga973d717438fe468dd5a5d8d45ede5312"></a><!-- doxytag: member="Misc::__TX_FILELINE__" ref="ga973d717438fe468dd5a5d8d45ede5312" args="" -->
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312">__TX_FILELINE__</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309">__TX_FUNCTION__</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущей функции  <a href="#gab170f39ac0e379c324c73495f14a1309"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3e287c38947fea870d01588fbd2a5fc9"></a><!-- doxytag: member="Misc::_TX_BUILDMODE" ref="ga3e287c38947fea870d01588fbd2a5fc9" args="" -->
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3e287c38947fea870d01588fbd2a5fc9">_TX_BUILDMODE</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя режима сборки <br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00032.htm#gaacbe12190c9bbc9e39741eb71ded6f35">In</a> (T x, T a, T b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка, находится ли параметр х внутри замкнутого интервала [a; b].  <a href="#gaacbe12190c9bbc9e39741eb71ded6f35"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gaa4558a3bf2a126a9e19c5a3655520787">random</a> (int range)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Генератор случайных чисел  <a href="#gaa4558a3bf2a126a9e19c5a3655520787"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gadf7eefa9eda0d1ae48bb42cadc6759ae">random</a> (double left, double right)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Генератор случайных чисел  <a href="#gadf7eefa9eda0d1ae48bb42cadc6759ae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga74ff1048e0d6bc458c9904fbbe0a6026">txSqr</a> (double x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>Очень удобное</em> возведение числа в квадрат.  <a href="#ga74ff1048e0d6bc458c9904fbbe0a6026"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga7b470eef58eabacf9c7820ce6d392506">txDump</a> (const void *address, const char name[]=&quot;txDump()&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Распечатывает дамп области памяти в консоли.  <a href="#ga7b470eef58eabacf9c7820ce6d392506"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gaf59817ad656dcbb3f9baebeb4d7f82f7">txPI</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Число Пи  <a href="#gaf59817ad656dcbb3f9baebeb4d7f82f7"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+Другие полезные функции, не связанные с рисованием</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga177f8bcb7544821ea4b5bd0571fe7196">txPlaySound</a> (const char filename[]=NULL, DWORD mode=SND_ASYNC)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Воспроизводит звуковой файл.  <a href="#ga177f8bcb7544821ea4b5bd0571fe7196"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba">txMessageBox</a> (const char *text, const char *header=&quot;TXLib сообщает&quot;, unsigned flags=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит сообщение в окне с помощью функции MessageBox.  <a href="#gacb878805752034c14b0409817ae5a5ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf">txNotifyIcon</a> (unsigned flags, const char title[], const char format[],...)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит всплывающее сообщение в системном трее.  <a href="#gae2d377df154bb9dcb45429c71c907ddf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a">txOutputDebugPrintf</a> (const char format[],...)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит сообщение в отладчике.  <a href="#gaa924f43cd62016e5e6a8500336add06a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5">sizearr</a>(arr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисление размера массива в элементах  <a href="#ga799c47c1a2a151647cd765e1fa4b27b5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3379d227f91f891ac97d068ab90ee871">SIZEARR</a>(arr)&#160;&#160;&#160;( sizeof (arr) / sizeof (0[arr]) )</td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga13174595f409e02a486969e058874f33">In</a> (const POINT &amp;pt, const RECT &amp;rect)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка, находится ли точка pt внутри прямоугольника rect.  <a href="#ga13174595f409e02a486969e058874f33"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga9a41302570477635882d90d623f0d8b3">TX_AUTO_FUNC</a>(param_t, param, func)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Автоматический вызов функции при завершении другой функции (аналог <code>__finally</code>)  <a href="#ga9a41302570477635882d90d623f0d8b3"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba">_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Макрос, позволяющий передать переменное число параметров в какой-либо другой макрос.  <a href="#gae4dfd7b0d66121016d6466d2ff10e8ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaaff3c8e496327bec13a821061787878f"></a><!-- doxytag: member="Misc::TX_COMMA" ref="gaaff3c8e496327bec13a821061787878f" args="" -->
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gaaff3c8e496327bec13a821061787878f">TX_COMMA</a>&#160;&#160;&#160;,</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Синоним макроса _ (<a class="el" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba">символ подчеркивания</a>) <br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga43d277b4418068ebef1fd2bdbaf550f6">_TX_MODULE</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя модуля TXLib, входит в диагностические сообщения.  <a href="#ga43d277b4418068ebef1fd2bdbaf550f6"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+Макросы для построения статической карты сообщений (Message Map)</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gaf6ea524e3c76ba5c8a0d1fa6b81d55b8">TX_BEGIN_MESSAGE_MAP</a>()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Заголовок карты сообщений (Message Map).  <a href="#gaf6ea524e3c76ba5c8a0d1fa6b81d55b8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gadbe2f17002d8d41056e9770066ef558b">TX_HANDLE</a>(id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Заголовок обработчика сообщения (Message handler) карты сообщений.  <a href="#gadbe2f17002d8d41056e9770066ef558b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3637c3398b6ebfa337171beec0770fe4">TX_COMMAND_MAP</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Начало карты команд (Command map) в карте сообщений.  <a href="#ga3637c3398b6ebfa337171beec0770fe4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#ga3f4a70a0e5076cb4f4addcab0ca760cd">TX_END_MESSAGE_MAP</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершитель карты сообщений.  <a href="#ga3f4a70a0e5076cb4f4addcab0ca760cd"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="member-group"></a>
+Экспериментальные отладочные макросы</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.htm#gaaa5d2cd4ba134312dcaca4e8316bbe9e">__TX_DEBUG_MACROS</a>&#160;&#160;&#160;(&quot;Группа отладочных $-макросов&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Отладочная печать переменной во время вычисления выражения или участка кода во время его выполнения  <a href="#gaaa5d2cd4ba134312dcaca4e8316bbe9e"></a><br/></td></tr>
+</table>
+<hr/><h2>Макросы</h2>
+<a class="anchor" id="ga799c47c1a2a151647cd765e1fa4b27b5"></a><!-- doxytag: member="TXLib.h::sizearr" ref="ga799c47c1a2a151647cd765e1fa4b27b5" args="(arr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sizearr</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arr</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Вычисление размера массива в элементах </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Имя массива</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Размер массива в элементах (не в байтах).</dd></dl>
+<p>Макрос <a class="el" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5" title="Вычисление размера массива в элементах">sizearr()</a> вычисляет размер массива в элементах, проверяя, можно ли его правильно вычислить при компиляции.</p>
+<p>Макрос <a class="el" href="a00032.htm#ga3379d227f91f891ac97d068ab90ee871">SIZEARR()</a> просто делит размер всего массива в байтах на размер его элемента, получается размер массива в элементах. Он <b>не проверяет,</b> можно ли его правильно вычислить, и при неправильном использовании может выдать <b>неверный размер.</b></p>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd><a class="el" href="a00032.htm#ga3379d227f91f891ac97d068ab90ee871">SIZEARR()</a> выдает неверный размер, если определение массива вместе с его размером, известным при компиляции, недоступно в месте использования <a class="el" href="a00032.htm#ga3379d227f91f891ac97d068ab90ee871">SIZEARR()</a>. См. пример ниже.</dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>В Microsoft Visual Studio 6 макрос <a class="el" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5" title="Вычисление размера массива в элементах">sizearr()</a> недоступен - у ее компилятора недостаточно сил, чтобы скомпилировать его. :(</dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">void</span> test()
+              {
+              <span class="comment">// Размер этого массива, хоть и не указан, но может быть автоматически определен</span>
+              <span class="comment">// компилятором при компиляции программы. Он равен 4 (четыре структуры POINT).</span>
+
+              POINT coord[] = { {110, 110}, {120, 120}, {130, 110}, {140, 120} };
+
+              <span class="comment">// Здесь размер массива известен при компиляции, т.к. он был определен тут же.</span>
+
+              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5" title="Вычисление размера массива в элементах">sizearr</a> (coord) - 1; i++)
+                  <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (coord[i].x, coord[i].y, coord[i+1].x, coord[i+1].y);
+
+              DrawLines1 (coord);                  <span class="comment">// Попытка передать массив без передачи размера.</span>
+              DrawLines2 (coord, <a class="code" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5" title="Вычисление размера массива в элементах">sizearr</a> (coord)); <span class="comment">// Правильная передача размера массива.</span>
+
+              DrawLines3 (coord);                  <span class="comment">// В принципе, можно и так, но тут ВОДЯТСЯ ШАБЛОНЫ.</span>
+              }
+
+          <span class="comment">// Функции DrawLines1 и DrawLines2 определены так:</span>
+
+          <span class="keywordtype">void</span> DrawLines1 (<span class="keyword">const</span> POINT coord[])
+              {
+              <span class="comment">// Массивы в Си передаются как указатели на начало массива. Поэтому:</span>
+              <span class="comment">// 1) sizearr здесь выдаст ошибку компиляции, и ее легко будет найти.</span>
+              <span class="comment">// 2) SIZEARR здесь неверно посчитает размер, что намного хуже,</span>
+              <span class="comment">//      т.к. он будет равен sizeof (POINT*) / sizeof (POINT) == 4/8 == 0.</span>
+
+              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5" title="Вычисление размера массива в элементах">sizearr</a> (coord) - 1; i++)
+                  <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (coord[i].x, coord[i].y, coord[i+1].x, coord[i+1].y);
+              }
+
+          <span class="keywordtype">void</span> DrawLines2 (<span class="keyword">const</span> POINT coord[], <span class="keywordtype">int</span> n)
+              {
+              <span class="comment">// Здесь размер приходит как параметр n, так что все просто.</span>
+
+              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n - 1; i++)
+                  <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (coord[i].x, coord[i].y, coord[i+1].x, coord[i+1].y);
+              }
+
+          <span class="comment">// HIC SVNT TEMPLATES</span>
+
+          <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> size&gt;
+          <span class="keywordtype">void</span> DrawLines3 (<span class="keyword">const</span> POINT (&amp;coord) [size])
+              {
+              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size - 1; i++)
+                  <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (coord[i].x, coord[i].y, coord[i+1].x, coord[i+1].y);
+              }
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02622">2622</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gafa99ec4acc4ecb2dc3c2d05da15d0e3f"></a><!-- doxytag: member="TXLib.h::MAX" ref="gafa99ec4acc4ecb2dc3c2d05da15d0e3f" args="(a, b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает максимальное из двух чисел </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Одно из чисел :) </td></tr>
+    <tr><td class="paramname">b</td><td>Другое из чисел :)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Максимальное из двух чисел a и b</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Возвращает минимальное из двух чисел">MIN()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Возвращает максимальное из двух чисел">MAX</a> (3, 7) != 7) printf (<span class="stringliteral">&quot;Your CPU is broken, throw it away.&quot;</span>);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02772">2772</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga3acffbd305ee72dcd4593c0d8af64a4f"></a><!-- doxytag: member="TXLib.h::MIN" ref="ga3acffbd305ee72dcd4593c0d8af64a4f" args="(a, b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает минимальное из двух чисел </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Одно из чисел :) </td></tr>
+    <tr><td class="paramname">b</td><td>Другое из чисел :)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Минимальное из двух чисел a и b</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Возвращает максимальное из двух чисел">MAX()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Возвращает минимальное из двух чисел">MIN</a> (3, 7) != 3) printf (<span class="stringliteral">&quot;Your CPU is still broken, throw it away twice.&quot;</span>);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02792">2792</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gacd66e8cacf954c3bc3bba81d09425a12"></a><!-- doxytag: member="TXLib.h::ROUND" ref="gacd66e8cacf954c3bc3bba81d09425a12" args="(x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ROUND</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Округляет число до целого </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Число</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Округленное число, преобразованное в тип <code>int</code> </dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">double</span> weight = 5.5;       <span class="comment">// 5.5 kilos is the weight of Maru in 2012.</span>
+          <span class="keywordtype">int</span> Maru = <a class="code" href="a00032.htm#gacd66e8cacf954c3bc3bba81d09425a12" title="Округляет число до целого">ROUND</a> (weight); <span class="comment">// Should use ROUND() because Maru is so round.</span>
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02816">2816</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gade9b60c36576ef735b3e1d1f628ad9c6"></a><!-- doxytag: member="TXLib.h::ZERO" ref="gade9b60c36576ef735b3e1d1f628ad9c6" args="(type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZERO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Обнулитель типов, не имеющих конструкторов </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Имя типа</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Значение типа <code>type</code>, покомпонентно инициализированное по умолчанию (для встроенных типов - нулем).</dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">void</span> f (POINT p);
+          ...
+
+          POINT z = {}; f (z);  <span class="comment">// Так без ZERO</span>
+
+          f (<a class="code" href="a00032.htm#gade9b60c36576ef735b3e1d1f628ad9c6" title="Обнулитель типов, не имеющих конструкторов">ZERO</a> (POINT));     <span class="comment">// Так с ZERO</span>
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02906">2906</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga9a41302570477635882d90d623f0d8b3"></a><!-- doxytag: member="TXLib.h::TX_AUTO_FUNC" ref="ga9a41302570477635882d90d623f0d8b3" args="(param_t, param, func)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_AUTO_FUNC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param_t, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Автоматический вызов функции при завершении другой функции (аналог <code>__finally</code>) </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param_t</td><td>Тип параметра автоматически вызываемой функции </td></tr>
+    <tr><td class="paramname">param</td><td>Имя параметра автоматически вызываемой функции </td></tr>
+    <tr><td class="paramname">func</td><td>Тело автоматически вызываемой функции (фигурные скобки не обязательны)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Макрос TX_AUTO_FUNC (param_t, param, func)</b></dt><dd></dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd><ul>
+<li>Для автоматически вызываемой функции допускается только <em>один</em> параметр.</li>
+<li>Его тип <code>param_t</code> и имя <code>param</code> должны соответствовать определению переменной, доступной в текущей области видимости. Параметр вызываемой функции будет связан с этой переменной через ссылку.</li>
+<li>Синоним: TX_FINALLY</li>
+</ul>
+</dd></dl>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd>В Microsoft Visual Studio 6 и 2003 в отладочной конфигурации (Debug) этот макрос работать не будет, см. <a href="http://support.microsoft.com/kb/199057">MS KB Article 199057</a>. Можно обходиться макросом <code>_TX_AUTO_FUNC</code>, см. его определение в исходном тексте рядом с определением <code>TX_AUTO_FUNC</code>.</dd></dl>
+<dl class="user"><dt><b>Макрос tx_auto_func (func)</b></dt><dd></dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd><ul>
+<li><em>Все</em> переменные вызываемой функции связываются с переменными внешней функции по ссылке.</li>
+<li>Их названия и типы <em>не</em> указываются. Указывается только тело вызываемой функции.</li>
+<li>Эта форма использует лямбда-функции <code>C++0x</code>, поэтому при компиляции требуется <em>MSVS 2010</em> или <em>GCC не ниже версии 4.5 с ключом компиляции <code>-std=c++0x</code> или <code>-std=c++11</code>.</em></li>
+<li>Синоним: tx_finally</li>
+</ul>
+</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00008.htm" title="Класс для автоматической блокировки и разблокировки критической секции.">txAutoLock</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">void</span> f1()
+              {
+              <span class="keywordtype">int</span> x = 1;
+              <a class="code" href="a00032.htm#ga9a41302570477635882d90d623f0d8b3" title="Автоматический вызов функции при завершении другой функции (аналог __finally)">TX_AUTO_FUNC</a> (<span class="keywordtype">int</span>, x, $(x));              <span class="comment">// Will be printed at return</span>
+
+              FILE* f = fopen (__FILE__<span class="stringliteral">&quot;.o.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);  <span class="comment">// Will be closed at return</span>
+              <a class="code" href="a00032.htm#ga9a41302570477635882d90d623f0d8b3" title="Автоматический вызов функции при завершении другой функции (аналог __finally)">TX_AUTO_FUNC</a> (FILE*, f, fclose (f));
+
+              fprintf (f, <span class="stringliteral">&quot;start: x = %d\n&quot;</span>, x);        <span class="comment">// Do some job</span>
+              x = 2;                                    <span class="comment">// Do some job</span>
+              }
+
+          <span class="keywordtype">void</span> f2()                                     <span class="comment">// Do the same. For C++0x only</span>
+              {
+              <span class="keywordtype">int</span> x = 1;
+              tx_auto_func ($(x));                      <span class="comment">// More simple usage</span>
+
+              FILE* f = fopen (__FILE__<span class="stringliteral">&quot;.o.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);
+              tx_auto_func (fclose (f));                <span class="comment">// More simple usage</span>
+
+              fprintf (f, <span class="stringliteral">&quot;start: x = %d\n&quot;</span>, x);
+              x = 2;
+              }
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02974">2974</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga3153a272f18d0f805028fce7e4337b53"></a><!-- doxytag: member="TXLib.h::assert" ref="ga3153a272f18d0f805028fce7e4337b53" args="(cond)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define assert</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cond</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Замена стандартного макроса <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, с выдачей сообщения через <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, консоль и OutputDebugString(). </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cond</td><td>Условие для проверки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Не определено</dd></dl>
+<p>Если условие, проверяемое <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, истинно, то макрос ничего не делает. <br/>
+ Если условие оказывается ложно, то выводится диагностическое сообщение и программа аварийно завершается.</p>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd><b>При компиляции в режиме Release (или если определен NDEBUG) assert превращается в пустой оператор.</b> <br/>
+ Не надо помещать в <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a> действия, которые важны для работы алгорима!</dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Если условие <code>cond</code> может быть вычислено уже во время компиляции как ложное, компилятор может предупредить об этом (как о делении на 0). </dd>
+<dd>
+<small>See: <a href="http://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf">"JPL Institutional Coding
+          Standard for the C Programming Language", Jet Propulsion Laboratory, California Institute of Technology, JPL DOCID D-60411, Ver. 1.0, March 3, 2009</a>, page 15.</small></dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga889b74443b3e918adee3e31fad4653f7" title="Выводит диагностическое сообщение в случае нулевого или ложного результата.">asserted</a>, <a class="el" href="a00025.htm#a66cb8e8fe20d9d05d02e73373bda7f8a" title="For compatibility with assert macro.">verified</a>, <a class="el" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify()</a>, <a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a>, <a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312" title="Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился.">__TX_FILELINE__</a>, <a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309" title="Имя текущей функции">__TX_FUNCTION__</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert</a> (0 &lt;= i &amp;&amp; i &lt; ARRAY_SIZE);
+
+          FILE* input = fopen (<span class="stringliteral">&quot;a.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);
+          <a class="code" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert</a> (input);
+
+          <span class="comment">// Этот вызов fgets() НЕ будет выполнен в режиме Release:</span>
+          <a class="code" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert</a> (fgets (str, <span class="keyword">sizeof</span> (str) - 1, input));
+
+          <span class="comment">// Здесь все будет правильно:</span>
+          <span class="keywordtype">bool</span> ok = (fclose (input) == 0);
+          <a class="code" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert</a> (ok);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03072">3072</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga889b74443b3e918adee3e31fad4653f7"></a><!-- doxytag: member="TXLib.h::asserted" ref="ga889b74443b3e918adee3e31fad4653f7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define asserted</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выводит диагностическое сообщение в случае нулевого или ложного результата. </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Всегда 0</dd></dl>
+<p>Суффиксная форма макроса <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, не теряющая в режиме Release исполнения предиката.</p>
+<dl class="note"><dt><b>Заметки:</b></dt><dd><b>Предполагается, что операция в случае неуспеха возвращает 0 или false.</b> <br/>
+<br/>
+ <b>При компиляции в режиме Release (или если определен NDEBUG) asserted превращается в пустое место.</b></dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, <a class="el" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify()</a>, <a class="el" href="a00025.htm#a66cb8e8fe20d9d05d02e73373bda7f8a" title="For compatibility with assert macro.">verified</a>, <a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a>, <a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312" title="Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился.">__TX_FILELINE__</a>, <a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309" title="Имя текущей функции">__TX_FUNCTION__</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          FILE* input = fopen (<span class="stringliteral">&quot;a.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>); <a class="code" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert</a> (input);
+
+          <span class="comment">// Этот вызов fgets() будет выполнен в любом случае:</span>
+          fgets (str, <span class="keyword">sizeof</span> (str) - 1, input) asserted;
+
+          <span class="comment">// Этот вызов fgets() НЕ будет выполнен в режиме Release:</span>
+          <a class="code" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert</a> (fgets (str, sizeof (str) - 1, input));
+
+          (fclose (input) != 0) asserted;
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03111">3111</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga14fecb1c008314444a74c1fe7d9a113b"></a><!-- doxytag: member="TXLib.h::verify" ref="ga14fecb1c008314444a74c1fe7d9a113b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define verify</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выполняет команду (вычисляет выражение) и проверяет результат. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expr</td><td>Команда (выражение)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>1, если выражение <code>expr</code> истинно, иначе 0.</dd></dl>
+<p>Если условие, проверяемое <a class="el" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify()</a>, истинно, то макрос ничего не делает. <br/>
+ Если условие оказывается ложно, то выводится диагностическое сообщение и программа аварийно завершается.</p>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Действие макроса аналогично <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, но при компиляции в режиме Release (или если определен NDEBUG) verify <b>не</b> превращается в пустой оператор.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00025.htm#a66cb8e8fe20d9d05d02e73373bda7f8a" title="For compatibility with assert macro.">verified</a>, <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, <a class="el" href="a00032.htm#ga889b74443b3e918adee3e31fad4653f7" title="Выводит диагностическое сообщение в случае нулевого или ложного результата.">asserted</a>, <a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a>, <a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312" title="Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился.">__TX_FILELINE__</a>, <a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309" title="Имя текущей функции">__TX_FUNCTION__</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          FILE* input = <a class="code" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify</a> (fopen (<span class="stringliteral">&quot;a.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>));
+
+          <span class="comment">// Этот вызов fgets() БУДЕТ выполнен в режиме Release:</span>
+          <a class="code" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify</a> (fgets (str, <span class="keyword">sizeof</span> (str) - 1, input));
+
+          <span class="comment">// Здесь все тоже будет правильно:</span>
+          <a class="code" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify</a> (fclose (input) == 0);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03157">3157</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga3e4a82a10130528f63b6f19476a0943a"></a><!-- doxytag: member="TXLib.h::TX_ERROR" ref="ga3e4a82a10130528f63b6f19476a0943a" args="(...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_ERROR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выводит развернутое диагностическое сообщение. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Сообщение с произвольным количеством параметров в стиле функции <code>printf()</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd><code>GCC</code> в режиме строгого соответствия стандарту ANSI (с ключом командной строки <code>-ansi</code>) и Microsoft Visual Studio версий 6 и 2003 не поддерживают макросы с переменным числом параметров. Поэтому, если параметров несколько, они разделяются <b>_</b> (<a class="el" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba">символом подчеркивания</a>, переопределенным в запятую) или символом TX_COMMA, вместо настоящей запятой, так как TX_ERROR &ndash; макрос. <br/>
+ Если в проекте используются библиотеки <a href="http://boost.org"><code>boost</code></a>, то их надо включать <b>до</b> <code><a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a></code> и вместо символа подчеркивания пользоваться TX_COMMA, так как <code>boost</code> использует символ подчеркивания как свой собственный служебный макрос в модуле <code>boost::preprocessor</code>, <small>&#160;</small><span class="s"> где творится дефайновый адЪ. </span><small>&#160;</small></dd></dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Всегда false</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba" title="Макрос, позволяющий передать переменное число параметров в какой-либо другой макрос.">_</a>, <a class="el" href="a00032.htm#gaaff3c8e496327bec13a821061787878f" title="Синоним макроса _ (символ подчеркивания)">TX_COMMA</a>, <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, <a class="el" href="a00032.htm#ga889b74443b3e918adee3e31fad4653f7" title="Выводит диагностическое сообщение в случае нулевого или ложного результата.">asserted</a>, <a class="el" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify()</a>, <a class="el" href="a00025.htm#a66cb8e8fe20d9d05d02e73373bda7f8a" title="For compatibility with assert macro.">verified</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a>, <a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312" title="Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился.">__TX_FILELINE__</a>, <a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309" title="Имя текущей функции">__TX_FUNCTION__</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR</a> (<span class="stringliteral">&quot;Не смог прочитать &#39;Войну и мир&#39;. Отмазка %d: не нашел &#39;%s&#39;&quot;</span>, reasonNum, fileName);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03198">3198</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga61997e2af7f7c3d2e40ef9a612000220"></a><!-- doxytag: member="TXLib.h::TX_DEBUG_ERROR" ref="ga61997e2af7f7c3d2e40ef9a612000220" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_DEBUG_ERROR</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выводит развернутое диагностическое сообщение в отладочном режиме. </p>
+<p>Описание см. в TX_ERROR.</p>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>В режиме Release этот макрос не выводит ничего.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba" title="Макрос, позволяющий передать переменное число параметров в какой-либо другой макрос.">_</a>, <a class="el" href="a00032.htm#gaaff3c8e496327bec13a821061787878f" title="Синоним макроса _ (символ подчеркивания)">TX_COMMA</a>, <a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, <a class="el" href="a00032.htm#ga889b74443b3e918adee3e31fad4653f7" title="Выводит диагностическое сообщение в случае нулевого или ложного результата.">asserted</a>, <a class="el" href="a00032.htm#ga14fecb1c008314444a74c1fe7d9a113b" title="Выполняет команду (вычисляет выражение) и проверяет результат.">verify()</a>, <a class="el" href="a00025.htm#a66cb8e8fe20d9d05d02e73373bda7f8a" title="For compatibility with assert macro.">verified</a>, <a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a>, <a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312" title="Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился.">__TX_FILELINE__</a>, <a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309" title="Имя текущей функции">__TX_FUNCTION__</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR</a> (<span class="stringliteral">&quot;Так и не смог прочитать &#39;Войну и мир&#39;. Отмазка %d: потерял &#39;%s&#39;&quot;</span>, reasonNum, fileName);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03225">3225</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gae4dfd7b0d66121016d6466d2ff10e8ba"></a><!-- doxytag: member="TXLib.h::_" ref="gae4dfd7b0d66121016d6466d2ff10e8ba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Макрос, позволяющий передать переменное число параметров в какой-либо другой макрос. </p>
+<dl class="note"><dt><b>Заметки:</b></dt><dd><b>Символ подчеркивания и символ TX_COMMA просто переопределяются в запятую.</b></dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR</a> (<span class="stringliteral">&quot;Слишком умный абзац: роман &#39;Война и мир&#39;, файл &#39;%s&#39;, строка %d&quot;</span> <a class="code" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba" title="Макрос, позволяющий передать переменное число параметров в какой-либо другой макрос.">_</a> fileName <a class="code" href="a00032.htm#gae4dfd7b0d66121016d6466d2ff10e8ba" title="Макрос, позволяющий передать переменное число параметров в какой-либо другой макрос.">_</a> lineNum);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03268">3268</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gab170f39ac0e379c324c73495f14a1309"></a><!-- doxytag: member="TXLib.h::__TX_FUNCTION__" ref="gab170f39ac0e379c324c73495f14a1309" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __TX_FUNCTION__</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Имя текущей функции </p>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd>Если определение имени функции не поддерживается компилятором, то __TX_FUNCTION__ раскрывается в имя исходного файла и номер строки. </dd></dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03337">3337</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga43d277b4418068ebef1fd2bdbaf550f6"></a><!-- doxytag: member="TXLib.h::_TX_MODULE" ref="ga43d277b4418068ebef1fd2bdbaf550f6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _TX_MODULE</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Имя модуля TXLib, входит в диагностические сообщения. </p>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Можно переопределять до включения файла <a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a>. </dd></dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l03374">3374</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gaf6ea524e3c76ba5c8a0d1fa6b81d55b8"></a><!-- doxytag: member="TXLib.h::TX_BEGIN_MESSAGE_MAP" ref="gaf6ea524e3c76ba5c8a0d1fa6b81d55b8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_BEGIN_MESSAGE_MAP</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Заголовок карты сообщений (Message Map). </p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gaf6ea524e3c76ba5c8a0d1fa6b81d55b8" title="Заголовок карты сообщений (Message Map).">TX_BEGIN_MESSAGE_MAP()</a>, <a class="el" href="a00032.htm#ga3f4a70a0e5076cb4f4addcab0ca760cd" title="Завершитель карты сообщений.">TX_END_MESSAGE_MAP</a>, <a class="el" href="a00032.htm#gadbe2f17002d8d41056e9770066ef558b" title="Заголовок обработчика сообщения (Message handler) карты сообщений.">TX_HANDLE()</a>, <a class="el" href="a00032.htm#ga3637c3398b6ebfa337171beec0770fe4" title="Начало карты команд (Command map) в карте сообщений.">TX_COMMAND_MAP</a>, <a class="el" href="a00009.htm#ad25c6de764a1157b6bc7a0738794f906" title="Функция обработки сообщений диалогового окна.">txDialog::dialogProc()</a>, <a class="el" href="a00009.htm" title="Базовый класс для диалоговых окон.">txDialog</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          Cм. реализацию функции <a class="code" href="a00031.htm#ga364e78410e64fb751d3a0253d08f98e2" title="Ввод строки в отдельном окне.">txInputBox</a>().
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l04268">4268</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gadbe2f17002d8d41056e9770066ef558b"></a><!-- doxytag: member="TXLib.h::TX_HANDLE" ref="gadbe2f17002d8d41056e9770066ef558b" args="(id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_HANDLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Заголовок обработчика сообщения (Message handler) карты сообщений. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор сообщения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gaf6ea524e3c76ba5c8a0d1fa6b81d55b8" title="Заголовок карты сообщений (Message Map).">TX_BEGIN_MESSAGE_MAP()</a>, <a class="el" href="a00032.htm#ga3f4a70a0e5076cb4f4addcab0ca760cd" title="Завершитель карты сообщений.">TX_END_MESSAGE_MAP</a>, <a class="el" href="a00032.htm#gadbe2f17002d8d41056e9770066ef558b" title="Заголовок обработчика сообщения (Message handler) карты сообщений.">TX_HANDLE()</a>, <a class="el" href="a00032.htm#ga3637c3398b6ebfa337171beec0770fe4" title="Начало карты команд (Command map) в карте сообщений.">TX_COMMAND_MAP</a>, <a class="el" href="a00009.htm#ad25c6de764a1157b6bc7a0738794f906" title="Функция обработки сообщений диалогового окна.">txDialog::dialogProc()</a>, <a class="el" href="a00009.htm" title="Базовый класс для диалоговых окон.">txDialog</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          Cм. реализацию функции <a class="code" href="a00031.htm#ga364e78410e64fb751d3a0253d08f98e2" title="Ввод строки в отдельном окне.">txInputBox</a>().
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l04292">4292</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga3637c3398b6ebfa337171beec0770fe4"></a><!-- doxytag: member="TXLib.h::TX_COMMAND_MAP" ref="ga3637c3398b6ebfa337171beec0770fe4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_COMMAND_MAP</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Начало карты команд (Command map) в карте сообщений. </p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gaf6ea524e3c76ba5c8a0d1fa6b81d55b8" title="Заголовок карты сообщений (Message Map).">TX_BEGIN_MESSAGE_MAP()</a>, <a class="el" href="a00032.htm#ga3f4a70a0e5076cb4f4addcab0ca760cd" title="Завершитель карты сообщений.">TX_END_MESSAGE_MAP</a>, <a class="el" href="a00032.htm#gadbe2f17002d8d41056e9770066ef558b" title="Заголовок обработчика сообщения (Message handler) карты сообщений.">TX_HANDLE()</a>, <a class="el" href="a00032.htm#ga3637c3398b6ebfa337171beec0770fe4" title="Начало карты команд (Command map) в карте сообщений.">TX_COMMAND_MAP</a>, <a class="el" href="a00009.htm#ad25c6de764a1157b6bc7a0738794f906" title="Функция обработки сообщений диалогового окна.">txDialog::dialogProc()</a>, <a class="el" href="a00009.htm" title="Базовый класс для диалоговых окон.">txDialog</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          Cм. реализацию функции <a class="code" href="a00031.htm#ga364e78410e64fb751d3a0253d08f98e2" title="Ввод строки в отдельном окне.">txInputBox</a>().
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l04309">4309</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga3f4a70a0e5076cb4f4addcab0ca760cd"></a><!-- doxytag: member="TXLib.h::TX_END_MESSAGE_MAP" ref="ga3f4a70a0e5076cb4f4addcab0ca760cd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_END_MESSAGE_MAP</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Завершитель карты сообщений. </p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#gaf6ea524e3c76ba5c8a0d1fa6b81d55b8" title="Заголовок карты сообщений (Message Map).">TX_BEGIN_MESSAGE_MAP()</a>, <a class="el" href="a00032.htm#ga3f4a70a0e5076cb4f4addcab0ca760cd" title="Завершитель карты сообщений.">TX_END_MESSAGE_MAP</a>, <a class="el" href="a00032.htm#gadbe2f17002d8d41056e9770066ef558b" title="Заголовок обработчика сообщения (Message handler) карты сообщений.">TX_HANDLE()</a>, <a class="el" href="a00032.htm#ga3637c3398b6ebfa337171beec0770fe4" title="Начало карты команд (Command map) в карте сообщений.">TX_COMMAND_MAP</a>, <a class="el" href="a00009.htm#ad25c6de764a1157b6bc7a0738794f906" title="Функция обработки сообщений диалогового окна.">txDialog::dialogProc()</a>, <a class="el" href="a00009.htm" title="Базовый класс для диалоговых окон.">txDialog</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          Cм. реализацию функции <a class="code" href="a00031.htm#ga364e78410e64fb751d3a0253d08f98e2" title="Ввод строки в отдельном окне.">txInputBox</a>().
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l04330">4330</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gaaa5d2cd4ba134312dcaca4e8316bbe9e"></a><!-- doxytag: member="TXLib.h::__TX_DEBUG_MACROS" ref="gaaa5d2cd4ba134312dcaca4e8316bbe9e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __TX_DEBUG_MACROS&#160;&#160;&#160;(&quot;Группа отладочных $-макросов&quot;)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Отладочная печать переменной во время вычисления выражения или участка кода во время его выполнения </p>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd>Эти макросы могут измениться в будущих версиях.</dd></dl>
+<dl>
+<dt>Назначение: </dt>
+<dd><table  border="0">
+<tr valign="top">
+<td><code> $ (x) </code> &#160;&#160;</td><td>Печать имени и значения переменной <code>x</code> внутри выражения. </td></tr>
+<tr valign="top">
+<td><code> $_(x) </code> &#160;&#160;</td><td>Печать только значения переменной <code>x</code> внутри выражения. <br/>
+ </td></tr>
+<tr valign="top">
+<td></td></tr>
+<tr valign="top">
+<td><code> $$ (expr) </code> &#160;&#160;</td><td>Печать выражения, его вычисление, печать и возврат значения. <br/>
+ Если выражение содержит оператор "запятая", не взятый в скобки, необходимо окружать expr еще одной парой скобок. </td></tr>
+<tr valign="top">
+<td><code> $$_(expr) </code> &#160;&#160;</td><td>То же, что и <code>$,</code> но вторая печать идет без новой строки. <br/>
+ </td></tr>
+<tr valign="top">
+<td></td></tr>
+<tr valign="top">
+<td><code> $$$ (expr) </code> &#160;&#160;</td><td>То же, что и <code>$,</code> но для операторов или блоков кода (без возврата значения). </td></tr>
+<tr valign="top">
+<td><code> $$$_(expr) </code> &#160;&#160;</td><td>То же, что и <code>$$,</code> но вторая печать идет без новой строки. <br/>
+ </td></tr>
+<tr valign="top">
+<td></td></tr>
+<tr valign="top">
+<td><code> $$$$ </code> &#160;&#160;</td><td>Печать местоположения в коде. </td></tr>
+<tr valign="top">
+<td><code> $$$$_ </code> &#160;&#160;</td><td>Печать местоположения в коде (только имя функции). </td></tr>
+<tr valign="top">
+<td><code> $n </code> &#160;&#160;</td><td>Перевод строки (печать <code>'\n'</code>). </td></tr>
+</table>
+</dd>
+</dl>
+<dl>
+<dt>Установка атрибутов символов консоли: </dt>
+<dd><table  border="0">
+<tr valign="top">
+<td><code>$d</code> &#160;&#160;</td><td>Светло-серый цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$T</code> &#160;&#160;</td><td>Прозрачный цвет </td></tr>
+<tr valign="top">
+<td><code>$b</code> &#160;&#160;</td><td>Светло-синий цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$B</code> &#160;&#160;</td><td>Темно-синий цвет </td></tr>
+<tr valign="top">
+<td><code>$g</code> &#160;&#160;</td><td>Светло-зеленый цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$G</code> &#160;&#160;</td><td>Темно-зеленый цвет </td></tr>
+<tr valign="top">
+<td><code>$c</code> &#160;&#160;</td><td>Светло-бирюзовый цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$C</code> &#160;&#160;</td><td>Темно-бирюзовый цвет </td></tr>
+<tr valign="top">
+<td><code>$r</code> &#160;&#160;</td><td>Светло-красный цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$R</code> &#160;&#160;</td><td>Темно-красный цвет </td></tr>
+<tr valign="top">
+<td><code>$m</code> &#160;&#160;</td><td>Светло-малиновый цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$M</code> &#160;&#160;</td><td>Темно-малиновый цвет </td></tr>
+<tr valign="top">
+<td><code>$y</code> &#160;&#160;</td><td>Желтый цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$Y</code> &#160;&#160;</td><td>Темно-желтый цвет </td></tr>
+<tr valign="top">
+<td><code>$t</code> &#160;&#160;</td><td>Белый цвет &#160;&#160;</td><td>&#160;&#160;</td><td><code>$D</code> &#160;&#160;</td><td>Темно-серый цвет </td></tr>
+</table>
+</dd>
+</dl>
+<dl>
+<dt></dt>
+<dd><table  border="0">
+<tr valign="top">
+<td><code>$a</code> &#160;&#160;</td><td>Assertion &#160;&#160;</td><td>Светло-зеленый на зеленом &#160;&#160;</td><td>&#160;&#160;</td><td><code>$A</code> &#160;&#160;</td><td>Assertion bold &#160;&#160;</td><td>Желтый на зеленом &#160;&#160;</td><td></td></tr>
+<tr valign="top">
+<td><code>$i</code> &#160;&#160;</td><td>Information &#160;&#160;</td><td>Светло-синий на синем &#160;&#160;</td><td>&#160;&#160;</td><td><code>$I</code> &#160;&#160;</td><td>Information bold &#160;&#160;</td><td>Желтый на синем &#160;&#160;</td><td></td></tr>
+<tr valign="top">
+<td><code>$w</code> &#160;&#160;</td><td>Warning &#160;&#160;</td><td>Светло-малиновый на малиновом &#160;&#160;</td><td>&#160;&#160;</td><td><code>$W</code> &#160;&#160;</td><td>Warning bold &#160;&#160;</td><td>Желтый на малиновом &#160;&#160;</td><td></td></tr>
+<tr valign="top">
+<td><code>$e</code> &#160;&#160;</td><td>Error &#160;&#160;</td><td>Светло-красный на красном &#160;&#160;</td><td>&#160;&#160;</td><td><code>$E</code> &#160;&#160;</td><td>Error bold &#160;&#160;</td><td>Желтый на красном &#160;&#160;</td><td></td></tr>
+<tr valign="top">
+<td><code>$f</code> &#160;&#160;</td><td>Fatal &#160;&#160;</td><td>Черный на светло-красном &#160;&#160;</td><td>&#160;&#160;</td><td><code>$F</code> &#160;&#160;</td><td>Fatal bold &#160;&#160;</td><td>Малиновый на светло-красном &#160;&#160;</td><td></td></tr>
+<tr valign="top">
+<td><code>$l</code> &#160;&#160;</td><td>Location &#160;&#160;</td><td>Черный на темно-сером &#160;&#160;</td><td>&#160;&#160;</td><td><code>$L</code> &#160;&#160;</td><td>Location bold &#160;&#160;</td><td>Светло-серый на темно-сером &#160;&#160;</td><td></td></tr>
+</table>
+</dd>
+</dl>
+<dl>
+<dt></dt>
+<dd><table  border="0">
+<tr valign="top">
+<td><code>$s</code> &#160;&#160;</td><td>Запомнить атрибуты. При выходе из блока кода атрибуты восстанавливаются. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3153a272f18d0f805028fce7e4337b53" title="Замена стандартного макроса assert(), с выдачей сообщения через txMessageBox(), консоль и OutputDebug...">assert()</a>, <a class="el" href="a00032.htm#ga889b74443b3e918adee3e31fad4653f7" title="Выводит диагностическое сообщение в случае нулевого или ложного результата.">asserted</a>, <a class="el" href="a00032.htm#ga973d717438fe468dd5a5d8d45ede5312" title="Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился.">__TX_FILELINE__</a>, <a class="el" href="a00032.htm#gab170f39ac0e379c324c73495f14a1309" title="Имя текущей функции">__TX_FUNCTION__</a>, <a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          $g  <span class="comment">// green</span>
+          <span class="keywordtype">int</span> x = 5;
+          <span class="keywordtype">int</span> y = $(x) + 1;
+          $$( x = $(y) + 2 );
+
+          $r  <span class="comment">// red</span>
+          <span class="keywordtype">double</span> xy = $$( pow (x, y) );
+
+          $$$$
+          <span class="keywordtype">double</span> h  = $$(( $(x) = x*x, y = y*y, sqrt ($(x+y)) ));
+
+          $$( <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600) );
+
+          $d  <span class="comment">// default color</span>
+          $$$( <span class="keywordflow">if</span> ($(xy) &lt; $(h)) { $s <span class="keywordflow">return</span> $(h); } )
+
+          $$$$
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l08304">8304</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga3379d227f91f891ac97d068ab90ee871"></a><!-- doxytag: member="TXLib.h::SIZEARR" ref="ga3379d227f91f891ac97d068ab90ee871" args="(arr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SIZEARR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arr</td><td>)</td>
+          <td>&#160;&#160;&#160;( sizeof (arr) / sizeof (0[arr]) )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Замена макросу <a class="el" href="a00032.htm#ga799c47c1a2a151647cd765e1fa4b27b5" title="Вычисление размера массива в элементах">sizearr()</a> для работы в Microsoft Visual Studio 6 </p>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02635">2635</a></p>
+
+</div>
+</div>
+<hr/><h2>Функции</h2>
+<a class="anchor" id="ga177f8bcb7544821ea4b5bd0571fe7196"></a><!-- doxytag: member="TXLib.h::txPlaySound" ref="ga177f8bcb7544821ea4b5bd0571fe7196" args="(const char filename[]=NULL, DWORD mode=SND_ASYNC)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool txPlaySound </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[] = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>SND_ASYNC</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Воспроизводит звуковой файл. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Имя звукового файла. Если NULL - останавливает звук. </td></tr>
+    <tr><td class="paramname">mode</td><td>Режим воспроизведения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Если операция была успешна - true, иначе - false.</dd></dl>
+<dl>
+<dt>Режимы воспроизведения: </dt>
+<dd><table  border="0">
+<tr valign="top">
+<td>SND_ASYNC &#160;&#160;</td><td>Звук проигрывается одновременно с работой программы. <br/>
+ Чтобы отменить звучание, вызовите txPlaySound (NULL). </td></tr>
+<tr valign="top">
+<td>SND_SYNC &#160;&#160;</td><td>Выполнение программы приостанавливается до окончания воспроизведения звука. </td></tr>
+<tr valign="top">
+<td>SND_LOOP &#160;&#160;</td><td>Зацикливать звук при воспроизведении. <br/>
+ Чтобы отменить звучание, вызовите txPlaySound (NULL). <br/>
+ </td></tr>
+<tr valign="top">
+<td></td></tr>
+<tr valign="top">
+<td>SND_NODEFAULT &#160;&#160;</td><td>Не использовать звук по умолчанию, если нельзя проиграть указанный звуковой файл. </td></tr>
+<tr valign="top">
+<td>SND_NOSTOP &#160;&#160;</td><td>Если какой-либо звук уже проигрывается, не останавливать его для запуска указанного звука. </td></tr>
+<tr valign="top">
+<td>SND_APPLICATION &#160;&#160;</td><td>Проигрывать звук, используя программу, зарегистрированную для данного типа звуковых файлов. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Поддерживаются только файлы в формате WAV. Остальные форматы (MP3 и др.) надо перекодировать. Переименование со сменой расширения не поможет, как и в случае с форматом картинок в <a class="el" href="a00029.htm#ga28123a5be2ad65c41550ccb558138476" title="Загружает из файла изображение в формате BMP. Делает это довольно медленно.">txLoadImage()</a>.</dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <a class="code" href="a00032.htm#ga177f8bcb7544821ea4b5bd0571fe7196" title="Воспроизводит звуковой файл.">txPlaySound</a> (<span class="stringliteral">&quot;tada.wav&quot;</span>);  <span class="comment">// So happy that this always exists</span>
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gacb878805752034c14b0409817ae5a5ba"></a><!-- doxytag: member="TXLib.h::txMessageBox" ref="gacb878805752034c14b0409817ae5a5ba" args="(const char *text, const char *header=&quot;TXLib сообщает&quot;, unsigned flags=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned txMessageBox </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>header</em> = <code>&quot;TXLib&#160;сообщает&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выводит сообщение в окне с помощью функции MessageBox. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Текст сообщения </td></tr>
+    <tr><td class="paramname">header</td><td>Заголовок сообщения </td></tr>
+    <tr><td class="paramname">flags</td><td>Флаги отображения сообщения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Значение, возвращаемое функцией MessageBox.</dd></dl>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd>Текст не должен превышать _TX_BIGBUFSIZE символов, а заголовок &ndash; _TX_BIGBUFSIZE символов, иначе они обрезаются.</dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Вместо <code><b>txMessageBox (text, header, flags)</b></code> можно использовать стандартную функцию Win32 <code><b>MessageBox (<a class="el" href="a00029.htm#gae47b05ec325f3bda871e46c8c74919e8" title="Возвращает дескриптор окна холста">txWindow()</a>, text, header, flags)</b></code>. Отличия txMessageBox в том, что она автоматически подставляет окно-родитель, и в том, что при выводе в окно строчки переводятся в формат UNICODE. Это важно лишь в том случае, когда <em>в региональных настройках контрольной панели Windows неверно установлена кодовая страница для программ, не поддерживающих UNICODE.</em> В остальных случаях нужды в <code>txMessageBox</code> нет.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox</a> (<span class="stringliteral">&quot;Получилось?&quot;</span>, <span class="stringliteral">&quot;Прочти меня&quot;</span>, MB_YESNO) == IDYES)
+              {
+              MessageBox (<a class="code" href="a00029.htm#gae47b05ec325f3bda871e46c8c74919e8" title="Возвращает дескриптор окна холста">txWindow</a>(), <span class="stringliteral">&quot;Хватит и обычного MessageBox()&quot;</span>, <span class="stringliteral">&quot;Win32 сообщает&quot;</span>, 0);
+              }
+          <span class="keywordflow">else</span>
+              <a class="code" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox</a> (<span class="stringliteral">&quot;Спасаем от кракозябл вместо русских букв. Гарантия. Недорого.&quot;</span>);
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae2d377df154bb9dcb45429c71c907ddf"></a><!-- doxytag: member="TXLib.h::txNotifyIcon" ref="gae2d377df154bb9dcb45429c71c907ddf" args="(unsigned flags, const char title[], const char format[],...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool txNotifyIcon </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>title</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>format</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выводит всплывающее сообщение в системном трее. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>Флаги сообщения </td></tr>
+    <tr><td class="paramname">title</td><td>Заголовок сообщения </td></tr>
+    <tr><td class="paramname">format</td><td>Строка для печати, как в printf().</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl>
+<dt>Флаги сообщения: </dt>
+<dd><table  border="0">
+<tr valign="top">
+<td><code>NIIF_INFO</code> &#160;&#160;</td><td>Информация </td></tr>
+<tr valign="top">
+<td><code>NIIF_WARNING</code> &#160;&#160;</td><td>Предупреждение </td></tr>
+<tr valign="top">
+<td><code>NIIF_ERROR</code> &#160;&#160;</td><td>Сообщение об ошибке </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Удалось ли отобразить сообщение.</dd></dl>
+<p>Функция формирует сообщение по правилам printf() и выводит во всплывающем окне.</p>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd><ul>
+<li>Эта функция требует, чтобы при компиляции константа версии Internet Explorer <code></code>(_WIN32_IE) была задана не ниже 0x0500. Для этого надо либо <b>включить <a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a> вместо <code>windows.h</code> или перед ним.</b> Либо надо самостоятельно определить <code></code>(#define) эту константу. <small>С версией Internet Explorer это связано потому, что при его установке в Windows обновляются многие компоненты (например, <code>shell32.dll</code> и <code>comctl32.dll</code>), которые влияют на функциональность системы независимо от использования браузера). Сам Internet Explorer в отображении сообщения не участвует.</small></li>
+<li>Сообщение не должно превышать _TX_BUFSIZE символов, иначе оно обрезается.</li>
+</ul>
+</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">int</span> hours = 3, minutes = 10;
+          <span class="keyword">const</span> <span class="keywordtype">char</span> station[] = <span class="stringliteral">&quot;Юму&quot;</span>;
+          ...
+          <a class="code" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon</a> (NIIF_INFO, <span class="stringliteral">&quot;Уважаемые пассажиры&quot;</span>,
+                        <span class="stringliteral">&quot;Поезд на %s отправляется в %d:%d.&quot;</span>, station, hours, minutes);
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa924f43cd62016e5e6a8500336add06a"></a><!-- doxytag: member="TXLib.h::txOutputDebugPrintf" ref="gaa924f43cd62016e5e6a8500336add06a" args="(const char format[],...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txOutputDebugPrintf </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>format</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Выводит сообщение в отладчике. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Строка для печати, как в printf().</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Количество напечатанных символов.</dd></dl>
+<p>Функция формирует сообщение по правилам printf() и передает его в OutputDebugString(). Ее вывод можно перехватить отладчиком или утилитами-логгерами, например, <a href="http://technet.microsoft.com/ru-ru/sysinternals/bb896647%28en-us%29.aspx">DbgView</a>. Если этого не сделать, и не задать первый символ <code>'\a'</code> (см. ниже), то о сообщении никто не узнает. :( </p>
+<dl class="note"><dt><b>Заметки:</b></dt><dd><ul>
+<li>Если первый символ в строке <code>'\a'</code>, то сообщение также дублируется <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a>.</li>
+<li>Если первый или второй символ в строке <code>'\f'</code>, то сообщение также дублируется printf().</li>
+</ul>
+</dd></dl>
+<dl class="warning"><dt><b>Предупреждения:</b></dt><dd>Сообщение не должно превышать _TX_BIGBUFSIZE символов, иначе оно обрезается.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a>, <a class="el" href="a00032.htm#gae2d377df154bb9dcb45429c71c907ddf" title="Выводит всплывающее сообщение в системном трее.">txNotifyIcon()</a>, <a class="el" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">int</span> x = 42;
+          ...
+          <a class="code" href="a00032.htm#gaa924f43cd62016e5e6a8500336add06a" title="Выводит сообщение в отладчике.">txOutputDebugPrintf</a> (<span class="stringliteral">&quot;Никто не узнает, что %d.&quot;</span>, x);
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaacbe12190c9bbc9e39741eb71ded6f35"></a><!-- doxytag: member="TXLib.h::In" ref="gaacbe12190c9bbc9e39741eb71ded6f35" args="(T x, T a, T b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool In </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Проверка, находится ли параметр х внутри замкнутого интервала [a; b]. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Проверяемый параметр </td></tr>
+    <tr><td class="paramname">a</td><td>Левая граница (включительно) </td></tr>
+    <tr><td class="paramname">b</td><td>Правая граница (включительно)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Если a &lt;= x &amp;&amp; x &lt;= b, то истина, если нет - ложь</dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">while</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() != 1)
+              {
+              <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#gaacbe12190c9bbc9e39741eb71ded6f35" title="Проверка, находится ли параметр х внутри замкнутого интервала [a; b].">In</a> (<a class="code" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX</a>(), 110, 120)) <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (100, 100, <span class="stringliteral">&quot;Meet the wall!&quot;</span>);
+              <a class="code" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep</a> (0);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga13174595f409e02a486969e058874f33"></a><!-- doxytag: member="TXLib.h::In" ref="ga13174595f409e02a486969e058874f33" args="(const POINT &amp;pt, const RECT &amp;rect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool In </td>
+          <td>(</td>
+          <td class="paramtype">const POINT &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RECT &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Проверка, находится ли точка pt внутри прямоугольника rect. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>Проверяемая точка в виде <code> POINT {x, y} </code> </td></tr>
+    <tr><td class="paramname">rect</td><td>Прямоугольник в виде <code> RECT {left, top, right, bottom} </code></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Результат проверки</dd></dl>
+<p>Удобно для реализации экранных кнопок, нажимаемых курсором мыши.</p>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          RECT button = { 100, 100, 150, 120 };
+
+          <a class="code" href="a00029.htm#gafb1459949ebb32b199d07f5464205baf" title="Устанавливает текущий цвет заполнения фигур.">txSetFillColor</a> (<a class="code" href="a00029.htm#gga3e94cfad3d9080241f84129d6e5c09b5abec0ab16c8a1ed55e137c20f80cdd25e" title="Светло-серый цвет.">TX_LIGHTGRAY</a>);
+          <a class="code" href="a00029.htm#ga56fe553987cace1e1572b2e64ea46ebc" title="Рисует прямоугольник.">txRectangle</a> (button.left, button.top, button.right, button.bottom);
+
+          <a class="code" href="a00029.htm#ga5a3cef04fcf688a051a9eafd6c8338a7" title="Устанавливает текущее выравнивание текста.">txSetTextAlign</a>();
+          <a class="code" href="a00029.htm#gafb1459949ebb32b199d07f5464205baf" title="Устанавливает текущий цвет заполнения фигур.">txSetFillColor</a> (<a class="code" href="a00029.htm#gga3e94cfad3d9080241f84129d6e5c09b5a4992f4f094a8e2ae9fdb68cfff1f6025" title="Белый цвет.">TX_WHITE</a>);
+          <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (125, 115, <span class="stringliteral">&quot;Cookie&quot;</span>);
+
+          <span class="keywordflow">for</span> (;;)
+              {
+              <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#gaacbe12190c9bbc9e39741eb71ded6f35" title="Проверка, находится ли параметр х внутри замкнутого интервала [a; b].">In</a> (<a class="code" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e" title="Возвращает позицию Мыши!">txMousePos</a>(), button))
+                  {
+                  <a class="code" href="a00029.htm#gafb1459949ebb32b199d07f5464205baf" title="Устанавливает текущий цвет заполнения фигур.">txSetFillColor</a> (TX_TRANSPARENT);
+                  <a class="code" href="a00029.htm#ga56fe553987cace1e1572b2e64ea46ebc" title="Рисует прямоугольник.">txRectangle</a> (button.left, button.top, button.right, button.bottom);
+
+                  <span class="keywordflow">if</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>())
+                      {
+                      <a class="code" href="a00029.htm#gafb1459949ebb32b199d07f5464205baf" title="Устанавливает текущий цвет заполнения фигур.">txSetFillColor</a> (<a class="code" href="a00029.htm#gga3e94cfad3d9080241f84129d6e5c09b5a5308a5fc6c34169a8af67630a5a750d5" title="Темно-серый цвет.">TX_DARKGRAY</a>);
+                      <a class="code" href="a00029.htm#ga56fe553987cace1e1572b2e64ea46ebc" title="Рисует прямоугольник.">txRectangle</a> (button.left, button.top, button.right, button.bottom);
+
+                      <a class="code" href="a00029.htm#gafb1459949ebb32b199d07f5464205baf" title="Устанавливает текущий цвет заполнения фигур.">txSetFillColor</a> (<a class="code" href="a00029.htm#gga3e94cfad3d9080241f84129d6e5c09b5a4992f4f094a8e2ae9fdb68cfff1f6025" title="Белый цвет.">TX_WHITE</a>);
+                      <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (125, 115, <span class="stringliteral">&quot;You got cookie&quot;</span>);
+
+                      <span class="keywordflow">break</span>;
+                      }
+                  }
+
+              <a class="code" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep</a> (0);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa4558a3bf2a126a9e19c5a3655520787"></a><!-- doxytag: member="TXLib.h::random" ref="gaa4558a3bf2a126a9e19c5a3655520787" args="(int range)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int random </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Генератор случайных чисел </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>Правая граница диапазона (<b>не</b> включая саму границу).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Случайное целое число в диапазоне [0; range).</dd></dl>
+<p>Вы еще помните, что означают разные скобочки в обозначении интервалов? :)</p>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">char</span> message[100] = <span class="stringliteral">&quot;Maybe...&quot;</span>;
+          sprintf (<span class="stringliteral">&quot;You SUDDENLY got %d bucks now. But note that tax rate is $%d.&quot;</span>, <a class="code" href="a00032.htm#gaa4558a3bf2a126a9e19c5a3655520787" title="Генератор случайных чисел">random</a> (100), 100);
+          <a class="code" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox</a> (message, <span class="stringliteral">&quot;Lottery&quot;</span>);
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gadf7eefa9eda0d1ae48bb42cadc6759ae"></a><!-- doxytag: member="TXLib.h::random" ref="gadf7eefa9eda0d1ae48bb42cadc6759ae" args="(double left, double right)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double random </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Генератор случайных чисел </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>Левая граница диапазона (<b>включая</b> саму границу). </td></tr>
+    <tr><td class="paramname">right</td><td>Правая граница диапазона (<b>включая</b> саму границу).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Случайное целое число в диапазоне [left; right].</dd></dl>
+<p>Вы все еще помните, что означают разные скобочки в обозначении интервалов? :)</p>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordtype">int</span> money = <a class="code" href="a00032.htm#gaa4558a3bf2a126a9e19c5a3655520787" title="Генератор случайных чисел">random</a> (-100, +100);
+          <span class="keywordflow">if</span> (money &lt; 0)
+              {
+              <span class="keywordtype">char</span> message[100] = <span class="stringliteral">&quot;Maybe...&quot;</span>;
+              sprintf (<span class="stringliteral">&quot;Проиграли в лотерею? Отдайте долг в %d рублей&quot;</span>, -money);
+              <a class="code" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox</a> (message, <span class="stringliteral">&quot;Быстро!&quot;</span>);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74ff1048e0d6bc458c9904fbbe0a6026"></a><!-- doxytag: member="TXLib.h::txSqr" ref="ga74ff1048e0d6bc458c9904fbbe0a6026" args="(double x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double txSqr </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><em>Очень удобное</em> возведение числа в квадрат. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Число для возведения в него</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Квадрат, полученный путем возведения в него числа, заданного для возведения в квадрат</dd></dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Это пример, как <b> не надо </b> писать код: <a class="el" href="a00032.htm#ga74ff1048e0d6bc458c9904fbbe0a6026" title="Очень удобное возведение числа в квадрат.">txSqr()</a> &ndash; функция с "медвежьей услугой". Иногда встречаются те, кто любит печатать в функции результат ее вычислений <small> (не данные для отладки, а именно результат), </small> вместо того, чтобы просто возвращать его туда, где эту функцию вызывали. Пусть эти люди воспользуются приведенной <a class="el" href="a00032.htm#ga74ff1048e0d6bc458c9904fbbe0a6026" title="Очень удобное возведение числа в квадрат.">txSqr()</a> для какого-нибудь нужного дела, особенно в цикле. Пример, конечно, несколько преувеличен. См. в исходном тексте код этой навязчивой радости.</dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          printf (<span class="stringliteral">&quot;\n&quot;</span> <span class="stringliteral">&quot;Радиус\t\t&quot;</span> <span class="stringliteral">&quot;Площадь круга\n\n&quot;</span>);
+
+          <span class="keywordflow">for</span> (<span class="keywordtype">double</span> r = 100; r &gt; 0; r--)
+              {
+              printf (<span class="stringliteral">&quot;%6.2lf...&quot;</span>, r);
+
+              <span class="keywordtype">double</span> square = M_PI * <a class="code" href="a00032.htm#ga74ff1048e0d6bc458c9904fbbe0a6026" title="Очень удобное возведение числа в квадрат.">txSqr</a> (r);  <span class="comment">// Надолго запомним эту площадь!</span>
+              printf (<span class="stringliteral">&quot;\b\b\b   \t&quot;</span>);
+
+              printf (<span class="stringliteral">&quot;%-.2lf\n&quot;</span>, square);
+              }
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02863">2863</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ga7b470eef58eabacf9c7820ce6d392506"></a><!-- doxytag: member="TXLib.h::txDump" ref="ga7b470eef58eabacf9c7820ce6d392506" args="(const void *address, const char name[]=&quot;txDump()&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void txDump </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>name</em>[] = <code>&quot;txDump()&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Распечатывает дамп области памяти в консоли. </p>
+<dl><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>Адрес начала распечатки. </td></tr>
+    <tr><td class="paramname">name</td><td>Название распечатки (усекается до 8 символов).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Заметки:</b></dt><dd>Распечатывается область памяти размером 256 байт. <br/>
+<br/>
+ После распечатки атрибуты консоли сбрасываются в 0x07 (светло-серый на черном).</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00032.htm#ga3e4a82a10130528f63b6f19476a0943a" title="Выводит развернутое диагностическое сообщение.">TX_ERROR()</a>, <a class="el" href="a00032.htm#ga61997e2af7f7c3d2e40ef9a612000220" title="Выводит развернутое диагностическое сообщение в отладочном режиме.">TX_DEBUG_ERROR()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keyword">const</span> <span class="keywordtype">char</span> text[] = <span class="stringliteral">&quot;Каждому лектору - в портфель по вектору&quot;</span>;
+          <a class="code" href="a00032.htm#ga7b470eef58eabacf9c7820ce6d392506" title="Распечатывает дамп области памяти в консоли.">txDump</a> (text);
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Переменные</h2>
+<a class="anchor" id="gaf59817ad656dcbb3f9baebeb4d7f82f7"></a><!-- doxytag: member="TXLib.h::txPI" ref="gaf59817ad656dcbb3f9baebeb4d7f82f7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="a00032.htm#gaf59817ad656dcbb3f9baebeb4d7f82f7">txPI</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Число Пи </p>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#gaf59817ad656dcbb3f9baebeb4d7f82f7" title="Число Пи">txPI</a> == 1) <a class="code" href="a00032.htm#gacb878805752034c14b0409817ae5a5ba" title="Выводит сообщение в окне с помощью функции MessageBox.">txMessageBox</a> (<span class="stringliteral">&quot;Вы попали в другую Вселенную.&quot;</span>, <span class="stringliteral">&quot;Поздравляем&quot;</span>, MB_ICONSTOP);
+</pre></div> </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="a00025_source.htm">TXLib.h</a> строка <a class="el" href="a00025_source.htm#l02831">2831</a></p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!-- --------------------------------------------------------------------------
+  doxygen_htm.htm
+  $Version: 00172a, Revision: 98 $
+  $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru> $
+  $Date: 2012-11-28 08:44:33 +0400 $
+ -------------------------------------------------------------------------- -->
+
+<table class="" width="100%"><tr valign="top">
+
+  <td align="left">
+    <small><a href="http://orphus.ru">Нашли ошибку? Выделите ее мышкой и нажмите Ctrl+ENTER. &copy;&#160;Orphus.ru.</a></small><br>
+    <a href="http://orphus.ru" id="orphus" target="_blank"><img class = "footer" alt="Orphus" src="http://storage.ded32.net.ru/orphus.gif" border="0"></a>
+    </td>
+
+  <td align="right">
+    Документация по TX Library. Дата: Tue Aug 12 2014 23:45:43. Создано&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3
+    <img src="http://storage.ded32.net.ru/stat/TXLib-Help.chm" width=1px height=1px border="0">
+    </td>
+  </tr></table>
+
+</ul>
+</div>
+
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol)? "https://ssl." : "http://www."); document.write (unescape ("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); try { var pageTracker = _gat._getTracker ("UA-7927138-1"); pageTracker._trackPageview(); } catch (err) {}</script>
+<script type="text/javascript" src="http://storage.ded32.net.ru/orphus.js"></script>
+
+</body>
+</html>

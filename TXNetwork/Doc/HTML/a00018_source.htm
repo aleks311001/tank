@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>TXNetwork: Исходный файл client.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="Doxyfile.css" rel="stylesheet" type="text/css" />
+<link href="Doxyfile.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TXNetwork
+   &#160;<span id="projectnumber">v. 0.5.2a</span>
+   </div>
+   <div id="projectbrief">&nbsp;ALL? Windows network in a sandbox :)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00018_source.htm','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Example02/client.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00018.htm">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//{===========================================================================</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="comment">//}===========================================================================</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00026.htm">proto.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define ANOTHER_PEER_IP &quot;localhost&quot; //Меняйте адрес тут :)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> NetPaint (<a class="code" href="a00015.htm">TX_SOCKET</a> paint_peer);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> CursorDraw (NetCursor_t cursor, COLORREF color);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> CursorMove (NetCursor_t* cursor);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">int</span> main()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;txCreateWindow (1024, 768);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;printf (<span class="stringliteral">&quot;Searching for server...\n&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="a00015.htm">TX_SOCKET</a> paint_peer = <a class="code" href="a00038.htm#ga6cf646e1512cfd0ea4cb426984510914">txCreateSocket</a> (<a class="code" href="a00038.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58">TX_CLIENT</a>, ANOTHER_PEER_IP);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;printf (<span class="stringliteral">&quot;Start draw meow.\n&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordflow">if</span> (<a class="code" href="a00038.htm#ga5e61ac3a46192caddcd98b27325ef953">txnAssert</a> (paint_peer) == <a class="code" href="a00039.htm#gaa56d5be53827cc51bd2a02fe580e00c9">TXN_NOT_CREATED</a>)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    printf (<span class="stringliteral">&quot;Can&#39;t find server on this IP address.\n&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;NetPaint (paint_peer);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> NetPaint (<a class="code" href="a00015.htm">TX_SOCKET</a> paint_peer)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;NetCursor_t cursor        = {100, 100, -1, -1, CUR_NOP};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;NetCursor_t peer_cursor   = {100, 100, -1, -1, CUR_NOP};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordflow">while</span> (!GetAsyncKeyState (VK_SPACE))</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (peer_cursor.action == CUR_EXIT)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    CursorDraw(cursor, TX_LIGHTGREEN);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    CursorDraw(peer_cursor, TX_LIGHTRED);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    CursorMove (&amp;cursor);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a00038.htm#gaf700cdda64317854f43186f0cfa003a1">txRecvFrom</a>  (paint_peer, &amp;peer_cursor, <span class="keyword">sizeof</span>(peer_cursor));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="a00038.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a>    (paint_peer, &amp;cursor     , <span class="keyword">sizeof</span>(cursor));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    txSleep (10);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;cursor.action = CUR_EXIT;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="a00038.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a>    (paint_peer, &amp;cursor, <span class="keyword">sizeof</span>(cursor));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> CursorMove(NetCursor_t* cursor)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;cursor-&gt;old_x = cursor-&gt;x;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;cursor-&gt;old_y = cursor-&gt;y;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;cursor-&gt;x = txMouseX();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;cursor-&gt;y = txMouseY();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordflow">if</span> (txMouseButtons() == 1)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    cursor-&gt;action = CUR_DRAW;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    cursor-&gt;action = CUR_NOP;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span> CursorDraw (NetCursor_t cursor, COLORREF color)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;txSetFillColor (color);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;txSetColor     (color, 10);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordflow">if</span> (cursor.action == 1)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    txLine (cursor.old_x, cursor.old_y, cursor.x, cursor.y);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="ttc" id="a00038_htm_gab1932ecc57580c15659f0cc01b695262"><div class="ttname"><a href="a00038.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a></div><div class="ttdeci">int txSendTo(TX_SOCKET &amp;to, const void *buf, int size_buf)</div><div class="ttdoc">Функция для отправки данных через сокет </div></div>
+<div class="ttc" id="a00038_htm_gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58"><div class="ttname"><a href="a00038.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58">TX_CLIENT</a></div><div class="ttdoc">Сокет является клиентом. </div><div class="ttdef"><b>Definition:</b> <a href="a00036_source.htm#l00213">TXNetwork.h:213</a></div></div>
+<div class="ttc" id="a00038_htm_ga6cf646e1512cfd0ea4cb426984510914"><div class="ttname"><a href="a00038.htm#ga6cf646e1512cfd0ea4cb426984510914">txCreateSocket</a></div><div class="ttdeci">TX_SOCKET txCreateSocket(sock_type type, const char *IP, int port=TX_STD_PORT, sock_type blocking=TX_BLOCK, bool useTCP=true)</div><div class="ttdoc">Создаёт сокет TXNetwork. </div></div>
+<div class="ttc" id="a00039_htm_gaa56d5be53827cc51bd2a02fe580e00c9"><div class="ttname"><a href="a00039.htm#gaa56d5be53827cc51bd2a02fe580e00c9">TXN_NOT_CREATED</a></div><div class="ttdeci">#define TXN_NOT_CREATED</div><div class="ttdoc">Сокет не создан. </div><div class="ttdef"><b>Definition:</b> <a href="a00036_source.htm#l00191">TXNetwork.h:191</a></div></div>
+<div class="ttc" id="a00015_htm"><div class="ttname"><a href="a00015.htm">TX_SOCKET</a></div><div class="ttdoc">Cокет TXLib&#39;a. </div><div class="ttdef"><b>Definition:</b> <a href="a00036_source.htm#l00232">TXNetwork.h:232</a></div></div>
+<div class="ttc" id="a00038_htm_gaf700cdda64317854f43186f0cfa003a1"><div class="ttname"><a href="a00038.htm#gaf700cdda64317854f43186f0cfa003a1">txRecvFrom</a></div><div class="ttdeci">int txRecvFrom(TX_SOCKET &amp;to, void *buf, int size_buf)</div><div class="ttdoc">Функция для приема данных через сокет </div></div>
+<div class="ttc" id="a00038_htm_ga5e61ac3a46192caddcd98b27325ef953"><div class="ttname"><a href="a00038.htm#ga5e61ac3a46192caddcd98b27325ef953">txnAssert</a></div><div class="ttdeci">int txnAssert(TX_SOCKET &amp;asr)</div><div class="ttdoc">Функция для проверки сокета </div></div>
+<div class="ttc" id="a00026_htm"><div class="ttname"><a href="a00026.htm">proto.h</a></div><div class="ttdoc">Чуть(!) более сложный пример использования TXNetwork - сетевая рисовалка. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_03680f297d755c096b0a1ead13ee12b7.htm">Examples</a></li><li class="navelem"><a class="el" href="dir_0bf6fc43c36071a85e05ebe41beeb1de.htm">Example02</a></li><li class="navelem"><a class="el" href="a00018.htm">client.cpp</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -17,7 +17,7 @@
 //!
 //!             А также сообщайте мне обо всем (e-mail: vova@txlib.ru).
 //!
-//! @version    0.6.3a
+//! @version    0.6.1a
 //!
 //! @author     Copyright (C) _RedMan_ (Vova Yurovsky) <vova@txlib.ru>, 7-8 класс
 //! @date       2015-2016
@@ -41,14 +41,15 @@
 //!             @strike котов @endstrike готов к работе с вами. @nn
 //!             Либо в командной строке компилятора надо указать опцию @c -l @c ws2_32.
 //! @par
+//!             Так же не забудьте указать путь к TXLib'у (если у вас путь не стандартный), определив @c __TXLIB_PATH
 //!
-//! @warning -#  <b>Библиотека находится в состоянии альфа-тестирования. Обо всех ошибках сообщайте
+//! @warning    <b>Библиотека находится в состоянии альфа-тестирования. Обо всех ошибках сообщайте
 //!             на почту vova@txlib.ru.</b>
 //!
-//! @warning -#  <b>При использовании совместно с TXLib:
-//!             Подключайте TXNetwork <b>ПЕРЕД</b> TXLib'ом </b>.
-//!
-//! @warning -#  <b>TXNetwork удаляет определение (\#undef) __STRICT_ANSI__ для совместимости с TXLib'ом</b>
+//! @warning    При использовании совместно с TXLib:
+//!          -# Перед подключением TXLib'a определите макрос WINVER (это версия Windows, для которой ведется
+//!             разработка) не менее, чем 0x0501 с помощью \#define.
+//!          -# Подключайте TXNetwork после TXLib'a. А можно и вместо него.
 //!
 //! @section    Contents Разделы системы помощи
 //! @par
@@ -101,9 +102,10 @@
 
 #ifdef __TXLIB_H_INCLUDED
 
-#error -----------------------------------------------------------------------
-#error Do not include TXLib before TXNetwork.
-#error -----------------------------------------------------------------------
+#warning -----------------------------------------------------------------------
+#warning Do not include TXLib before TXNetwork.
+#warning NOTE: TXNetwork will include TXLib automatically.
+#warning -----------------------------------------------------------------------
 
 #endif
 
@@ -139,13 +141,20 @@
 
 #endif
 
+#ifndef __TXLIB_PATH
+
+#define __TXLIB_PATH "TXLib.h"
+
+#endif
+
 #pragma GCC system_header
 
 #undef  __STRICT_ANSI__
 
 #include <ws2tcpip.h>
-#include <stdio.h>
-#include <assert.h>
+#include __TXLIB_PATH
+
+#define __STRICT_ANSI__
 
 //! @endcond
 //}
@@ -182,14 +191,14 @@
 #define TXN_NOT_CREATED 101
 
 //! @ingroup TXNERCO
-//! @brief   Сокет в порядке.
+//! @brief   Сокет впорядке.
 //!
 //! Возвращается txnAssert'ом.
 
 #define TXN_OK          100
 
 //! @ingroup TXNERCO
-//! @brief   Ошибка сокета.
+//! @brief   Сокет в порядке.
 //!
 //! Возвращается функциями класса TX_SOCKET при приеме/передаче данных.
 
@@ -280,8 +289,8 @@ class TX_SOCKET
 
     sock_type _type_;
 
-    bool _txInitAsServer (const char*,    u_short port, sock_type type, bool useTCP, const unsigned OueueSize);
-    bool _txInitAsClient (const char* IP, u_short port, sock_type type, bool useTCP, const unsigned);
+    bool _txInitAsServer (const char*,    u_short port, sock_type type, bool useTCP);
+    bool _txInitAsClient (const char* IP, u_short port, sock_type type, bool useTCP);
 
     public:
 
@@ -309,7 +318,7 @@ class TX_SOCKET
         _type_ (that._type_)
         {}
 
-    TX_SOCKET (sock_type type, const char* IP, int port, sock_type blocking, bool useTCP, const unsigned OueueSize):
+    TX_SOCKET (sock_type type, const char* IP, int port, sock_type blocking, bool useTCP):
         _broadcats(),
         _TCP (useTCP),
         _init (false),
@@ -320,27 +329,18 @@ class TX_SOCKET
         _client_addr(),
         _type_ (blocking)
         {
-        if (IP == NULL)
-            {
-            if (type == TX_SERVER)
-                _broadcats = false;
-            else
-                return;
-            }
-        else
-            {
-            assert (IP);
-            _broadcats = ! (strcmp (IP, TX_BROADCAST));          // TX_BROADCAT :)
-            }
+        assert (IP);
+
+        _broadcats = ! (strcmp (IP, TX_BROADCAST));                                   // TX_BROADCAT :)
 
         switch (_type)
             {
             case TX_CLIENT:   if (! (this->*(_broadcats? &TX_SOCKET :: _txInitAsServer : &TX_SOCKET :: _txInitAsClient))
-                                    (IP, (u_short) port, _type_, useTCP, OueueSize)) return;
+                                    (IP, (u_short) port, _type_, useTCP)) return;
                               break;
 
             case TX_SERVER:   if (! (this->*(_broadcats? &TX_SOCKET :: _txInitAsClient : &TX_SOCKET :: _txInitAsServer))
-                                    (IP, (u_short) port, _type_, useTCP, OueueSize)) return;
+                                    (IP, (u_short) port, _type_, useTCP)) return;
                               break;
 
             case TX_BLOCK:
@@ -381,7 +381,6 @@ class TX_SOCKET
      *  @param   port      Порт компьютеров, на котором будет "висеть" сокет.
      *  @param   blocking  Тип сокета (блокирующий или неблокирующий).
      *  @param   useTCP    Если false, то используется протокол UDP. Иначе TCP.
-     *  @param   OueueSize @strike Черная магия @endstrike Размер очереди обрабатываемых клиентов для listen. Use Google, Luck
      *
      *  @return  Сокет TXNetwork'a.
      *
@@ -394,8 +393,8 @@ class TX_SOCKET
      *  @endcode
      */
 
-    TX_SOCKET txCreateSocket (sock_type type, const char* IP = NULL, int port = TX_STD_PORT,
-                              sock_type blocking = TX_BLOCK, bool useTCP = true, const unsigned OueueSize = 0x10);
+    TX_SOCKET txCreateSocket (sock_type type, const char* IP, int port = TX_STD_PORT,
+                              sock_type blocking = TX_BLOCK, bool useTCP = true);
 
     //! @ingroup TXSocket
     //! @brief   Функция для отправки данных через сокет
@@ -550,7 +549,7 @@ return this;
 // TX_SOCKET
 //{
 
-bool TX_SOCKET :: _txInitAsServer (const char*, u_short port, sock_type blocking, bool useTCP, const unsigned OueueSize)
+bool TX_SOCKET :: _txInitAsServer (const char*, u_short port, sock_type blocking, bool useTCP)
     {
     addrinfo hints    = {};
     hints.ai_family   = AF_INET;
@@ -608,7 +607,7 @@ bool TX_SOCKET :: _txInitAsServer (const char*, u_short port, sock_type blocking
 
     if (useTCP)
         {
-        if (listen (**_sock, OueueSize)) return false;
+        if (listen (**_sock, 0x10)) return false;
 
         int client_addr_size = sizeof (_client_addr);
 
@@ -636,7 +635,7 @@ bool TX_SOCKET :: _txInitAsServer (const char*, u_short port, sock_type blocking
     return true;
     }
 
-bool TX_SOCKET :: _txInitAsClient (const char* IP, u_short port, sock_type blocking, bool useTCP, const unsigned)
+bool TX_SOCKET :: _txInitAsClient (const char* IP, u_short port, sock_type blocking, bool useTCP)
     {
     hostent* he = gethostbyname (IP);
 
@@ -750,10 +749,10 @@ int txRecvFrom (TX_SOCKET& to, void* buf, int size_buf)
     return answ;
     }
 
-TX_SOCKET txCreateSocket (sock_type type, const char* IP/* = NULL*/,
-                          int port /* = TX_STD_PORT*/, sock_type blocking /* = TX_BLOCK*/, bool useTCP /* = true*/, const unsigned OueueSize/* = 0x10*/)
+TX_SOCKET txCreateSocket (sock_type type, const char* IP,
+                          int port /* = TX_STD_PORT*/, sock_type blocking /* = TX_BLOCK*/, bool useTCP /* = true*/)
     {
-    return TX_SOCKET (type, IP, port, blocking, useTCP, OueueSize);
+    return TX_SOCKET (type, IP, port, blocking, useTCP);
     }
 
 int txnAssert (TX_SOCKET& asr)

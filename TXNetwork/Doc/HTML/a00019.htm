@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>TXNetwork: Сокет TXNetwork</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="Doxyfile.css" rel="stylesheet" type="text/css" />
+<link href="Doxyfile.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TXNetwork
+   &#160;<span id="projectnumber">v. 0.5.3a</span>
+   </div>
+   <div id="projectbrief">&nbsp;@strikeALL@endstrike Windows network in a sandbox :)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00019.htm','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Сокет TXNetwork</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.htm">TX_SOCKET</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cокет TXLib'a.  <a href="a00015.htm#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ga1e359e37a66aaeab778423c0c61923d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#ga1e359e37a66aaeab778423c0c61923d0">TX_BROADCAST</a>&#160;&#160;&#160;&quot;255.255.255.255&quot;</td></tr>
+<tr class="memdesc:ga1e359e37a66aaeab778423c0c61923d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Широковещательный IP-адрес TXNetwork'a.  <a href="#ga1e359e37a66aaeab778423c0c61923d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1e359e37a66aaeab778423c0c61923d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3ab3baeb73e77641e348a9aa33516ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a>&#160;&#160;&#160;27050</td></tr>
+<tr class="memdesc:gad3ab3baeb73e77641e348a9aa33516ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стандартный порт TXNetwork'a.  <a href="#gad3ab3baeb73e77641e348a9aa33516ec">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad3ab3baeb73e77641e348a9aa33516ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadea4550fd711b4de49839e72be38c2d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#gadea4550fd711b4de49839e72be38c2d0">TX_LOCALHOST</a>&#160;&#160;&#160;&quot;127.0.0.1&quot;</td></tr>
+<tr class="memdesc:gadea4550fd711b4de49839e72be38c2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP-адрес компьютера, на которм запущен компьютер.  <a href="#gadea4550fd711b4de49839e72be38c2d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gadea4550fd711b4de49839e72be38c2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga0696d269feb958d9f6fa2d0e1cf7e517"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a> { <br />
+&#160;&#160;<a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a348f2bd7cd4f969b024f32d9cb4c417c">TX_SERVER</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58">TX_CLIENT</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a57c7249731b701a916229d3c795ba9fd">TX_BLOCK</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a80597d9c9785fab539e760bebf2acc22">TX_NONBLOCK</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a247d953bff98c6ee1de4ddca128848f3">TX_NOTYPE</a> = -1
+<br />
+ }<tr class="memdesc:ga0696d269feb958d9f6fa2d0e1cf7e517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Типы сокета.  <a href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0696d269feb958d9f6fa2d0e1cf7e517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga6cf646e1512cfd0ea4cb426984510914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00015.htm">TX_SOCKET</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#ga6cf646e1512cfd0ea4cb426984510914">txCreateSocket</a> (<a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a> type, const char *IP, int port=<a class="el" href="a00019.htm#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a>, <a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a> blocking=<a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a57c7249731b701a916229d3c795ba9fd">TX_BLOCK</a>, bool useTCP=true)</td></tr>
+<tr class="memdesc:ga6cf646e1512cfd0ea4cb426984510914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт сокет TXNetwork.  <a href="#ga6cf646e1512cfd0ea4cb426984510914">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6cf646e1512cfd0ea4cb426984510914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1932ecc57580c15659f0cc01b695262"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a> (<a class="el" href="a00015.htm">TX_SOCKET</a> &amp;to, const void *buf, int size_buf)</td></tr>
+<tr class="memdesc:gab1932ecc57580c15659f0cc01b695262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для отправки данных через сокет  <a href="#gab1932ecc57580c15659f0cc01b695262">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab1932ecc57580c15659f0cc01b695262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf700cdda64317854f43186f0cfa003a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#gaf700cdda64317854f43186f0cfa003a1">txRecvFrom</a> (<a class="el" href="a00015.htm">TX_SOCKET</a> &amp;to, void *buf, int size_buf)</td></tr>
+<tr class="memdesc:gaf700cdda64317854f43186f0cfa003a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для приема данных через сокет  <a href="#gaf700cdda64317854f43186f0cfa003a1">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf700cdda64317854f43186f0cfa003a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e61ac3a46192caddcd98b27325ef953"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#ga5e61ac3a46192caddcd98b27325ef953">txnAssert</a> (<a class="el" href="a00015.htm">TX_SOCKET</a> &amp;asr)</td></tr>
+<tr class="memdesc:ga5e61ac3a46192caddcd98b27325ef953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для проверки сокета  <a href="#ga5e61ac3a46192caddcd98b27325ef953">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5e61ac3a46192caddcd98b27325ef953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac42a63b28b3c029dda53fd90ddd0cb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#gaac42a63b28b3c029dda53fd90ddd0cb8">txChangeSockType</a> (<a class="el" href="a00015.htm">TX_SOCKET</a> &amp;to, <a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a> blocking)</td></tr>
+<tr class="memdesc:gaac42a63b28b3c029dda53fd90ddd0cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для изменения типа (синхронный - не синхронный) сокета.  <a href="#gaac42a63b28b3c029dda53fd90ddd0cb8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaac42a63b28b3c029dda53fd90ddd0cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf1ee4dbd12ced05ce2492f14e1bb313"><td class="memItemLeft" align="right" valign="top">SOCKET *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.htm#gaaf1ee4dbd12ced05ce2492f14e1bb313">txGetWinSocket</a> (<a class="el" href="a00015.htm">TX_SOCKET</a> &amp;what)</td></tr>
+<tr class="memdesc:gaaf1ee4dbd12ced05ce2492f14e1bb313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, которая возвращает сокет winsock'а.  <a href="#gaaf1ee4dbd12ced05ce2492f14e1bb313">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaf1ee4dbd12ced05ce2492f14e1bb313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Макросы</h2>
+<a class="anchor" id="ga1e359e37a66aaeab778423c0c61923d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_BROADCAST&#160;&#160;&#160;&quot;255.255.255.255&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Широковещательный IP-адрес TXNetwork'a. </p>
+<p>IP-адрес, с которого все компьютеры принимают сообщения, посланые на этот адрес. </p>
+
+<p>См. определение в файле <a class="el" href="a00017_source.htm">TXNetwork.h</a> строка <a class="el" href="a00017_source.htm#l00172">172</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gad3ab3baeb73e77641e348a9aa33516ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_STD_PORT&#160;&#160;&#160;27050</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Стандартный порт TXNetwork'a. </p>
+<p>Стандартный номер порта. Учти, юный программист, что на один порт может быть повешен только один сокет! </p>
+
+<p>См. определение в файле <a class="el" href="a00017_source.htm">TXNetwork.h</a> строка <a class="el" href="a00017_source.htm#l00179">179</a></p>
+
+</div>
+</div>
+<a class="anchor" id="gadea4550fd711b4de49839e72be38c2d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_LOCALHOST&#160;&#160;&#160;&quot;127.0.0.1&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IP-адрес компьютера, на которм запущен компьютер. </p>
+<p>IP-адрес твоего компьютера. Он верен только с точки зрения самого компьютера. </p>
+
+<p>См. определение в файле <a class="el" href="a00017_source.htm">TXNetwork.h</a> строка <a class="el" href="a00017_source.htm#l00186">186</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a class="anchor" id="ga0696d269feb958d9f6fa2d0e1cf7e517"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Типы сокета. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a class="anchor" id="gga0696d269feb958d9f6fa2d0e1cf7e517a348f2bd7cd4f969b024f32d9cb4c417c"></a>TX_SERVER&#160;</td><td class="fielddoc">
+<p>Сокет является сервером, создается первым. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58"></a>TX_CLIENT&#160;</td><td class="fielddoc">
+<p>Сокет является клиентом. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0696d269feb958d9f6fa2d0e1cf7e517a57c7249731b701a916229d3c795ba9fd"></a>TX_BLOCK&#160;</td><td class="fielddoc">
+<p>Сокет блокирует выполнение программы во время приема/передачи. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0696d269feb958d9f6fa2d0e1cf7e517a80597d9c9785fab539e760bebf2acc22"></a>TX_NONBLOCK&#160;</td><td class="fielddoc">
+<p>Сокет не блокирует выполнение программы во время приема/передачи. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0696d269feb958d9f6fa2d0e1cf7e517a247d953bff98c6ee1de4ddca128848f3"></a>TX_NOTYPE&#160;</td><td class="fielddoc">
+<p>Если не знаешь или не уверен. </p>
+</td></tr>
+</table>
+
+<p>См. определение в файле <a class="el" href="a00017_source.htm">TXNetwork.h</a> строка <a class="el" href="a00017_source.htm#l00212">212</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a class="anchor" id="ga6cf646e1512cfd0ea4cb426984510914"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00015.htm">TX_SOCKET</a> txCreateSocket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>IP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em> = <code><a class="el" href="a00019.htm#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a>&#160;</td>
+          <td class="paramname"><em>blocking</em> = <code><a class="el" href="a00019.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a57c7249731b701a916229d3c795ba9fd">TX_BLOCK</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useTCP</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт сокет TXNetwork. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Тип сокета: клиент (TX_CLIENT) или сервер (TX_SERVER). </td></tr>
+    <tr><td class="paramname">IP</td><td>IP-адрес компьютера, с которым будет создан сокет. Если тип сокета <code>type</code> - TX_SERVER, то этот параметр может быть пустой строкой. </td></tr>
+    <tr><td class="paramname">port</td><td>Порт компьютеров, на котором будет "висеть" сокет. </td></tr>
+    <tr><td class="paramname">blocking</td><td>Тип сокета (блокирующий или неблокирующий). </td></tr>
+    <tr><td class="paramname">useTCP</td><td>Если false, то используется протокол UDP. Иначе TCP.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Сокет TXNetwork'a.</dd></dl>
+<dl class="section user"><dt>Пример</dt><dd><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;txCreateSocket (TX_CLIENT, &quot;192.168.0.1&quot;, 107);   // Подключаемся по telnet&#39;у</div>
+</div><!-- fragment --> <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;txCreateSocket (TX_SERVER, &quot;&quot;,          27051);   // Поднимаем сервер своей игры. Ю-ху!</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab1932ecc57580c15659f0cc01b695262"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txSendTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00015.htm">TX_SOCKET</a> &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция для отправки данных через сокет </p>
+<p>Cокет TXLib'a.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>Сокет, через который нужно передать данные. </td></tr>
+    <tr><td class="paramname">buf</td><td>Буфер, который будет передан. </td></tr>
+    <tr><td class="paramname">size_buf</td><td>Размер буфера.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки. Подробнее см. MSDN. </dd></dl>
+<dl class="section user"><dt>Пример 1</dt><dd><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;TX_SOCEKT game_server = txCreateSocket (...);    // Создаем сокет</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;int x = 0, y = 0;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;char coordinates[200] = &quot;&quot;;                      // Создаем строку для параметров</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;sprintf (coordinates, &quot;x = %d, y = %d&quot;, x, y);   // Печатаем значения параметров в строку</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;txSendTo (game_server, coordinates, 200);        // Передаем координаты как текст</div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Пример 2</dt><dd><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;struct Point { int x, y };                       // Тут поступаем умнее, создаем структуру</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...                                              // для хранения координат</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;TX_SOCEKT game_server = txCreateSocket (...);    // Создаем сокет</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;Point p = { 100, 200 };                          // Создаем точку с координатами x = 100, y = 200</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;txSendTo (game_server, &amp;p, sizeof (p));          // Передаем данные как структуру</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf700cdda64317854f43186f0cfa003a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txRecvFrom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00015.htm">TX_SOCKET</a> &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция для приема данных через сокет </p>
+<p>Cокет TXLib'a.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>Сокет, через с которого нужно принять данные. </td></tr>
+    <tr><td class="paramname">buf</td><td>Буфер, который в будет записан массив. </td></tr>
+    <tr><td class="paramname">size_buf</td><td>Размер буфера.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки. Подробнее см. MSDN. </dd></dl>
+<dl class="section user"><dt>Пример 1</dt><dd><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;TX_SOCEKT game_server = txCreateSocket (...);      // Создаем сокет</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;int x = 0, y = 0;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;char coordinates[200] = &quot;&quot;;                        // Создаем строку для параметров</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;txRecvFrom (game_server, coordinates, 200);        // Принимаем координаты</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;sscanf (coordinates, &quot; x = %d , y = %d&quot;, &amp;x, &amp;y);  // Извлекаем координаты из полученной строки</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                                   // (следи за каждым пробелом!).</div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Пример 2</dt><dd><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;struct Point { int x, y };                       // Тут поступаем умнее, создаем структуру</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...                                              // для хранения координат</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;TX_SOCEKT game_client = txCreateSocket (...);    // Создаем сокет</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;Point p = {};                                    // Создаем переменную для приема координат</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;...</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;txRecvFrom (game_server, &amp;p, sizeof (p));        // Принимаем данные</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;DrawGameObject (p.x, p.y);                       // Используем данные</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5e61ac3a46192caddcd98b27325ef953"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txnAssert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00015.htm">TX_SOCKET</a> &amp;&#160;</td>
+          <td class="paramname"><em>asr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция для проверки сокета </p>
+<p>Cокет TXLib'a.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asr</td><td>Сокет, который нужно проверить.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaac42a63b28b3c029dda53fd90ddd0cb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txChangeSockType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00015.htm">TX_SOCKET</a> &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00019.htm#ga0696d269feb958d9f6fa2d0e1cf7e517">sock_type</a>&#160;</td>
+          <td class="paramname"><em>blocking</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция для изменения типа (синхронный - не синхронный) сокета. </p>
+<p>Cокет TXLib'a.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>Сокет, тип которого нужно изменить. </td></tr>
+    <tr><td class="paramname">blocking</td><td>Новый тип блокировки сокета.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Наличие ошибки. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaaf1ee4dbd12ced05ce2492f14e1bb313"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SOCKET* txGetWinSocket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00015.htm">TX_SOCKET</a> &amp;&#160;</td>
+          <td class="paramname"><em>what</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция, которая возвращает сокет winsock'а. </p>
+<p>Cокет TXLib'a.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">what</td><td>Сокет TXLib'a, сокет которого нужно вернуть.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на сокет winsock'a. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>TX Library: Поддержка мыши</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen_.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Создано системой Doxygen 1.7.3 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="TXLib.png"></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TX Library&#160;<span id="projectnumber">Help &ndash; Version: 00172a, Revision: 104</span></div>
+   <div id="projectbrief"><s>&nbsp;ALL&nbsp;</s> Windows graphics in a sandbox</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00030.htm','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Поддержка мыши</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="member-group"></a>
+Работа с мышью</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">POINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e">txMousePos</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает позицию Мыши!  <a href="#ga452a1a7dc5d3f467c8b79b9db3ea053e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d">txMouseX</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает Х-Координату Мыши!  <a href="#ga6adbdb491a8eec2a4209c54874ae7b7d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576">txMouseY</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает Y-Координату Мыши!  <a href="#ga572acf2310d35defaa9a37a2ec260576"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73">txMouseButtons</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает состояние Кнопок Мыши!  <a href="#gab814b21d8f52c3efd0d7175d30a4fa73"></a><br/></td></tr>
+</table>
+<hr/><h2>Функции</h2>
+<a class="anchor" id="ga452a1a7dc5d3f467c8b79b9db3ea053e"></a><!-- doxytag: member="TXLib.h::txMousePos" ref="ga452a1a7dc5d3f467c8b79b9db3ea053e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT txMousePos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает позицию Мыши! </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Позиция мыши как структура POINT.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX()</a>, <a class="el" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY()</a>, <a class="el" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e" title="Возвращает позицию Мыши!">txMousePos()</a>, <a class="el" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          RECT area = { 100, 100, 110, 110 };
+
+          <span class="keywordflow">while</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() != 1)
+              {
+              <span class="keywordflow">if</span> (<a class="code" href="a00032.htm#gaacbe12190c9bbc9e39741eb71ded6f35" title="Проверка, находится ли параметр х внутри замкнутого интервала [a; b].">In</a> (<a class="code" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e" title="Возвращает позицию Мыши!">txMousePos</a>(), area)) <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (100, 100, <span class="stringliteral">&quot;What are you doing here?!&quot;</span>);
+              <a class="code" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep</a> (0);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6adbdb491a8eec2a4209c54874ae7b7d"></a><!-- doxytag: member="TXLib.h::txMouseX" ref="ga6adbdb491a8eec2a4209c54874ae7b7d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txMouseX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает Х-Координату Мыши! </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Х-координата мыши.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX()</a>, <a class="el" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY()</a>, <a class="el" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e" title="Возвращает позицию Мыши!">txMousePos()</a>, <a class="el" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">while</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() != 1)
+              {
+              <a class="code" href="a00029.htm#gaa14e9c2a46cf713efaa1f850074d8adc" title="Рисует окружность или круг.">txCircle</a> (<a class="code" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX</a>(), <a class="code" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY</a>(), 20);
+              <a class="code" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep</a> (0);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga572acf2310d35defaa9a37a2ec260576"></a><!-- doxytag: member="TXLib.h::txMouseY" ref="ga572acf2310d35defaa9a37a2ec260576" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txMouseY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает Y-Координату Мыши! </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Y-координата мыши.</dd></dl>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX()</a>, <a class="el" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY()</a>, <a class="el" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e" title="Возвращает позицию Мыши!">txMousePos()</a>, <a class="el" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">while</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() != 1)
+              {
+              <a class="code" href="a00029.htm#gaa14e9c2a46cf713efaa1f850074d8adc" title="Рисует окружность или круг.">txCircle</a> (<a class="code" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX</a>(), <a class="code" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY</a>(), 20);
+              <a class="code" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep</a> (0);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab814b21d8f52c3efd0d7175d30a4fa73"></a><!-- doxytag: member="TXLib.h::txMouseButtons" ref="gab814b21d8f52c3efd0d7175d30a4fa73" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int txMouseButtons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает состояние Кнопок Мыши! </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>Состояние Кнопок Мыши!</dd></dl>
+<p>В возвращаемом значении выставленный в единицу 1-й (младший) бит означает нажатую левую Кнопку Мыши, 2-й - правую. <br/>
+ Например, возвращенное число 3 (двоичное 11) означает одновременное нажатие левой и правой Кнопок.</p>
+<dl class="see"><dt><b>См. также:</b></dt><dd><a class="el" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX()</a>, <a class="el" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY()</a>, <a class="el" href="a00030.htm#ga452a1a7dc5d3f467c8b79b9db3ea053e" title="Возвращает позицию Мыши!">txMousePos()</a>, <a class="el" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons()</a></dd></dl>
+<dl class="usage">
+<dt><b>Примеры использования:</b></dt>
+<dd><div class="fragment"><pre class="fragment">          <span class="keywordflow">while</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() != 3)
+              {
+              <span class="keywordflow">if</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() &amp; 1) <a class="code" href="a00029.htm#gaa14e9c2a46cf713efaa1f850074d8adc" title="Рисует окружность или круг.">txCircle</a> (<a class="code" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX</a>(), <a class="code" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY</a>(), 20);
+              <span class="keywordflow">if</span> (<a class="code" href="a00030.htm#gab814b21d8f52c3efd0d7175d30a4fa73" title="Возвращает состояние Кнопок Мыши!">txMouseButtons</a>() &amp; 2) <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>   (<a class="code" href="a00030.htm#ga6adbdb491a8eec2a4209c54874ae7b7d" title="Возвращает Х-Координату Мыши!">txMouseX</a>(), <a class="code" href="a00030.htm#ga572acf2310d35defaa9a37a2ec260576" title="Возвращает Y-Координату Мыши!">txMouseY</a>(), 0, 0);
+              <a class="code" href="a00029.htm#ga56227ddccbe156355eaca50264bf3334" title="Задерживает выполнение программы на определенное время.">txSleep</a> (0);
+              }
+</pre></div> </dd>
+</dl>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!-- --------------------------------------------------------------------------
+  doxygen_htm.htm
+  $Version: 00172a, Revision: 98 $
+  $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru> $
+  $Date: 2012-11-28 08:44:33 +0400 $
+ -------------------------------------------------------------------------- -->
+
+<table class="" width="100%"><tr valign="top">
+
+  <td align="left">
+    <small><a href="http://orphus.ru">Нашли ошибку? Выделите ее мышкой и нажмите Ctrl+ENTER. &copy;&#160;Orphus.ru.</a></small><br>
+    <a href="http://orphus.ru" id="orphus" target="_blank"><img class = "footer" alt="Orphus" src="http://storage.ded32.net.ru/orphus.gif" border="0"></a>
+    </td>
+
+  <td align="right">
+    Документация по TX Library. Дата: Tue Aug 12 2014 23:45:43. Создано&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3
+    <img src="http://storage.ded32.net.ru/stat/TXLib-Help.chm" width=1px height=1px border="0">
+    </td>
+  </tr></table>
+
+</ul>
+</div>
+
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol)? "https://ssl." : "http://www."); document.write (unescape ("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); try { var pageTracker = _gat._getTracker ("UA-7927138-1"); pageTracker._trackPageview(); } catch (err) {}</script>
+<script type="text/javascript" src="http://storage.ded32.net.ru/orphus.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>TX Library: Пример: Простейший</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen_.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Создано системой Doxygen 1.7.3 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="TXLib.png"></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TX Library&#160;<span id="projectnumber">Help &ndash; Version: 00172a, Revision: 104</span></div>
+   <div id="projectbrief"><s>&nbsp;ALL&nbsp;</s> Windows graphics in a sandbox</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00001.htm','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<h1>Пример: Простейший </h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><hr/>
+ <h2><a class="anchor" id="Tutor_1st_01"></a>
+Простейшая программа</h2>
+<p>Простейшая программа на С (или С++) состоит из двух частей: раздела подключения библиотек и главной функции программы. Рассмотрим пример, в котором рисуется на экране простой рисунок.</p>
+<hr/>
+ <h2><a class="anchor" id="Tutor_1st_02"></a>
+Раздел подключения библиотек</h2>
+<p>Директивы (команды) подключения библиотек находятся обычно в начале файла программы и выглядят обычно так:</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">    #include &lt;stdlib.h&gt;</span>
+<span class="preprocessor">    #include &quot;<a class="code" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a>&quot;</span>
+</pre></div><p><code>Stdlib.h</code> и <code><a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a></code> - файлы библиотек, которые подключаются к вашей программе. После этого вы можете использовать команды, функции и переменные, объявленные в этих файлах. Больше, чем нужно, библиотек подключать не стоит, хотя это и не вредно. Когда используется много библиотек, раздел может быть очень большим.</p>
+<hr/>
+ <h2><a class="anchor" id="Tutor_1st_03"></a>
+Главная функция программы</h2>
+<p>Программа на С (С++) состоит из функций. Функция - это описание каких-либо действий с заданным именем (названием).</p>
+<p>Например,</p>
+<div class="fragment"><pre class="fragment">    <span class="keywordtype">int</span> main()
+        {
+        <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600);
+        <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290, 320, 220);
+        <span class="keywordflow">return</span> 0;
+        }
+</pre></div><p>Главная функция - это функция, с которой начинается исполнение программы. Ее имя - <code>main()</code>. Скобки показывают, что речь идет именно о функции, т.е., об описании каких-то действий. Для того, чтобы функция начала работу, ее нужно <em>вызвать</em>. Функцию <code>main()</code> вызывает сама операционная система компьютера. Слово <code>int</code> означает, что <code>main()</code> в конце работы передаст тому, кто ее вызывал (операционной системе), некое целое число. Это число для функции main() означает код завершения нашей программы. Если он равен 0, то работа программы считается успешной.</p>
+<p>Действия, записанные в функции, заключаются в фигурные скобки <code>{</code> и <code>}</code>. Они обозначают начало и конец функции.</p>
+<p>Внутри функции записаны вызовы команд, которые что-то рисуют на экране. Между командами, там, где это логически необходимо, стоят пустые строки, отделяющие одни части программы от других. Это способствует большей понятности программы. Пустая строка в программировании соответствует началу абзаца текста в русском языке.</p>
+<p>Для понимания программы и того, чтобы в ней не появлялись ошибки, очень важно, чтобы в нужных местах в ней стояли пробелы. Обычно их ставят до открывающих круглых скобок, после запятых, до и после знаков операций. Наличие пробелов делает программу приятной на вид, и предотвращает напряжение глаз при работе с компьютером. Работа с плохо оформленным текстом программы может нанести вред глазам, снизить зрение.</p>
+<p>Пример плохо написанной программы:</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">    #include &quot;<a class="code" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a>&quot;</span>
+    <span class="keywordtype">int</span>   main(){
+    <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a>(800,600);  <span class="comment">// По-моему, про зрение все ясно. :)</span>
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>(320,290,320,220);
+     <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290,280,350);
+      <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>(320, 290,360,350);
+     <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>(320,230,270,275);
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>(320,230, 400,220);
+    <a class="code" href="a00029.htm#gaa14e9c2a46cf713efaa1f850074d8adc" title="Рисует окружность или круг.">txCircle</a>(320,190,30);
+      <a class="code" href="a00029.htm#ga9290f4d78a1f2dc5db7892cabe9a2abc" title="Выбирает текущий шрифт.">txSelectFont</a>( <span class="stringliteral">&quot;Times&quot;</span>,60);
+    <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a>(240,400,<span class="stringliteral">&quot;Hello, world!&quot;</span>);
+              <span class="keywordflow">return</span>        0;
+    }
+</pre></div><p>Для задания положения рисуемых фигур используется координатная система, у которой начало координат расположено слева-вверху, а ось OY смотрит вниз. Это несколько непривычно, но деваться некуда. :) Например, команда</p>
+<div class="fragment"><pre class="fragment">    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290, 320, 220);
+</pre></div><p>проводит линию из точки x=320 и у=290 в точку с x=320 и y=220.</p>
+<p>Каждая команда заканчивается точкой с запятой. Это - аналог точки в русском языке. Точка с запятой ставится в конце каждого <em>законченного</em> действия или объявления. Например, в строке с <code>txCreateWindow</code> (800, 600) точка с запятой ставится, т.к. в этой строке "закончена мысль" о том, что надо создать окно для рисования. В строке с <code>int main()</code> - не ставится, т.к. описание функции <code>main()</code> не закончено (на самом деле, оно там только начато).</p>
+<p>Если в программе используются строки, они заключаются в двойные кавычки, например:</p>
+<div class="fragment"><pre class="fragment">    <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (240, 400, <span class="stringliteral">&quot;Hello, world!&quot;</span>);
+</pre></div><p>Если в программе присутствут числа с дробной частью, то эта часть отделяется от целой части точкой, а не запятой, как в русском языке.</p>
+<hr/>
+ <h2><a class="anchor" id="Tutor_1st_04"></a>
+Распространенные ошибки и борьба с ними</h2>
+<p><em>Первое правило в борьбе с ошибками: не бойтесь их количества.</em>Часто первые ошибки влекут за собой последующие. Поэтому прежде всего анализируйте и исправляйте <em>самую первую</em> ошибку. Остальные могут быть ее следствием и исправятся сами, если вы исправите первую ошибку.</p>
+<p><em>Второе правило: будьте внимательны.</em> Об этом см. ниже.</p>
+<p><em>Третье правило <small>&#160;</small><span class="s"> волшебника: </span><small>&#160;</small> ищите ошибку вначале у себя, а только потом в библиотеках.</em> Библиотеки достаточно долго тестировались, поэтому вероятность ошибки в них очень мала.</p>
+<dl class="user"><dt><b>Ошибки, не связанные с текстом программы</b></dt><dd></dd></dl>
+<ul>
+<li>Вначале убедитесь, что файл с программой имеет правильное расширение <code>".CPP"</code>, а не расширение <code>".C"</code>. Если расширение (тип) файла неправильное, то в списке ошибок одной из первых будет сообщение <code><em>"TXLib.h: Must use C++ to compile TXLib.h".</em></code> Это потому, что для библиотеки требуется компилятор C++, а он транслирует файлы с расширением <code>".CPP"</code>. Файлы <code>".C"</code> транслирует компилятор Cи, а не C++. <br/>
+ Чтобы сменить расширение файла, выберите в главном меню <code>[File], [Save As]</code> и дайте программе имя с расширением <code>".CPP"</code>. Лучше не использовать ни русских букв, ни пробелов в имени файла.</li>
+<li>Если файл библиотека TXLib установилась неверно, то файл <code><a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a></code> может быть не найден. Сообщение об ошибке зависит от компилятора, но будет содержать фразу, подобную <code><em>"TXLib.h file not found".</em></code> В этом случае выйдите из среды программирования и переустановите TXLib. Если это не помогает, то просто скопируйте файл <code><a class="el" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a></code> из папки <code>TX</code> в папку с примерами или в папку с вашей программой.</li>
+</ul>
+<dl class="user"><dt><b>Ошибки, связанные с текстом программы</b></dt><dd></dd></dl>
+<p>В простых программах ошибки бывают двух видов:</p>
+<ul>
+<li>Ошибки записи (орфография, пунктуация) - их называют синтаксическими ошибками <em>(syntax error).</em> Они происходят до запуска программы, на стадии перевода программы в машинный код (стадии компиляции). Поэтому их называют <em>ошибками времени компиляции (compile-time errors).</em> Исполняемый файл при этом не создается и программа не запускается.</li>
+</ul>
+<ul>
+<li>Логические ошибки - они происходят после запуска программы, при этом при компиляции ошибок нет (иногда имеются предупреждения, <em>warnings</em>, которые полезно исправлять, а лучше не допускать их появления). Их называют <em>ошибками времени исполнения (runtime errors).</em></li>
+</ul>
+<dl class="user"><dt><b>Ошибки времени компиляции</b></dt><dd></dd></dl>
+<p>Практически все синтаксические ошибки на этой стадии происходят из-за невнимательности. Распространенные синтаксические ошибки:</p>
+<ul>
+<li>Путают ключевые слова, названия библиотек и команд: <div class="fragment"><pre class="fragment"><span class="preprocessor">      #iclude &quot;TX lib.h&quot;                // Правильно: #include &quot;TXLib.h&quot;</span>
+<span class="preprocessor"></span>      in maim()                         <span class="comment">// Правильно: int main()</span>
+      tx Line (10, 10, 20, 20)          <span class="comment">// Правильно: txLine (10, 10, 20, 20);</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Путают большие и маленькие буквы: <div class="fragment"><pre class="fragment">      txcircle (100, 100, 10)           <span class="comment">// Правильно: txCircle</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Не ставят скобки: <div class="fragment"><pre class="fragment">      <span class="keywordtype">int</span> main                          <span class="comment">// Правильно: main()</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Забывают запятые или путают их с другими знаками: <div class="fragment"><pre class="fragment">      txСircle (100  100  10)           <span class="comment">// Правильно: txCircle (100, 100, 10);</span>
+      txСircle (200; 200; 20)           <span class="comment">// Правильно: txCircle (200, 200, 20);</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Забывают точки с запятой: <div class="fragment"><pre class="fragment">      <a class="code" href="a00029.htm#ga9290f4d78a1f2dc5db7892cabe9a2abc" title="Выбирает текущий шрифт.">txSelectFont</a> (<span class="stringliteral">&quot;Times&quot;</span>, 60)        <span class="comment">// Правильно: txSelectFont (&quot;Times&quot;, 60);</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Забывают или путают кавычки: <div class="fragment"><pre class="fragment">      <a class="code" href="a00029.htm#ga9290f4d78a1f2dc5db7892cabe9a2abc" title="Выбирает текущий шрифт.">txSelectFont</a> (Times, 60)          <span class="comment">// Правильно: txSelectFont (&quot;Times&quot;, 60);</span>
+      <a class="code" href="a00029.htm#ga9290f4d78a1f2dc5db7892cabe9a2abc" title="Выбирает текущий шрифт.">txSelectFont</a> (&#39;Arial&#39;, 20)        <span class="comment">// Правильно: txSelectFont (&quot;Arial&quot;, 20);</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Ставят лишние точки с запятой там, где "мысль не закончена": <div class="fragment"><pre class="fragment">      <span class="keywordtype">int</span> main();                       <span class="comment">// Правильно: main()</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Указвают дробную часть числа не через точку, а через запятую: <div class="fragment"><pre class="fragment">      3,1415                            <span class="comment">// Правильно: 3.1415</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Забывают фигурные скобки: <div class="fragment"><pre class="fragment">                                        <span class="comment">// Правильно: int main()</span>
+      <span class="keywordtype">int</span> main()                        <span class="comment">//            {</span>
+      <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600);        <span class="comment">//            txCreateWindow (800, 600);</span>
+      <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290, 320, 220);      <span class="comment">//            txLine (320, 290, 320, 220);</span>
+      return 0;                         <span class="comment">//            return 0;</span>
+                                        <span class="comment">//            }</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Забывают писать открывающие или закрывающие скобки, или пишут лишние, отчего появляются непарные скобки, или путают виды скобок: <div class="fragment"><pre class="fragment">      <span class="keywordtype">int</span> main()
+          {
+          <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600);
+
+          <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290, 320, 220;   <span class="comment">// Не закрыта круглая скобка</span>
+          <span class="keywordflow">return</span> 0;
+          }
+</pre></div> <div class="fragment"><pre class="fragment">      <span class="keywordtype">int</span> main()
+      {
+      <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> {800, 600};        <span class="comment">// Фигурные скобки вместо круглых</span>
+      <span class="keywordflow">return</span> 0;
+      }
+
+      <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290, 320, 220;       <span class="comment">// Команда за пределами функции main()</span>
+      }                                 <span class="comment">// Лишняя скобка</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Помещают команды за пределы фигурных скобок <div class="fragment"><pre class="fragment">      <span class="keywordtype">int</span> main()
+      {
+      <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600);
+      <span class="keywordflow">return</span> 0;
+      }
+
+      <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a> (320, 290, 320, 220);      <span class="comment">// Команда за пределами функции main()</span>
+</pre></div></li>
+</ul>
+<ul>
+<li>Указывают лишние данные в командах или указывают меньше данных (аргументов), чем нужно.<br/>
+<br/>
+ При таком несоответствии количества параметров <em>(too few arguments... - слишком мало агрументов,</em> или <em>too many arguments... - слишком много)</em> среда программирования часто указывает на <em>правильное</em> определение той команды, которая была неверно вызвана. Это нужно для того, чтобы вы посмотрели на это определение и вспомнили, сколько данных надо передавать. Это совсем <em>не</em> означает "ошибки в библиотеке" или "ошибки в
+      стандартной команде". Настоящее место ошибки там, где команда вызвана. В это место легко попасть, если кликнуть мышкой 2 раза на строку с надписью <em>"...at this point in file"</em> в списке ошибок, в нижней части окна среды программирования.<br/>
+<br/>
+ Примеры таких ошибок: <div class="fragment"><pre class="fragment">      txСircle (100, 100);              <span class="comment">// Здесь не указан радиус</span>
+      txСircle (200, 200, 20, 30);      <span class="comment">// Здесь лишнее число -- txCircle() принимает всего 3 аргумента</span>
+</pre></div></li>
+</ul>
+<dl class="user"><dt><b>Ошибки времени исполнения</b></dt><dd></dd></dl>
+<p>Бывают и логические ошибки, или <em>ошибки времени выполнения (runtime errors).</em> Например, мы не выбрали нужный цвет рисования (по умолчанию он белый), или цвет совпал с фоном и поэтому не виден. Или мы нарисовали одну фигуру поверх другой, и она закрыла предыдущую, или задали неверные координаты. Эти ошибки появляются после запуска программы. Их легко понять, если выполнить на листе бумаги все команды одну за другой, в том порядке, в котором они заданы в программе. При этом не надо стараться выполнять "так, как лучше", или "как хочется,
+    чтобы получилось". Выполняйте так, как будто это не ваша, а совсем чужая работа, и вам не интересен ее результат. В тот момент, когда результат разойдется с вашим желанием и вы получите странную фигуру, станет понятно место ошибки.</p>
+<p>Конечно лучше, если ошибка произошла на стадии компиляции, чем на стадии выполнения, когда искать ее труднее. Поскольку человеку избежать ошибок невозможно, один из видов мастерства состоит в том, чтобы постараться перевести хотя бы часть ошибок из стадии исполнения на стадию компиляции. Пусть они происходят там, где их легче ловить. :)</p>
+<dl class="user"><dt><b>Ошибки и стиль программирования</b></dt><dd></dd></dl>
+<p>Правильное оформление кода (стиль программирования) помогает перевести ошибки стадии выполнения на стадию набора текста, и находить их даже до компиляции. Например, неверные координаты очень сложно проследить в "примере плохо написанной программы" (см. выше). Сделать это гораздо легче в "законченном примере" (см. ниже), где все числа, операторы и команды аккуратно выровнены. Если программа длиннее нескольких строк, то между ее логическими частями ставят пустые строки (вместо "красных строк" в русском языке), это позволяет не напрягать логическое мышление зазря, а концентрироваться на творчестве и на развитии программы.</p>
+<p>Оформлять код "красиво" уже после того, как программа написана и отлажена, достаточно бессмысленно -- хороший стиль облегчает написание и отладку, а ведь программа уже готова. :) Поэтому ставить пробелы, пустые строки и выравнивать текст нужно сразу, при наборе, и приучиться это делать автоматически, как (хочется надеяться) вы автоматически моете руки перед едой. :)</p>
+<p>Многие опытные люди, желая помочь вам, бывают разочарованы плохим стилем и перестают помогать и советовать. Поэтому чтобы регулярно получать помощь знатоков, нужно держать стиль на высоте. К счастью, оформить программу - это самое легкое дело в программировании, но и одновременно это первый шаг к надежности и мастерству.</p>
+<p>См. также <a class="el" href="main.htm#UsageWarning">предупреждение</a>.</p>
+<hr/>
+ <h2><a class="anchor" id="Tutor_1st_Code"></a>
+Законченный пример</h2>
+<div class="fragment"><pre class="fragment"><span class="comment">//{=========================================================================== </span>
+<span class="comment"></span><span class="comment">//              $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) &lt;mail@txlib.ru&gt; $</span>
+<span class="comment">//}===========================================================================</span>
+
+<span class="preprocessor">#include &quot;<a class="code" href="a00025.htm" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a>&quot;</span>                         <span class="comment">// Подключение библиотеки рисования</span>
+
+<span class="keywordtype">int</span> main()                                 <span class="comment">// Заголовок главной функции</span>
+    {                                      <span class="comment">// Начало функции</span>
+    <a class="code" href="a00029.htm#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования">txCreateWindow</a> (800, 600);             <span class="comment">// Открытие окна 800 на 600 пикселей</span>
+
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>   (320, 290, 320, 220);         <span class="comment">// Проводится линия из точки x=320 и у=290 в точку с x=320 и y=220</span>
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>   (320, 290, 280, 350);         <span class="comment">// Проводятся другие линии,    </span>
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>   (320, 290, 360, 350);         <span class="comment">//     в результате чего</span>
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>   (320, 230, 270, 275);         <span class="comment">//     на экране </span>
+    <a class="code" href="a00029.htm#ga5654ec6899099964535e338d0523c34d" title="Рисует линию.">txLine</a>   (320, 230, 400, 220);         <span class="comment">//     появляется рисунок</span>
+    <a class="code" href="a00029.htm#gaa14e9c2a46cf713efaa1f850074d8adc" title="Рисует окружность или круг.">txCircle</a> (320, 190, 30);               <span class="comment">// Рисуется окружность с центром x=320 y=190 и радиусом 30</span>
+                                           
+    <a class="code" href="a00029.htm#ga9290f4d78a1f2dc5db7892cabe9a2abc" title="Выбирает текущий шрифт.">txSelectFont</a> (<span class="stringliteral">&quot;Times New Roman&quot;</span>, 60);  <span class="comment">// Выбирается шрифт &quot;Times&quot; размера 60</span>
+    <a class="code" href="a00029.htm#ga4eacb78833e54f44243f60ded9fdaf64" title="Рисует текст.">txTextOut</a> (240, 400, <span class="stringliteral">&quot;Hello, world!&quot;</span>); <span class="comment">// Печатается текст &quot;Hello, world!&quot; в точке x=240 y=400</span>
+
+    <span class="keywordflow">return</span> 0;                              <span class="comment">// Возврат успешного кода завершения</span>
+    }                                      <span class="comment">// Конец функции</span>
+
+
+
+
+</pre></div> </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!-- --------------------------------------------------------------------------
+  doxygen_htm.htm
+  $Version: 00172a, Revision: 98 $
+  $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru> $
+  $Date: 2012-11-28 08:44:33 +0400 $
+ -------------------------------------------------------------------------- -->
+
+<table class="" width="100%"><tr valign="top">
+
+  <td align="left">
+    <small><a href="http://orphus.ru">Нашли ошибку? Выделите ее мышкой и нажмите Ctrl+ENTER. &copy;&#160;Orphus.ru.</a></small><br>
+    <a href="http://orphus.ru" id="orphus" target="_blank"><img class = "footer" alt="Orphus" src="http://storage.ded32.net.ru/orphus.gif" border="0"></a>
+    </td>
+
+  <td align="right">
+    Документация по TX Library. Дата: Tue Aug 12 2014 23:45:42. Создано&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3
+    <img src="http://storage.ded32.net.ru/stat/TXLib-Help.chm" width=1px height=1px border="0">
+    </td>
+  </tr></table>
+
+</ul>
+</div>
+
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol)? "https://ssl." : "http://www."); document.write (unescape ("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); try { var pageTracker = _gat._getTracker ("UA-7927138-1"); pageTracker._trackPageview(); } catch (err) {}</script>
+<script type="text/javascript" src="http://storage.ded32.net.ru/orphus.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>TXNetwork: Третий пример. Простая сетевая игра - арканоид.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="Doxyfile.css" rel="stylesheet" type="text/css" />
+<link href="Doxyfile.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TXNetwork
+   &#160;<span id="projectnumber">v. 0.6.1a</span>
+   </div>
+   <div id="projectbrief">&nbsp;ALL? Windows network in a sandbox :)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.10 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00008.htm','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Третий пример. Простая сетевая игра - арканоид. </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><dl class="section user"><dt></dt><dd>Можно передавать и не один тип структур.</dd></dl>
+<hr/>
+<h1><a class="anchor" id="Example3_Client_Code"></a>
+Файл: client.cpp - код клиента.</h1>
+<div class="fragment"><div class="line"><span class="comment">// client.cpp</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;proto.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#define SERVER_IP &quot;127.0.0.1&quot;  // Измените на IP-адрес сервера</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> RunGame    (<a class="code" href="a00013.htm">TX_SOCKET</a> peer_sock);</div>
+<div class="line"><span class="keywordtype">void</span> DrawPlayer (Player_t player, COLORREF color);</div>
+<div class="line"><span class="keywordtype">void</span> DrawBall   (Ball_t ball);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">    {</div>
+<div class="line">    txCreateWindow (1024, 768);</div>
+<div class="line">    txBegin();</div>
+<div class="line"></div>
+<div class="line">    txSetColor (TX_LIGHTGREEN);</div>
+<div class="line">    txSetTextAlign (TA_CENTER);</div>
+<div class="line">    txTextOut (500, 380, <span class="stringliteral">&quot;I am a server!&quot;</span>);</div>
+<div class="line">    txTextOut (500, 450, <span class="stringliteral">&quot;Waiting for client...&quot;</span>);</div>
+<div class="line">    txSleep (0);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="a00013.htm">TX_SOCKET</a> client = <a class="code" href="a00017.htm#ga6cf646e1512cfd0ea4cb426984510914">txCreateSocket</a> (<a class="code" href="a00017.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a5594ab6ae4c1de966d629c79fd2ffc58">TX_CLIENT</a>, SERVER_IP, <a class="code" href="a00017.htm#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a>, <a class="code" href="a00017.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a57c7249731b701a916229d3c795ba9fd">TX_BLOCK</a>, <span class="keyword">false</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="a00017.htm#ga5e61ac3a46192caddcd98b27325ef953">txnAssert</a> (client) == <a class="code" href="a00018.htm#gaa56d5be53827cc51bd2a02fe580e00c9">TXN_NOT_CREATED</a>)</div>
+<div class="line">        {</div>
+<div class="line">        printf (<span class="stringliteral">&quot;ERROR: BAD SOCKET!!!&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">    RunGame (client);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> RunGame (<a class="code" href="a00013.htm">TX_SOCKET</a> peer_sock)</div>
+<div class="line">    {</div>
+<div class="line">    Player_t me   = {512, 748, 0};</div>
+<div class="line">    Player_t peer = {512,  20, 0};</div>
+<div class="line"></div>
+<div class="line">    Ball_t ball = {100, 100, 15, 15};</div>
+<div class="line"></div>
+<div class="line">    DWORD timer = 0;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (!GetAsyncKeyState (VK_SPACE) &amp;&amp; peer.action != -1)</div>
+<div class="line">        {</div>
+<div class="line">        txSetFillColor (TX_BLACK);</div>
+<div class="line">        txClear();</div>
+<div class="line"></div>
+<div class="line">        txSetColor (TX_LIGHTGREEN);</div>
+<div class="line">        txTextOut (500, 380, <span class="stringliteral">&quot;I am a client!&quot;</span>);</div>
+<div class="line">        txTextOut (500, 450, <span class="stringliteral">&quot;Use [A], [D]. [Space] to exit.&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (GetAsyncKeyState (<span class="charliteral">&#39;A&#39;</span>) &amp;&amp; me.x &gt;   50) me.x -= 15;</div>
+<div class="line">        <span class="keywordflow">if</span> (GetAsyncKeyState (<span class="charliteral">&#39;D&#39;</span>) &amp;&amp; me.x &lt; 1019) me.x += 15;</div>
+<div class="line"></div>
+<div class="line">        DrawBall (ball);</div>
+<div class="line">        DrawPlayer (me,   TX_LIGHTGREEN);</div>
+<div class="line">        DrawPlayer (peer, TX_PINK);</div>
+<div class="line"></div>
+<div class="line">        timer = GetTickCount();</div>
+<div class="line"></div>
+<div class="line">        <a class="code" href="a00017.htm#gaf700cdda64317854f43186f0cfa003a1">txRecvFrom</a> (peer_sock, &amp;peer, <span class="keyword">sizeof</span> (peer));</div>
+<div class="line">        <a class="code" href="a00017.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a>   (peer_sock, &amp;me,   <span class="keyword">sizeof</span> (me));</div>
+<div class="line">        <a class="code" href="a00017.htm#gaf700cdda64317854f43186f0cfa003a1">txRecvFrom</a> (peer_sock, &amp;ball, <span class="keyword">sizeof</span> (ball));</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">while</span> (GetTickCount() - timer &lt; 15);</div>
+<div class="line">            txSleep (0);</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">    me.action = -1;</div>
+<div class="line">    <a class="code" href="a00017.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a> (peer_sock, &amp;me, <span class="keyword">sizeof</span> (me));</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> DrawPlayer (Player_t player, COLORREF color)</div>
+<div class="line">    {</div>
+<div class="line">    txSetColor     (color);</div>
+<div class="line">    txSetFillColor (color);</div>
+<div class="line"></div>
+<div class="line">    txRectangle (player.x - 100, player.y - 10, player.x + 100, player.y + 10);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> DrawBall (Ball_t ball)</div>
+<div class="line">    {</div>
+<div class="line">    txSetColor     (TX_LIGHTCYAN);</div>
+<div class="line">    txSetFillColor (TX_LIGHTCYAN);</div>
+<div class="line"></div>
+<div class="line">    txCircle (ball.x, ball.y, 20);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+</div><!-- fragment --><hr/>
+<h1><a class="anchor" id="Example3_Server_Code"></a>
+Файл: server.cpp - код клиента.</h1>
+<div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;proto.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> RunGame          (<a class="code" href="a00013.htm">TX_SOCKET</a> peer_sock);</div>
+<div class="line"><span class="keywordtype">void</span> DrawPlayer       (Player_t player, COLORREF color);</div>
+<div class="line"><span class="keywordtype">void</span> DrawBall         (Ball_t  ball);</div>
+<div class="line"><span class="keywordtype">void</span> MoveBall         (Ball_t* ball);</div>
+<div class="line"><span class="keywordtype">void</span> BallInterPlayers (Ball_t* ball, Player_t player1, Player_t player2);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">    {</div>
+<div class="line">    txCreateWindow (1024, 768);</div>
+<div class="line">    txBegin();</div>
+<div class="line"></div>
+<div class="line">    txSetColor (TX_LIGHTGREEN);</div>
+<div class="line">    txSetTextAlign (TA_CENTER);</div>
+<div class="line">    txTextOut (500, 380, <span class="stringliteral">&quot;I am a server!&quot;</span>);</div>
+<div class="line">    txTextOut (500, 450, <span class="stringliteral">&quot;Waiting for client...&quot;</span>);</div>
+<div class="line">    txSleep (0);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="a00013.htm">TX_SOCKET</a> client = <a class="code" href="a00017.htm#ga6cf646e1512cfd0ea4cb426984510914">txCreateSocket</a> (<a class="code" href="a00017.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a348f2bd7cd4f969b024f32d9cb4c417c">TX_SERVER</a>, <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="a00017.htm#gad3ab3baeb73e77641e348a9aa33516ec">TX_STD_PORT</a>, <a class="code" href="a00017.htm#gga0696d269feb958d9f6fa2d0e1cf7e517a57c7249731b701a916229d3c795ba9fd">TX_BLOCK</a>, <span class="keyword">false</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="a00017.htm#ga5e61ac3a46192caddcd98b27325ef953">txnAssert</a> (client) == <a class="code" href="a00018.htm#gaa56d5be53827cc51bd2a02fe580e00c9">TXN_NOT_CREATED</a>)</div>
+<div class="line">        {</div>
+<div class="line">        printf (<span class="stringliteral">&quot;ERROR: BAD SOCKET!!!&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">    RunGame (client);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> RunGame (<a class="code" href="a00013.htm">TX_SOCKET</a> peer_sock)</div>
+<div class="line">    {</div>
+<div class="line">    Player_t me   = {512,  20, 0};</div>
+<div class="line">    Player_t peer = {512, 748, 0};</div>
+<div class="line"></div>
+<div class="line">    Ball_t ball = {100, 100, 15, 15};</div>
+<div class="line"></div>
+<div class="line">    DWORD timer = 0;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (!GetAsyncKeyState (VK_ESCAPE) &amp;&amp; peer.action != -1)</div>
+<div class="line">        {</div>
+<div class="line">        txSetFillColor (TX_BLACK);</div>
+<div class="line">        txClear();</div>
+<div class="line"></div>
+<div class="line">        txSetColor (TX_LIGHTGREEN);</div>
+<div class="line">        txTextOut (500, 380, <span class="stringliteral">&quot;I am a server!&quot;</span>);</div>
+<div class="line">        txTextOut (500, 450, <span class="stringliteral">&quot;Use [Left], [Right]. [Escape] to exit.&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (GetAsyncKeyState (VK_LEFT)  &amp;&amp; me.x &gt;   50) me.x -= 15;</div>
+<div class="line">        <span class="keywordflow">if</span> (GetAsyncKeyState (VK_RIGHT) &amp;&amp; me.x &lt; 1019) me.x += 15;</div>
+<div class="line"></div>
+<div class="line">        MoveBall (&amp;ball);</div>
+<div class="line"></div>
+<div class="line">        DrawBall (ball);</div>
+<div class="line">        DrawPlayer (me,   TX_LIGHTGREEN);</div>
+<div class="line">        DrawPlayer (peer, TX_PINK);</div>
+<div class="line"></div>
+<div class="line">        BallInterPlayers (&amp;ball, peer, me);</div>
+<div class="line"></div>
+<div class="line">        timer = GetTickCount();</div>
+<div class="line"></div>
+<div class="line">        <a class="code" href="a00017.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a>   (peer_sock, &amp;me,   <span class="keyword">sizeof</span> (me));</div>
+<div class="line">        <a class="code" href="a00017.htm#gaf700cdda64317854f43186f0cfa003a1">txRecvFrom</a> (peer_sock, &amp;peer, <span class="keyword">sizeof</span> (peer));</div>
+<div class="line">        <a class="code" href="a00017.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a>   (peer_sock, &amp;ball, <span class="keyword">sizeof</span> (ball));</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">while</span> (GetTickCount() - timer &lt; 15);</div>
+<div class="line">            txSleep (0);</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">    me.action = -1;</div>
+<div class="line">    <a class="code" href="a00017.htm#gab1932ecc57580c15659f0cc01b695262">txSendTo</a> (peer_sock, &amp;me, <span class="keyword">sizeof</span> (me));</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> DrawPlayer (Player_t player, COLORREF color)</div>
+<div class="line">    {</div>
+<div class="line">    txSetColor     (color);</div>
+<div class="line">    txSetFillColor (color);</div>
+<div class="line"></div>
+<div class="line">    txRectangle (player.x - 100, player.y - 10, player.x + 100, player.y + 10);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> DrawBall (Ball_t ball)</div>
+<div class="line">    {</div>
+<div class="line">    txSetColor     (TX_LIGHTCYAN);</div>
+<div class="line">    txSetFillColor (TX_LIGHTCYAN);</div>
+<div class="line"></div>
+<div class="line">    txCircle (ball.x, ball.y, 20);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> MoveBall (Ball_t* ball)</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (ball-&gt;x &lt;    0) { ball-&gt;vx = -ball-&gt;vx; ball-&gt;x =    0; }</div>
+<div class="line">    <span class="keywordflow">if</span> (ball-&gt;x &gt; 1024) { ball-&gt;vx = -ball-&gt;vx; ball-&gt;x = 1024; }</div>
+<div class="line">    <span class="keywordflow">if</span> (ball-&gt;y &lt;    0) { ball-&gt;vy = -ball-&gt;vy; ball-&gt;y =    0; }</div>
+<div class="line">    <span class="keywordflow">if</span> (ball-&gt;y &gt;  768) { ball-&gt;vy = -ball-&gt;vy; ball-&gt;y =  768; }</div>
+<div class="line"></div>
+<div class="line">    ball-&gt;x += ball-&gt;vx;</div>
+<div class="line">    ball-&gt;y += ball-&gt;vy;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> BallInterPlayers (Ball_t* ball, Player_t player1, Player_t player2)</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (player1.x - 100 &lt; ball-&gt;x &amp;&amp; ball-&gt;x &lt; player1.x + 100 &amp;&amp; player1.y - 25 &lt; ball-&gt;y)</div>
+<div class="line">        ball-&gt;vy = -ball-&gt;vy;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (player2.x - 100 &lt; ball-&gt;x &amp;&amp; ball-&gt;x &lt; player2.x + 100 &amp;&amp; player2.y + 25 &gt; ball-&gt;y)</div>
+<div class="line">        ball-&gt;vy = -ball-&gt;vy;</div>
+<div class="line">    }</div>
+</div><!-- fragment --><hr/>
+<h1><a class="anchor" id="Example3_Proto_Code"></a>
+Файл: proto.h - общие структуры и данные сервера и клиента.</h1>
+<div class="fragment"><div class="line"><span class="comment">// proto.h</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00015.htm">TXNetwork.h</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//1. server -&gt; client: Player_t</span></div>
+<div class="line"><span class="comment">//2. server &lt;- client: Player_t</span></div>
+<div class="line"><span class="comment">//3. server -&gt; client: Ball_t</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>Player_t</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordtype">int</span> x, y;</div>
+<div class="line">    <span class="keywordtype">int</span> action;</div>
+<div class="line">    };</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>Ball_t</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordtype">int</span>  x,  y;</div>
+<div class="line">    <span class="keywordtype">int</span> vx, vy;</div>
+<div class="line">    };</div>
+<div class="line"></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>
