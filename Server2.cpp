@@ -25,7 +25,7 @@ struct C_snaryad
     COLORREF color ;
     } ;
 
-const int XWindow = 1000/*GetSystemMetrics (SM_CXSCREEN)*/, YWindow = 600/*GetSystemMetrics (SM_CYSCREEN)*/ ;
+const int XWindow = 1000/*GetSystemMetrics (SM_CXSCREEN)*/, YWindow = 600/*GetSystemMetrics (SM_CYSCREEN) */;
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) ;
 void Draw_Snaryad (C_snaryad * s) ;
@@ -34,7 +34,7 @@ void Vistrel (C_snaryad snaryad [], C_Tank tank [], int d);
 void Prisv_zn_prot (C_Tank sopernik []);
 //void Prisv_zn_sn_p (C_snaryad snaryad_p [][]);
 void Prisv_zn_sn (C_snaryad snaryad []);
-void Prisv_Zn_Per_data (int P_D [], C_Tank tank);
+void Prisv_Zn_Per_data      (int P_D    [], C_Tank tank);
 void Prisv_Zn_Tank_sop (C_Tank * tank,  int P_D []);
 double atan_ (double x, double y) ;
 double sqrt_ (double x) ;
@@ -46,8 +46,8 @@ int main ()
     //_txWindowStyle &= ~ WS_CAPTION ;
     txCreateWindow (XWindow, YWindow) ;
 
-    C_Tank tank     [2] = {{          100,           100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (0, 0, 255), RGB (150, 150, 150)},
-                           {XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (255, 0, 0), RGB (150, 150, 150)}} ;
+    C_Tank tank     [2] = {{XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (0, 0, 255), RGB (150, 150, 150)},
+                           {          100,           100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (255, 0, 0), RGB (150, 150, 150)}} ;
     //C_Tank sopernik [3] = {} ;
 
     int Per_Data_0 [14] = {};
@@ -59,11 +59,11 @@ int main ()
     double Per_sn_0 [20] = {};
     double Per_sn_1 [20] = {};
 
-    //Prisv_zn_prot (sopernik);
-    //Prisv_zn_sn_p (snaryad_p);
-
     Per_Data_1[12] = txMouseX ();
     Per_Data_1[13] = txMouseY ();
+
+    //Prisv_zn_prot (sopernik);
+    //Prisv_zn_sn_p (snaryad_p);
 
     Prisv_zn_sn   (snaryad_0);
     Prisv_zn_sn   (snaryad_1);
@@ -72,12 +72,11 @@ int main ()
     int k_prot = 0 ;
     int t_p_prot[3] = {} ;
 
-    TX_SOCKET client = txCreateSocket (TX_CLIENT, SERVER_IP);
+    TX_SOCKET client = txCreateSocket (TX_SERVER, "");
 
     for (int i = 0, t_p = 0; !GetAsyncKeyState (VK_ESCAPE) && tank[0].XP > 0; i ++, t_p ++, tank[0].XP += 0.0025)
         {
         txBegin() ;
-
         txSetFillColor (TX_WHITE) ;
         txClear () ;
         if (GetAsyncKeyState ('W')) tank[0].vy = -3 ;
@@ -87,7 +86,6 @@ int main ()
 
         tank[0].x += tank[0].vx;
         tank[0].y += tank[0].vy;
-
         if (tank[0].vx < 0) tank[0].vx += 0.05;
         if (tank[0].vy < 0) tank[0].vy += 0.05;
         if (tank[0].vx > 0) tank[0].vx -= 0.05;
@@ -102,6 +100,7 @@ int main ()
             d++;
             t_p = 0;
             }
+
         for (int i_ = 0; i_ < 10; i_++)
             {
             snaryad_0[i_].x += snaryad_0[i_].vx ;
@@ -139,12 +138,12 @@ int main ()
             Per_sn_0 [2 * i + 1] = snaryad_0[i].y;
             }
 
-        Prisv_Zn_Per_data (Per_Data_0, tank[0]);
+        Prisv_Zn_Per_data      (Per_Data_0, tank[0]);
 
-        txSendTo   (client, &Per_Data_0, sizeof (Per_Data_0));
         txRecvFrom (client, &Per_Data_1, sizeof (Per_Data_1));
-        txSendTo   (client, &Per_sn_0,   sizeof (Per_sn_0));
+        txSendTo   (client, &Per_Data_0, sizeof (Per_Data_0));
         txRecvFrom (client, &Per_sn_1,   sizeof (Per_sn_1));
+        txSendTo   (client, &Per_sn_0,   sizeof (Per_sn_0));
 
         Prisv_Zn_Tank_sop (&tank [1], Per_Data_1);
 

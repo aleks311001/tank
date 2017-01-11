@@ -1,0 +1,1276 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x0041A0AD. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3434 (Main), GetLastError(): 10038 (Сделана попытка выполнить операцию на объекте, не являющемся сокетом). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041954A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 19:38:26, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 19:38:32
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F8C. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3C7C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419429 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 19:42:57, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 19:43:18
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x1A70 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0041A052 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004195BE in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 5 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 6 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F42. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x437C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419429 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 19:58:23, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 19:58:35
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F42. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x2860 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419429 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 19:58:23, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 19:59:16
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F8E. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x14CC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:02:25, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:02:39
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F9A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3138 (Main), GetLastError(): 10038 (Сделана попытка выполнить операцию на объекте, не являющемся сокетом). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:03:33, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:03:36
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FA6. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x1F50 (Main), GetLastError(): 10038 (Сделана попытка выполнить операцию на объекте, не являющемся сокетом). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419481 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:03:52, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:03:56
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FA6. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x29C8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419481 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:06:47, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:06:54
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FC0. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3814 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419481 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:10:33, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:10:45
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FC0. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x2510 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419481 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:10:33, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:12:12
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F9A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3028 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:16:41, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:16:56
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F9A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3414 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:17:31, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:17:45
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FA4. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x370 (Main), GetLastError(): 10038 (Сделана попытка выполнить операцию на объекте, не являющемся сокетом). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:22:41, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:22:45
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FA4. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x3270 (Main), GetLastError(): 10038 (Сделана попытка выполнить операцию на объекте, не являющемся сокетом). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:23:14, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:23:17
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419FA4. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x14D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:23:14, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:23:51
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00419F8E. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x1B38 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419475 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 4 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:25:56, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:26:18
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x2E48 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x36A0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:29:05, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:29:30
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x41D8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:37:39, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:37:54
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x26A8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x500 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xBEC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:41:51, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:42:01
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x834 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:43:20, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:43:48
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xC04 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xF24 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:46:42, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:47:09
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x3160 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 20:50:22, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 20:50:36
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00410E6E. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdRe0, Thread: 0x4150 (Main), errno: 33 (Domain error). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004110AE in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0041A28F in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x00419760 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 5 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 6 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:00:40, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:01:01
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 7235, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x406C (Canvas). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004110AE in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0041A28F in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x00419760 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 5 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 6 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:00:40, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:01:00
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 7235, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#3: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x406C (Canvas). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004110AE in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x0041A28F in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x00419760 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 5 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 6 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:00:40, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:01:00
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xD40 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:01:34, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:01:47
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x35EC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:01:34, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:04:43
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xA98 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:05:59, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:08:31
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x1DA4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x2B04 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\asus\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 11 2017 21:17:50, Debug, GNU g++ 4.8.1, std=201103L
+Started:	Jan 11 2017 21:18:59
+
+Run file:	C:\Users\asus\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\asus\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0x14FC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\asus\Documents\GitHub\tank\V2.exe, файл: C:\Users\asus\Documents\GitHub\tank\TXLib.h, строка: 9657, функция: HDC__*& {anonymous}::TX::txDC(bool),
+
+Сообщение: Окно рисования не создано или не в порядке
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004E741C (32-bit), Flags: CMdrE0, Thread: 0xFBC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040F58A in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 1 0x004192C0 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 2 0x0040127D in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
+# 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+# 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
