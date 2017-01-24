@@ -61,21 +61,13 @@ int main ()
 
     C_Lvl_plus obj [5] = {};
 
-    double Per_Obj_Nach [20] = {}
-
     for (int i = 0; i < 5; i++)
         {
         obj[i].x   = rand_ (50, XWindow - 50);
         obj[i].y   = rand_ (50, YWindow - 50);
         obj[i].lvl = rand_ (1, 3);
         obj[i].Xp  = (obj[i].lvl + 1) * 2;
-        Per_Obj_Nach [i*4    ] = obj[i].x;
-        Per_Obj_Nach [i*4 + 1] = obj[i].y;
-        Per_Obj_Nach [i*4 + 2] = obj[i].lvl;
-        Per_Obj_Nach [i*4 + 3] = obj[i].Xp;
         }
-
-    txSendTo   (client, &Per_Obj_Nach,  sizeof (Per_Obj_Nach));
 
     int Per_Data_0 [14] = {};
     int Per_Data_1 [14] = {};

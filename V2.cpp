@@ -1,6 +1,6 @@
 #include "TXNetwork.h"
 #include "TXLib.h"
-#define SERVER_IP "46.188.125.87"  //IP сервера
+#define SERVER_IP "localhost"  //IP сервера  //10.0.2.205
 
 struct C_Tank
     {
@@ -25,10 +25,20 @@ struct C_snaryad
     COLORREF color ;
     } ;
 
+struct C_Lvl_plus
+    {
+    double x, y;
+    double vx, vy;
+    double Xp;
+    double lvl;
+    double r;
+    };
+
 const int XWindow = 1000/*GetSystemMetrics (SM_CXSCREEN)*/, YWindow = 600/*GetSystemMetrics (SM_CYSCREEN)*/ ;
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) ;
 void Draw_Snaryad (C_snaryad * s) ;
+void Draw_LVL_plus (C_Lvl_plus * obj);
 void Draw_XP (double xp) ;
 void Vistrel (C_snaryad snaryad [], C_Tank tank [], int d);
 void Prisv_zn_prot (C_Tank sopernik []);
@@ -50,6 +60,8 @@ int main ()
                            {XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (255, 0, 0), RGB (150, 150, 150)}} ;
     //C_Tank sopernik [3] = {} ;
 
+    C_Lvl_plus obj [5] = {};
+
     int Per_Data_0 [14] = {};
     int Per_Data_1 [14] = {};
 
@@ -58,6 +70,9 @@ int main ()
 
     double Per_sn_0 [20] = {};
     double Per_sn_1 [20] = {};
+
+    double Per_Obj_s [20] = {};
+    double Per_Obj_r [20] = {};
 
     //Prisv_zn_prot (sopernik);
     //Prisv_zn_sn_p (snaryad_p);
@@ -117,12 +132,40 @@ int main ()
             Draw_Snaryad (&snaryad_0[i_]);
             Draw_Snaryad (&snaryad_1[i_]);
 
+            for (int n = 0; n < 5; n++)
+                {
+                Draw_LVL_plus (&obj[n]);
+                }
+
             if (dist (snaryad_1[i_].x, snaryad_1[i_].y, tank[0].x, tank[0].y) < tank[0].r + 20)
                 {
                 if (tank[0].XP > 1) tank[0].XP --;
                 snaryad_0[i_].y = -50;
                 snaryad_0[i_].vx = 0;
                 snaryad_0[i_].vy = 0;
+                }
+
+            for (int n = 0; n < 5; n++)
+                {
+                if (dist (snaryad_0[i_].x, snaryad_0[i_].y, obj[n].x, obj[n].y) < obj[n].r + 20)
+                    {
+                    snaryad_0[i_].y = -50;
+                    if (obj[n].Xp > 1)
+                        {
+                        obj[n].Xp --;
+                        obj[n].vx = snaryad_0[i_].vx/15;
+                        obj[n].vy = snaryad_0[i_].vy/15;
+                        }
+                    else
+                        {
+                        obj[n].x   = rand_ (50, XWindow - 50);
+                        obj[n].y   = rand_ (50, YWindow - 50);
+                        obj[n].lvl = rand_ (1, 3);
+                        obj[n].Xp  = (obj[n].lvl + 1) * 2;
+                        }
+                    snaryad_0[i_].vx = 0;
+                    snaryad_0[i_].vy = 0;
+                    }
                 }
             }
 
@@ -133,10 +176,18 @@ int main ()
 
         if (tank[0].XP >= tank[0].max_XP) tank[0].XP = tank[0].max_XP;
 
-        for (int i = 0; i < 10; i++)
+        for (int n = 0; n < 10; n++)
             {
-            Per_sn_0 [2 * i]     = snaryad_0[i].x;
-            Per_sn_0 [2 * i + 1] = snaryad_0[i].y;
+            Per_sn_0 [2 * n]     = snaryad_0[n].x;
+            Per_sn_0 [2 * n + 1] = snaryad_0[n].y;
+            }
+
+        for (int n = 0; n < 5; n++)
+            {
+            Per_Obj_s [n*4    ] = obj[n].x;
+            Per_Obj_s [n*4 + 1] = obj[n].y;
+            Per_Obj_s [n*4 + 2] = obj[n].lvl;
+            Per_Obj_s [n*4 + 3] = obj[n].Xp;
             }
 
         Prisv_Zn_Per_data (Per_Data_0, tank[0]);
@@ -145,13 +196,23 @@ int main ()
         txRecvFrom (client, &Per_Data_1, sizeof (Per_Data_1));
         txSendTo   (client, &Per_sn_0,   sizeof (Per_sn_0));
         txRecvFrom (client, &Per_sn_1,   sizeof (Per_sn_1));
+        txSendTo   (client, &Per_Obj_s,  sizeof (Per_Obj_s));
+        txRecvFrom (client, &Per_Obj_r,  sizeof (Per_Obj_r));
 
         Prisv_Zn_Tank_sop (&tank [1], Per_Data_1);
 
-        for (int i = 0; i < 10; i++)
+        for (int n = 0; n < 10; n++)
             {
-            snaryad_1[i].x = Per_sn_1 [2 * i];
-            snaryad_1[i].y = Per_sn_1 [2 * i + 1];
+            snaryad_1[n].x = Per_sn_1 [2 * n];
+            snaryad_1[n].y = Per_sn_1 [2 * n + 1];
+            }
+
+        for (int n = 0; n < 5; n++)
+            {
+            obj[n].x   = Per_Obj_r [n*4];
+            obj[n].y   = Per_Obj_r [n*4 + 1];
+            obj[n].lvl = Per_Obj_r [n*4 + 2];
+            obj[n].Xp  = Per_Obj_r [n*4 + 3];
             }
 
         txEnd() ;
@@ -173,6 +234,7 @@ void Draw_tank (C_Tank * tank, double SledX, double SledY)
                      { k1 + tank->l * cos (atan_ (Y_m , X_m)) + tank->x,
                       -k2 + tank->l * sin (atan_ (Y_m , X_m)) + tank->y}} ;
 
+    txSetColor (TX_BLACK);
     txSetFillColor (tank->Dulo) ;
     txPolygon (Dulo, 4) ;
     txSetFillColor (TX_BLACK) ;
@@ -202,6 +264,22 @@ void Draw_Snaryad (C_snaryad * s)
     txCircle (s->x, s->y, 20) ;
     txSetFillColor (s->color) ;
     txCircle (s->x, s->y, 16) ;
+    }
+
+void Draw_LVL_plus (C_Lvl_plus * obj)
+    {
+    txSetFillColor (RGB (0, (obj->lvl + 2) * 50, 0));
+    txSetColor     (RGB (0, (obj->lvl + 2) * 40, 0), 3);
+    obj->r  = obj->lvl * 10;
+    if (obj->vx <= -0.1) obj->vx += 0.05;
+    if (obj->vy <= -0.1) obj->vy += 0.05;
+    if (obj->vx >=  0.1) obj->vx -= 0.05;
+    if (obj->vy >=  0.1) obj->vy -= 0.05;
+    if (obj->vy <   0.1 && obj->vy > -0.1) obj->vy = 0;
+    if (obj->vx <   0.1 && obj->vx > -0.1) obj->vx = 0;
+    obj->x += obj->vx;
+    obj->y += obj->vy;
+    txCircle (obj->x, obj->y, obj->r);
     }
 
 void Draw_XP (double xp)

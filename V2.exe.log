@@ -1274,3 +1274,227 @@ TXLib сообщает:
 # 3 0x004012A5 in C:\Users\asus\Documents\GitHub\tank\V2.exe
 # 4 0x77329E54 in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
 # 5 0x77329E1F in C:\WINDOWS\SYSTEM32\ntdll.dll!RtlSetCurrentTransaction
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x61761B45 в функции SymGetLineFromAddrW64. Попытка прочесть данные по адресу 0x04CA75EF. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F641C (32-bit), Flags: CMdrE0, Thread: 0x1648 (Main). 
+From: C:\Users\User\Documents\GitHub\tank\TXLib.h (9017) bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x61757DA8 in C:\Windows\MgwHelp32.dll!SymGetLineFromAddrW64
+# 1 0x61761DC3 in C:\Windows\MgwHelp32.dll!SymGetLineFromAddrW64
+# 2 0x61759739 in C:\Windows\MgwHelp32.dll!SymGetLineFromAddrW64
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\User\Documents\GitHub\tank\TXLib.h (9017):
+
+   9015: 
+   9016: $       SetLastError (0);
+=> 9017: $       (CALL_(MinGW::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(y)) ||
+   9018:         (CALL_(Win32::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(Y)) ||
+   9019:             DBG_ ("SymFromAddr (0x%p) failed", addr);
+
+# 1 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\Users\User\Documents\GitHub\tank\TXLib.h (8819):
+
+   8817: $       bool                    inTX   = false;
+   8818: 
+=> 8819:         if (addr) { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module); }
+   8820: 
+   8821:         if (readSource && !inTX) { $ _txSymGetFromAddr ((void*) 1, NULL, NULL, NULL, &source, 2); }
+
+# 2 in HDC__*& {anonymous}::TX::txDC(bool) at C:\Users\User\Documents\GitHub\tank\TXLib.h (9657):
+
+   9655: inline HDC& txDC (bool forced /*= false*/)
+   9656:     {
+=> 9657: $1  if (forced) _TX_IF_TXWINDOW_FAILED { static HDC null = NULL; return null; }
+   9658: 
+   9659: $   return _txCanvas_BackBuf[0];
+
+# 3 in int main() at C:\Users\User\Documents\GitHub\tank\V2.cpp (87):
+
+     85:         txBegin() ;
+     86: 
+=>   87:         txSetFillColor (TX_WHITE) ;
+     88:         txClear () ;
+     89:         if (GetAsyncKeyState ('W')) tank[0].vy = -3 ;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 24 2017 11:33:12, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Jan 24 2017 11:35:00
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x61761B45 в функции SymGetLineFromAddrW64. Попытка прочесть данные по адресу 0x049E818E. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F641C (32-bit), Flags: CMdrE0, Thread: 0x964 (Main), GetLastError(): 87 (Параметр задан неверно). 
+From: C:\Users\User\Documents\GitHub\tank\TXLib.h (9017) bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E280 in C:\Users\User\Documents\GitHub\tank\V2.exe!(anonymous namespace)::TX::_txOnSignal
+# 1 0x004010F9 in C:\Users\User\Documents\GitHub\tank\V2.exe!_gnu_exception_handler@4
+# 2 0x75AB003F in C:\Windows\syswow64\kernel32.dll!GetProfileStringW
+# 3 0x771E74DF in C:\Windows\SysWOW64\ntdll.dll!RtlKnownExceptionFilter
+# 4 0x771A9EC5 in C:\Windows\SysWOW64\ntdll.dll!RtlInitializeExceptionChain
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\User\Documents\GitHub\tank\TXLib.h (9017):
+
+   9015: 
+   9016: $       SetLastError (0);
+=> 9017: $       (CALL_(MinGW::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(y)) ||
+   9018:         (CALL_(Win32::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(Y)) ||
+   9019:             DBG_ ("SymFromAddr (0x%p) failed", addr);
+
+# 1 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\Users\User\Documents\GitHub\tank\TXLib.h (8819):
+
+   8817: $       bool                    inTX   = false;
+   8818: 
+=> 8819:         if (addr) { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module); }
+   8820: 
+   8821:         if (readSource && !inTX) { $ _txSymGetFromAddr ((void*) 1, NULL, NULL, NULL, &source, 2); }
+
+# 2 in HDC__*& {anonymous}::TX::txDC(bool) at C:\Users\User\Documents\GitHub\tank\TXLib.h (9657):
+
+   9655: inline HDC& txDC (bool forced /*= false*/)
+   9656:     {
+=> 9657: $1  if (forced) _TX_IF_TXWINDOW_FAILED { static HDC null = NULL; return null; }
+   9658: 
+   9659: $   return _txCanvas_BackBuf[0];
+
+# 3 in int main() at C:\Users\User\Documents\GitHub\tank\V2.cpp (95):
+
+     93:         txBegin() ;
+     94: 
+=>   95:         txSetFillColor (TX_WHITE) ;
+     96:         txClear () ;
+     97:         if (GetAsyncKeyState ('W')) tank[0].vy = -3 ;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 24 2017 12:18:18, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Jan 24 2017 12:18:32
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\GitHub\tank\V2.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x61754590 в функции SymGetLineFromAddrW64. Попытка прочесть данные по адресу 0x020FD40C. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F641C (32-bit), Flags: CMdrE0, Thread: 0xC8C (Main), GetLastError(): 87 (Параметр задан неверно). 
+From: C:\Users\User\Documents\GitHub\tank\TXLib.h (9017) bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x61757DA8 in C:\Windows\MgwHelp32.dll!SymGetLineFromAddrW64
+# 1 0x61761DC3 in C:\Windows\MgwHelp32.dll!SymGetLineFromAddrW64
+# 2 0x61759739 in C:\Windows\MgwHelp32.dll!SymGetLineFromAddrW64
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\User\Documents\GitHub\tank\TXLib.h (9017):
+
+   9015: 
+   9016: $       SetLastError (0);
+=> 9017: $       (CALL_(MinGW::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(y)) ||
+   9018:         (CALL_(Win32::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(Y)) ||
+   9019:             DBG_ ("SymFromAddr (0x%p) failed", addr);
+
+# 1 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\Users\User\Documents\GitHub\tank\TXLib.h (8819):
+
+   8817: $       bool                    inTX   = false;
+   8818: 
+=> 8819:         if (addr) { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module); }
+   8820: 
+   8821:         if (readSource && !inTX) { $ _txSymGetFromAddr ((void*) 1, NULL, NULL, NULL, &source, 2); }
+
+# 2 in HDC__*& {anonymous}::TX::txDC(bool) at C:\Users\User\Documents\GitHub\tank\TXLib.h (9657):
+
+   9655: inline HDC& txDC (bool forced /*= false*/)
+   9656:     {
+=> 9657: $1  if (forced) _TX_IF_TXWINDOW_FAILED { static HDC null = NULL; return null; }
+   9658: 
+   9659: $   return _txCanvas_BackBuf[0];
+
+# 3 in int main() at C:\Users\User\Documents\GitHub\tank\V2.cpp (96):
+
+     94:         txBegin() ;
+     95: 
+=>   96:         txSetFillColor (TX_WHITE) ;
+     97:         txClear () ;
+     98:         if (GetAsyncKeyState ('W')) tank[0].vy = -3 ;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\GitHub\tank\TXLib.h
+Compiled:	Jan 24 2017 12:26:46, DEBUG, GNU g++ 4.8.1, std=201103L
+Started:	Jan 24 2017 12:28:30
+
+Run file:	C:\Users\User\Documents\GitHub\tank\V2.exe
+Directory:	C:\Users\User\Documents\GitHub\tank
+
+--------------------------------------------------
