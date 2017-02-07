@@ -34,7 +34,7 @@ struct C_Lvl_plus
     double r;
     };
 
-const int XWindow = 1000/*GetSystemMetrics (SM_CXSCREEN)*/, YWindow = 600/*GetSystemMetrics (SM_CYSCREEN) */;
+const int XWindow = GetSystemMetrics (SM_CXSCREEN), YWindow = GetSystemMetrics (SM_CYSCREEN);
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) ;
 void Draw_Snaryad (C_snaryad * s) ;
@@ -53,15 +53,15 @@ double rand_ (int a, int b);
 
 int main ()
     {
-    //_txWindowStyle &= ~ WS_CAPTION ;
+    _txWindowStyle &= ~ WS_CAPTION ;
     txCreateWindow (XWindow, YWindow) ;
 
-    C_Tank tank     [2] = {{XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (0, 0, 255), RGB (150, 150, 150)},
+    C_Tank tank     [2] = {{XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 25, 30, 1, RGB (0, 0, 255), RGB (150, 150, 150)},
                            {          100,           100, 0, 0, 40, 20, 90, 0, 0, 15, 15, 1, RGB (255, 0, 0), RGB (150, 150, 150)}} ;
 
     C_Lvl_plus obj [5] = {};
 
-    double Per_Obj_Nach [20] = {}
+    double Per_Obj_Nach [20] = {};
 
     for (int i = 0; i < 5; i++)
         {
@@ -74,8 +74,6 @@ int main ()
         Per_Obj_Nach [i*4 + 2] = obj[i].lvl;
         Per_Obj_Nach [i*4 + 3] = obj[i].Xp;
         }
-
-    txSendTo   (client, &Per_Obj_Nach,  sizeof (Per_Obj_Nach));
 
     int Per_Data_0 [14] = {};
     int Per_Data_1 [14] = {};
@@ -92,9 +90,6 @@ int main ()
     Per_Data_1[12] = txMouseX ();
     Per_Data_1[13] = txMouseY ();
 
-    //Prisv_zn_prot (sopernik);
-    //Prisv_zn_sn_p (snaryad_p);
-
     Prisv_zn_sn   (snaryad_0);
     Prisv_zn_sn   (snaryad_1);
 
@@ -104,24 +99,31 @@ int main ()
 
     TX_SOCKET client = txCreateSocket (TX_SERVER, "");
 
+    txSendTo   (client, &Per_Obj_Nach,  sizeof (Per_Obj_Nach));
+
     for (int i = 0, t_p = 0; !GetAsyncKeyState (VK_ESCAPE) && tank[0].XP > 0; i ++, t_p ++, tank[0].XP += 0.0025)
         {
         txBegin() ;
         txSetFillColor (TX_WHITE) ;
         txClear () ;
-        if (GetAsyncKeyState ('W')) tank[0].vy = -3 ;
-        if (GetAsyncKeyState ('A')) tank[0].vx = -3 ;
-        if (GetAsyncKeyState ('S')) tank[0].vy =  3 ;
-        if (GetAsyncKeyState ('D')) tank[0].vx =  3 ;
+        if (GetAsyncKeyState ('W')) tank[0].vy = -8 ;
+        if (GetAsyncKeyState ('A')) tank[0].vx = -8 ;
+        if (GetAsyncKeyState ('S')) tank[0].vy =  8 ;
+        if (GetAsyncKeyState ('D')) tank[0].vx =  8 ;
 
         tank[0].x += tank[0].vx;
         tank[0].y += tank[0].vy;
-        if (tank[0].vx <= -0.1) tank[0].vx += 0.05;
-        if (tank[0].vy <= -0.1) tank[0].vy += 0.05;
-        if (tank[0].vx >=  0.1) tank[0].vx -= 0.05;
-        if (tank[0].vy >=  0.1) tank[0].vy -= 0.05;
-        if (tank[0].vy <   0.1 && tank[0].vy > -0.1) tank[0].vy = 0;
-        if (tank[0].vx <   0.1 && tank[0].vx > -0.1) tank[0].vx = 0;
+        if (tank[0].vx <= -0.3) tank[0].vx += 0.2;
+        if (tank[0].vy <= -0.3) tank[0].vy += 0.2;
+        if (tank[0].vx >=  0.3) tank[0].vx -= 0.2;
+        if (tank[0].vy >=  0.3) tank[0].vy -= 0.2;
+        if (tank[0].vy <   0.3 && tank[0].vy > -0.3) tank[0].vy = 0;
+        if (tank[0].vx <   0.3 && tank[0].vx > -0.3) tank[0].vx = 0;
+
+        if (tank[0].x <         - 500) tank[0].x =         - 500;
+        if (tank[0].x > XWindow + 500) tank[0].x = XWindow + 500;
+        if (tank[0].y <         - 500) tank[0].y =         - 500;
+        if (tank[0].y > YWindow + 500) tank[0].y = YWindow + 500;
 
         Draw_tank (&tank [0], txMouseX (), txMouseY ()) ;
         Draw_tank (&tank [1], Per_Data_1[12], Per_Data_1 [13]) ;
@@ -131,7 +133,7 @@ int main ()
             Draw_LVL_plus (&obj[n]);
             }
 
-        if (GetAsyncKeyState (VK_SPACE) && t_p >= 35)
+        if (GetAsyncKeyState (VK_SPACE) && t_p >= 20)
             {
             Vistrel (snaryad_0, tank, d%10);
             d++;
@@ -153,14 +155,6 @@ int main ()
             Draw_Snaryad (&snaryad_0[i_]);
             Draw_Snaryad (&snaryad_1[i_]);
 
-            if (dist (snaryad_1[i_].x, snaryad_1[i_].y, tank[0].x, tank[0].y) < tank[0].r + 20)
-                {
-                if (tank[0].XP > 1) tank[0].XP --;
-                snaryad_0[i_].y = -50;
-                snaryad_0[i_].vx = 0;
-                snaryad_0[i_].vy = 0;
-                }
-
             for (int n = 0; n < 5; n++)
                 {
                 if (dist (snaryad_0[i_].x, snaryad_0[i_].y, obj[n].x, obj[n].y) < obj[n].r + 20)
@@ -178,6 +172,7 @@ int main ()
                         obj[n].y   = rand_ (50, YWindow - 50);
                         obj[n].lvl = rand_ (1, 3);
                         obj[n].Xp  = (obj[n].lvl + 1) * 2;
+                        tank[0].XP ++;
                         }
                     snaryad_0[i_].vx = 0;
                     snaryad_0[i_].vy = 0;
@@ -221,12 +216,22 @@ int main ()
             {
             snaryad_1[n].x = Per_sn_1 [2 * n];
             snaryad_1[n].y = Per_sn_1 [2 * n + 1];
+
+            if (dist (snaryad_0[n].x, snaryad_0[n].y, tank[1].x, tank[1].y) < tank[1].r + 20)
+                {
+                if (tank[1].XP > 1) tank[1].XP --;
+                snaryad_0[n].y = -50;
+                snaryad_0[n].vx = 0;
+                snaryad_0[n].vy = 0;
+                }
+
+            if (dist (snaryad_1[n].x, snaryad_1[n].y, tank[0].x, tank[0].y) < tank[0].r + 20 && tank[0].XP > -1) tank[0].XP --;
             }
 
         for (int n = 0; n < 5; n++)
             {
-            obj[n].x   = Per_Obj_r [n*4];
-            obj[n].y   = Per_Obj_r [n*4 + 1];
+            if (Per_Obj_r [n*4]     != Per_Obj_s [n*4    ]) obj[n].x   = Per_Obj_r [n*4];
+            if (Per_Obj_r [n*4 + 1] != Per_Obj_s [n*4 + 1]) obj[n].y   = Per_Obj_r [n*4 + 1];
             obj[n].lvl = Per_Obj_r [n*4 + 2];
             obj[n].Xp  = Per_Obj_r [n*4 + 3];
             }
@@ -312,8 +317,8 @@ void Vistrel (C_snaryad snaryad [], C_Tank tank [], int d)
     snaryad[d].y0 = tank[0].y_d ;
     snaryad[d].x  = snaryad[d].x0 ;
     snaryad[d].y  = snaryad[d].y0 ;
-    snaryad[d].vx = 15 * cos (atan_ (tank[0].y_d - tank[0].y , tank[0].x_d - tank[0].x)) ;
-    snaryad[d].vy = 15 * sin (atan_ (tank[0].y_d - tank[0].y , tank[0].x_d - tank[0].x)) ;
+    snaryad[d].vx = 30 * cos (atan_ (tank[0].y_d - tank[0].y , tank[0].x_d - tank[0].x)) ;
+    snaryad[d].vy = 30 * sin (atan_ (tank[0].y_d - tank[0].y , tank[0].x_d - tank[0].x)) ;
     }
 
 void Prisv_zn_prot (C_Tank sopernik [])
