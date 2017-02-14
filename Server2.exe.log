@@ -1538,3 +1538,58 @@ From: C:\Users\User\Documents\GitHub\tank\TXLib.h (8978) bool {anonymous}::TX::_
 # 3 in int main() at C:\Users\User\Documents\GitHub\tank\Server2.cpp (102):
 
 
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\tank\Server2.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00425EA1 в функции txSendTo в файле D:/tank/TXNetwork.h на строке 700. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F7420 (32-bit), Flags: CMdRe0, Thread: 0x16C8 (Main), GetLastError(): 10038 (Сделана попытка выполнить операцию на объекте, не являющемся сокетом). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00425EA1 in D:\tank\Server2.exe!txSendTo at D:/tank/TXNetwork.h (700)
+
+# 1 0x00426660 in D:\tank\Server2.exe!main at D:/tank/Server2.cpp (102):
+
+    100:     TX_SOCKET client = txCreateSocket (TX_SERVER, "");
+    101: 
+=>  102:     txSendTo   (client, &Per_Obj_Nach,  sizeof (Per_Obj_Nach));
+    103: 
+    104:     for (int i = 0, t_p = 0; !GetAsyncKeyState (VK_ESCAPE) && tank[0].XP > 0; i ++, t_p ++, tank[0].XP += 0.0025)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\tank\Server2.cpp (91):
+
+     89: 
+     90:     Per_Data_1[12] = txMouseX ();
+=>   91:     Per_Data_1[13] = txMouseY ();
+     92: 
+     93:     Prisv_zn_sn   (snaryad_0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Desktop\TX\TXLib.h
+Compiled:	Feb 14 2017 11:19:58, GNU g++ 4.8.1, std=201103L, 32-bit, DEBUG
+Started:	Feb 14 2017 11:20:20
+
+Run file:	D:\tank\Server2.exe
+Directory:	D:\tank
+
+--------------------------------------------------

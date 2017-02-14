@@ -34,7 +34,7 @@ struct C_Lvl_plus
     double r;
     };
 
-const int XWindow = GetSystemMetrics (SM_CXSCREEN), YWindow = GetSystemMetrics (SM_CYSCREEN);
+const int XWindow = 1000 /*GetSystemMetrics (SM_CXSCREEN)*/, YWindow = 1000/*GetSystemMetrics (SM_CYSCREEN)*/;
 
 void Draw_tank (C_Tank * tank, double SledX, double SledY) ;
 void Draw_Snaryad (C_snaryad * s) ;
@@ -53,7 +53,7 @@ double rand_ (int a, int b);
 
 int main ()
     {
-    _txWindowStyle &= ~ WS_CAPTION ;
+    //_txWindowStyle &= ~ WS_CAPTION ;
     txCreateWindow (XWindow, YWindow) ;
 
     C_Tank tank     [2] = {{XWindow - 100, YWindow - 100, 0, 0, 40, 20, 90, 0, 0, 25, 30, 1, RGB (0, 0, 255), RGB (150, 150, 150)},
@@ -127,6 +127,7 @@ int main ()
 
         Draw_tank (&tank [0], txMouseX (), txMouseY ()) ;
         Draw_tank (&tank [1], Per_Data_1[12], Per_Data_1 [13]) ;
+        printf ("%lg, %lg, ", obj[1].x, obj[1].y);
 
         for (int n = 0; n < 5; n++)
             {
@@ -177,6 +178,27 @@ int main ()
                     snaryad_0[i_].vx = 0;
                     snaryad_0[i_].vy = 0;
                     }
+
+                if (dist (snaryad_1[i_].x, snaryad_1[i_].y, obj[n].x, obj[n].y) < obj[n].r + 20)
+                    {
+                    snaryad_1[i_].y = -50;
+                    if (obj[n].Xp > 1)
+                        {
+                        obj[n].Xp --;
+                        obj[n].vx = snaryad_1[i_].vx/15;
+                        obj[n].vy = snaryad_1[i_].vy/15;
+                        }
+                    else
+                        {
+                        obj[n].x   = rand_ (50, XWindow - 50);
+                        obj[n].y   = rand_ (50, YWindow - 50);
+                        obj[n].lvl = rand_ (1, 3);
+                        obj[n].Xp  = (obj[n].lvl + 1) * 2;
+                        tank[0].XP ++;
+                        }
+                    snaryad_1[i_].vx = 0;
+                    snaryad_1[i_].vy = 0;
+                    }
                 }
             }
 
@@ -207,7 +229,7 @@ int main ()
         txSendTo   (client, &Per_Data_0, sizeof (Per_Data_0));
         txRecvFrom (client, &Per_sn_1,   sizeof (Per_sn_1));
         txSendTo   (client, &Per_sn_0,   sizeof (Per_sn_0));
-        txRecvFrom (client, &Per_Obj_r,  sizeof (Per_Obj_r));
+        //txRecvFrom (client, &Per_Obj_r,  sizeof (Per_Obj_r));
         txSendTo   (client, &Per_Obj_s,  sizeof (Per_Obj_s));
 
         Prisv_Zn_Tank_sop (&tank [1], Per_Data_1);
@@ -236,6 +258,7 @@ int main ()
             obj[n].Xp  = Per_Obj_r [n*4 + 3];
             }
 
+        txSleep ();
         txEnd() ;
         }
     }
